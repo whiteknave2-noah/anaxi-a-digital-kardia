@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use ANAXI or its reference harnesses in research, please cite this repository."
+title: "ANAXI: A DIGITAL KARDIA"
+type: software
+authors:
+  - family-names: "Brannum"
+    given-names: "Noah DanGabriel"
+version: "2026-09-24 / 4e950d0"
+date-released: "2026-09-24"
+repository-code: "https://github.com/whiteknave2-noah/anaxi-a-digital-kardia"
+url: "https://github.com/whiteknave2-noah/anaxi-a-digital-kardia"
+abstract: >-
+  ANAXI: A DIGITAL KARDIA is a completed persistent-agent architecture and
+  public reference case focused on truthful provenance, bounded authority,
+  privacy, continuity, recovery, reversibility, and meaningful end-to-end
+  affordance. The repository also includes an ANAXI-specific reproducibility
+  distribution and a standalone portable claim harness.
+keywords:
+  - artificial intelligence
+  - persistent agents
+  - provenance
+  - authority
+  - privacy
+  - recovery
+  - reproducibility
+  - agent evaluation
