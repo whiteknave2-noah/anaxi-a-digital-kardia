@@ -1,0 +1,126 @@
+{
+  "schema": "claim-harness.inventory/v0",
+  "project": "toy-agent",
+  "policy": {"not_attempted_fails_run": false},
+  "claims": [
+    {
+      "id": "PROVENANCE-1",
+      "question": "canonical-provenance",
+      "statement": "Every outcome the agent records names the canonical input that caused it and the responder that produced it.",
+      "evidence": "executable"
+    },
+    {
+      "id": "AUTHORITY-1",
+      "question": "authority",
+      "statement": "No input text can grant a capability or cause a privileged side effect; authority changes only through the operator console.",
+      "evidence": "executable"
+    },
+    {
+      "id": "SCOPE-1",
+      "question": "scope-isolation",
+      "statement": "Notes written in one scope never appear in replies or deliveries for another scope.",
+      "evidence": "executable"
+    },
+    {
+      "id": "NULL-1",
+      "question": "lawful-null",
+      "statement": "Intentional non-action is a typed, recorded null with a reason, distinct from an internal error.",
+      "evidence": "executable"
+    },
+    {
+      "id": "RECOVERY-1",
+      "question": "recovery",
+      "statement": "An input accepted before a crash is recovered exactly once, unaltered, on reopen.",
+      "evidence": "executable"
+    },
+    {
+      "id": "REPLAY-1",
+      "question": "replay-idempotence",
+      "statement": "Replaying an input, before or after reopen, adds no events and no side-effect attempts.",
+      "evidence": "executable"
+    },
+    {
+      "id": "AMBIGUOUS-1",
+      "question": "ambiguous-side-effects",
+      "statement": "A send whose outcome is unknown is never resent automatically, including across a crash and reopen.",
+      "evidence": "executable"
+    },
+    {
+      "id": "REVOCATION-1",
+      "question": "revocation",
+      "statement": "A revoked destination or capability receives zero new side-effect attempts, including after reopen.",
+      "evidence": "executable"
+    },
+    {
+      "id": "DELIVERY-1",
+      "question": "delivery-vs-backend",
+      "statement": "Recall and send replies reach the subject through the delivery channel, not only the agent's own records.",
+      "evidence": "executable"
+    },
+    {
+      "id": "PERSISTENCE-1",
+      "question": "persistence",
+      "statement": "Notes, grants and revocations survive reopening from disk and killing the process.",
+      "evidence": "executable",
+      "notes": "Three required bindings. The quick reference run deselects the slow kill test, so this claim is NOT_ATTEMPTED (2 of 3) there; run the tests without -m \"not slow\" to establish it."
+    },
+    {
+      "id": "IDENTITY-1",
+      "question": "provider-identity",
+      "statement": "Which responder produced each outcome is recorded mechanically, and swapping the responder does not change the agent's identity or history.",
+      "evidence": "executable"
+    },
+    {
+      "id": "AFFORDANCE-1",
+      "question": "meaningful-affordance",
+      "statement": "Every command !help shows a sender can be used exactly as shown, and nothing unusable is shown.",
+      "evidence": "executable"
+    },
+    {
+      "id": "AFFORDANCE-LIVE-1",
+      "question": "meaningful-affordance",
+      "statement": "A first-time human user, given only the !help output, stored and recalled a note without other instructions.",
+      "evidence": "live_only",
+      "live_record": {
+        "observed": "illustrative example record",
+        "summary": "Example of how a hands-on session with a person is recorded. It cannot be re-run offline, so it is reported as LIVE_ONLY and never as PASS.",
+        "reference": "session notes kept by the project (example)"
+      }
+    },
+    {
+      "id": "HISTORY-1",
+      "question": "history-vs-reinterpretation",
+      "statement": "Annotating an event later never alters the recorded event, live or after reopen.",
+      "evidence": "executable"
+    },
+    {
+      "id": "RETENTION-1",
+      "question": "scope-isolation",
+      "statement": "Notes are kept indefinitely; there is no retention limit or deletion path in this version.",
+      "evidence": "disposition",
+      "disposition": {
+        "decided_by": "project owner (example)",
+        "decision": "accepted for v0",
+        "rationale": "The toy agent stores only demo data. A real project would have to decide retention before binding any privacy claim to evidence."
+      }
+    },
+    {
+      "id": "ORDER-1",
+      "statement": "Recall lists notes oldest first.",
+      "evidence": "executable",
+      "withdrawn": {
+        "reason": "Ordering was never a product requirement; withdrawn so a passing test is not mistaken for a commitment (example)."
+      }
+    },
+    {
+      "id": "OFFLINE-1",
+      "statement": "The reference evidence run cannot reach the network.",
+      "evidence": "executable"
+    },
+    {
+      "id": "CHECKS-DETECT-1",
+      "statement": "Each portable check used above catches a deliberately broken agent for the stated reason.",
+      "evidence": "executable"
+    }
+  ]
+}

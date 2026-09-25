@@ -1,0 +1,261 @@
+{
+  "assay": "owner_public_resource_delivery_v1",
+  "authoritative_discovery_error": null,
+  "canonical_production_history_mutated": false,
+  "collection_walk_counts": {
+    "library": 5,
+    "music": 3,
+    "photographs": 5
+  },
+  "collection_walk_errors": {},
+  "identifier_scheme": "item:<first 16 hex of sha256(resource_class NUL source_key)>; no resource names or contents are recorded",
+  "ordinary_route": "workspace_direction.execute_workspace_action + workspace_delivery.fit_boundary_result",
+  "pass2_room_estimator_tokens": 1098,
+  "private_space_traversed": false,
+  "production_manifest_error": null,
+  "production_pass2_hard_floor": 2102,
+  "production_resource_files_mutated": false,
+  "records": [
+    {
+      "attempted_total": 5,
+      "authoritative_expected_total": 5,
+      "authoritative_required_set_established": true,
+      "capability_id": "public_resource_delivery.library",
+      "failed_items_or_scenarios": [],
+      "failed_total": 0,
+      "item_results": {
+        "item:17c1b31c4dd4e5f6": {
+          "evidence": {
+            "delivered_chars": 3395,
+            "document_type": "text",
+            "operation": "read_windows",
+            "reached_end": true,
+            "windows": 5
+          },
+          "reason": null,
+          "status": "PASS"
+        },
+        "item:18a407caa73ff049": {
+          "evidence": {
+            "operation": "view_page",
+            "page_count": 3,
+            "pages_delivered": [
+              {
+                "cost": 1100,
+                "page": 1,
+                "representation": [
+                  792,
+                  1024
+                ]
+              },
+              {
+                "cost": 1100,
+                "page": 2,
+                "representation": [
+                  792,
+                  1024
+                ]
+              },
+              {
+                "cost": 1100,
+                "page": 3,
+                "representation": [
+                  792,
+                  1024
+                ]
+              }
+            ]
+          },
+          "reason": null,
+          "status": "PASS"
+        },
+        "item:2bcb4bb534d025e7": {
+          "evidence": {
+            "delivered_chars": 5234,
+            "document_type": "pdf",
+            "operation": "read_windows",
+            "reached_end": false,
+            "windows": 8
+          },
+          "reason": null,
+          "status": "PASS"
+        },
+        "item:6fdaf8712f2cd409": {
+          "evidence": {
+            "delivered_chars": 1517,
+            "document_type": "text",
+            "operation": "read_windows",
+            "reached_end": true,
+            "windows": 3
+          },
+          "reason": null,
+          "status": "PASS"
+        },
+        "item:b8376cebe8e696ec": {
+          "evidence": {
+            "delivered_chars": 72306,
+            "document_type": "text",
+            "operation": "read_windows",
+            "reached_end": true,
+            "windows": 114
+          },
+          "reason": null,
+          "status": "PASS"
+        }
+      },
+      "live_only_owner_dispositions": {},
+      "live_only_passed": [],
+      "live_only_requirements": [],
+      "missing_from_production": [],
+      "passed_total": 5,
+      "production_discovered_total": 5,
+      "remaining_not_established": [],
+      "skipped_or_unattempted": [],
+      "status": "COMPLETE",
+      "unexpected_in_production": []
+    },
+    {
+      "attempted_total": 5,
+      "authoritative_expected_total": 5,
+      "authoritative_required_set_established": true,
+      "capability_id": "public_resource_delivery.photographs",
+      "failed_items_or_scenarios": [],
+      "failed_total": 0,
+      "item_results": {
+        "item:2a92e4c92e7187e9": {
+          "evidence": {
+            "delivered_source_bytes": 5735,
+            "image_admission_cost": 1100,
+            "operation": "view",
+            "representation": [
+              640,
+              480
+            ]
+          },
+          "reason": null,
+          "status": "PASS"
+        },
+        "item:396fbc9175edda55": {
+          "evidence": {
+            "delivered_source_bytes": 52989,
+            "image_admission_cost": 1100,
+            "operation": "view",
+            "representation": [
+              640,
+              480
+            ]
+          },
+          "reason": null,
+          "status": "PASS"
+        },
+        "item:60da759162f63249": {
+          "evidence": {
+            "delivered_source_bytes": 67093,
+            "image_admission_cost": 1100,
+            "operation": "view",
+            "representation": [
+              640,
+              480
+            ]
+          },
+          "reason": null,
+          "status": "PASS"
+        },
+        "item:cbe7097ea146a378": {
+          "evidence": {
+            "delivered_source_bytes": 52892,
+            "image_admission_cost": 1100,
+            "operation": "view",
+            "representation": [
+              640,
+              480
+            ]
+          },
+          "reason": null,
+          "status": "PASS"
+        },
+        "item:d0cb8c8545f6dd94": {
+          "evidence": {
+            "delivered_source_bytes": 12172,
+            "image_admission_cost": 1100,
+            "operation": "view",
+            "representation": [
+              640,
+              480
+            ]
+          },
+          "reason": null,
+          "status": "PASS"
+        }
+      },
+      "live_only_owner_dispositions": {},
+      "live_only_passed": [],
+      "live_only_requirements": [],
+      "missing_from_production": [],
+      "passed_total": 5,
+      "production_discovered_total": 5,
+      "remaining_not_established": [],
+      "skipped_or_unattempted": [],
+      "status": "COMPLETE",
+      "unexpected_in_production": []
+    },
+    {
+      "attempted_total": 3,
+      "authoritative_expected_total": 3,
+      "authoritative_required_set_established": true,
+      "capability_id": "public_resource_delivery.music",
+      "failed_items_or_scenarios": [],
+      "failed_total": 0,
+      "item_results": {
+        "item:8101840cd8a0cab1": {
+          "evidence": {
+            "duration_seconds": 5.944,
+            "late_delivery": "whole",
+            "listen_delivery": "whole",
+            "operation": "listen_and_late_dynamics"
+          },
+          "reason": null,
+          "status": "PASS"
+        },
+        "item:b1c3a23c175ff65e": {
+          "evidence": {
+            "duration_seconds": 5.888,
+            "late_delivery": "whole",
+            "listen_delivery": "whole",
+            "operation": "listen_and_late_dynamics"
+          },
+          "reason": null,
+          "status": "PASS"
+        },
+        "item:b23d94f127b98700": {
+          "evidence": {
+            "duration_seconds": 6.0,
+            "late_delivery": "whole",
+            "listen_delivery": "whole",
+            "operation": "listen_and_late_dynamics"
+          },
+          "reason": null,
+          "status": "PASS"
+        }
+      },
+      "live_only_owner_dispositions": {},
+      "live_only_passed": [],
+      "live_only_requirements": [],
+      "missing_from_production": [],
+      "passed_total": 3,
+      "production_discovered_total": 3,
+      "remaining_not_established": [],
+      "skipped_or_unattempted": [],
+      "status": "COMPLETE",
+      "unexpected_in_production": []
+    }
+  ],
+  "source_root": "<synthetic-public-source-root>",
+  "whole_resource_result": {
+    "capability_record_total": 3,
+    "nonpassing_capabilities": [],
+    "passing_capability_total": 3,
+    "status": "COMPLETE"
+  },
+  "workspace_root": "<synthetic-isolated-workspace-root>"
+}

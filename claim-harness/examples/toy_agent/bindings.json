@@ -1,0 +1,75 @@
+{
+  "schema": "claim-harness.bindings/v0",
+  "bindings": {
+    "PROVENANCE-1": [
+      "examples/toy_agent/tests/test_history.py::test_every_outcome_traces_to_its_input",
+      "examples/toy_agent/tests/test_history.py::test_outcomes_record_the_responder"
+    ],
+    "AUTHORITY-1": [
+      "examples/toy_agent/tests/test_authority_scope.py::test_text_cannot_grant_capability",
+      "examples/toy_agent/tests/test_authority_scope.py::test_unauthorized_command_is_refused_not_ignored",
+      "examples/toy_agent/tests/test_authority_scope.py::test_authority_granted_by_operator_takes_effect"
+    ],
+    "SCOPE-1": [
+      "examples/toy_agent/tests/test_authority_scope.py::test_recall_does_not_cross_scopes",
+      "examples/toy_agent/tests/test_authority_scope.py::test_digest_does_not_cross_scopes"
+    ],
+    "NULL-1": [
+      "examples/toy_agent/tests/test_null.py::test_plain_chat_is_a_typed_null",
+      "examples/toy_agent/tests/test_null.py::test_empty_recall_is_a_typed_null",
+      "examples/toy_agent/tests/test_null.py::test_null_is_recorded_in_history",
+      "examples/toy_agent/tests/test_null.py::test_internal_failure_is_an_error_not_a_null"
+    ],
+    "RECOVERY-1": [
+      "examples/toy_agent/tests/test_restart.py::test_accepted_input_is_recovered_once_after_crash"
+    ],
+    "REPLAY-1": [
+      "examples/toy_agent/tests/test_side_effects.py::test_replayed_send_adds_no_events_or_attempts",
+      "examples/toy_agent/tests/test_side_effects.py::test_replay_after_reopen_adds_nothing"
+    ],
+    "AMBIGUOUS-1": [
+      "examples/toy_agent/tests/test_side_effects.py::test_ambiguous_send_is_not_resent",
+      "examples/toy_agent/tests/test_side_effects.py::test_crash_after_send_is_treated_as_ambiguous"
+    ],
+    "REVOCATION-1": [
+      "examples/toy_agent/tests/test_side_effects.py::test_revoked_destination_gets_zero_attempts",
+      "examples/toy_agent/tests/test_side_effects.py::test_revocation_holds_after_reopen",
+      "examples/toy_agent/tests/test_side_effects.py::test_revoked_capability_gets_zero_attempts"
+    ],
+    "DELIVERY-1": [
+      "examples/toy_agent/tests/test_delivery_affordance.py::test_recall_reply_reaches_subject",
+      "examples/toy_agent/tests/test_delivery_affordance.py::test_send_confirmation_reaches_subject"
+    ],
+    "PERSISTENCE-1": [
+      "examples/toy_agent/tests/test_restart.py::test_notes_survive_reopen",
+      "examples/toy_agent/tests/test_restart.py::test_grants_and_revocations_survive_reopen",
+      "examples/toy_agent/tests/test_restart.py::test_notes_survive_process_kill"
+    ],
+    "IDENTITY-1": [
+      "examples/toy_agent/tests/test_history.py::test_outcomes_record_the_responder",
+      "examples/toy_agent/tests/test_history.py::test_agent_identity_is_not_the_responder"
+    ],
+    "AFFORDANCE-1": [
+      "examples/toy_agent/tests/test_delivery_affordance.py::test_owner_can_use_everything_help_shows",
+      "examples/toy_agent/tests/test_delivery_affordance.py::test_guest_can_use_everything_help_shows",
+      "examples/toy_agent/tests/test_delivery_affordance.py::test_nothing_is_advertised_to_a_stranger"
+    ],
+    "HISTORY-1": [
+      "examples/toy_agent/tests/test_history.py::test_annotation_does_not_rewrite_history",
+      "examples/toy_agent/tests/test_history.py::test_history_reader_returns_copies"
+    ],
+    "ORDER-1": [
+      "examples/toy_agent/tests/test_history.py::test_recall_lists_notes_oldest_first"
+    ],
+    "OFFLINE-1": [
+      "examples/toy_agent/tests/test_offline.py::test_network_guard_is_active_for_this_run"
+    ],
+    "CHECKS-DETECT-1": [
+      "examples/toy_agent/tests/test_counterexamples.py::test_duplicate_side_effect_on_replay_is_caught",
+      "examples/toy_agent/tests/test_counterexamples.py::test_authority_from_untrusted_text_is_caught",
+      "examples/toy_agent/tests/test_counterexamples.py::test_automatic_retry_of_ambiguous_send_is_caught",
+      "examples/toy_agent/tests/test_counterexamples.py::test_backend_success_without_delivery_is_caught",
+      "examples/toy_agent/tests/test_counterexamples.py::test_lawful_null_misreported_as_failure_is_caught"
+    ]
+  }
+}

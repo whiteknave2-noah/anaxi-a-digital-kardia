@@ -1,0 +1,12 @@
+{
+  "blocked_items_version": 1,
+  "items": [
+    {
+      "capability_id": "01_ordinary_waking_continuity_temporal_grounding",
+      "scenario": "exact_production_launcher_path",
+      "status": "LIVE_REQUIRED",
+      "reason": "Deployment of the verified tree to production master is done and later repairs are committed on master. Exact-launcher execution against the production model runtime and production state is live and requires the owner to restart ANAXI through the ordinary launcher (offline readiness: test_launcher_script_execution.py, real bash execution with a recording interpreter).",
+      "needed_to_proceed": "Owner restarts ANAXI through the ordinary launcher and performs the live checkout."
+    }
+  ]
+}

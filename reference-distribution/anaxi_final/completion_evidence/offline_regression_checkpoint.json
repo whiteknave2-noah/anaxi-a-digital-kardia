@@ -1,0 +1,59 @@
+{
+ "checkpoint_version": 2,
+ "code_head_tested": "1e1e8476ef564e53628f808f75760a18d09e9338",
+ "command": "python -m pytest -q -p no:cacheprovider -rs   (run from anaxi_final/)",
+ "custom_runner_suites_executed_via_pytest_wrapper": {
+  "pinned_check_total": 857,
+  "registry": "anaxi_final/completion_evidence/custom_runner_suites.json",
+  "suite_count": 24
+ },
+ "environment": {
+  "cwd": "production checkout; tests write no runtime logs into the repository and assert non-mutation of pre-existing runtime logs instead of their absence",
+  "hf_hub_offline": true,
+  "interpreter": "production .venv-macos (Python 3.14), all 85 pinned requirements verified by test_runtime_dependencies.py",
+  "network": "non-loopback connections blocked in every test process (network_guard)",
+  "platform": "macOS",
+  "transformers_offline": true
+ },
+ "repaired_modules": [
+  "test_llama_interface.py"
+ ],
+ "result": {
+  "duration_seconds": 208.2,
+  "failed": 0,
+  "passed": 2076,
+  "skipped": 29,
+  "subtests_passed": 17
+ },
+ "skips": "3 Windows-only launcher tests plus 26 opt-in real-model harness tests (ANAXI_REAL_MODEL_HARNESS=1; run separately)",
+ "status": "PASS_WITH_DECLARED_UNRUNNABLE_HISTORICAL_MODULES",
+ "tested_at": "2026-09-20",
+ "truthfulness_notice": "This checkpoint does not establish the 8 declared unrunnable historical modules, deployment of this branch to production, the exact deployed launcher path, or any live-only requirement. Owner-scenario status comes only from scenario bindings, not from this aggregate.",
+ "unrunnable_test_modules_declared": [
+  "test_api1_control_plane.py",
+  "test_api2_control_plane.py",
+  "test_api2_lr1_s1.py",
+  "test_compatibility_harness.py",
+  "test_decision_path_core_parity.py",
+  "test_hir1_registration.py",
+  "test_judge_rubric.py",
+  "test_substrate_evaluation.py"
+ ],
+ "wrapper_gated_modules": [
+  "test_relationship_normalization.py",
+  "test_sleep_v1_acceptance.py"
+ ],
+ "production_deployment": {
+  "deployed_head_at_time_of_live_failure": "37aea6fe841425d6a7f41461db71e7a70c3bad14",
+  "note": "The production checkout is this branch; the running instance at the live failure (H 01M2VH12GHV3R2WJKMJQ9CASAC, 2026-09-18 17:28 PDT) predated e775f3e and every later commit."
+ },
+ "tests_aligned_to_cost_probe_calls_and_runtime_logs": [
+  "test_direction_integrity_repair.py",
+  "test_network_guard.py",
+  "test_owc5_s2_integration.py",
+  "test_roaming_waking_capacity.py",
+  "test_sleep_read_time_provenance.py",
+  "test_workspace_direction.py"
+ ],
+ "runtime_state_non_mutation": "size and mtime of signal_observations.jsonl, native_turn_staging.jsonl, logs/ui_turn_diagnostics.jsonl and conversation_direction_trace.jsonl were identical before and after the full regression (contents never read)."
+}

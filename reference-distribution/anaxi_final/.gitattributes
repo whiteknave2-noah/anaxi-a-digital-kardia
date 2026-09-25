@@ -1,0 +1,7 @@
+# Windows->macOS migration prep (2026-09-06): shell scripts and macOS
+# launchers must keep LF line endings regardless of the checkout
+# platform's own autocrlf setting -- a CRLF-mangled shebang line can
+# fail to execute on macOS/Linux even though the file looks identical
+# on Windows.
+*.sh text eol=lf
+*.command text eol=lf

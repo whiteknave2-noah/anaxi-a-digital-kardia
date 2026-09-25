@@ -1,0 +1,11 @@
+claim-harness
+Copyright 2026 The claim-harness contributors
+
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+Provenance: the claim-accounting pattern (claim inventory -> evidence bindings
+-> executed results -> claim ledger -> truthful disposition) and the portable
+questions in QUESTIONS.md were extracted conceptually from the reference test
+harness of the ANAXI persistent-agent research project. This package is an
+independent, newly written implementation; it contains no source code, data,
+tests or history from that project, and does not depend on it at runtime.

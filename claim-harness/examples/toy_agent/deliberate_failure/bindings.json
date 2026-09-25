@@ -1,0 +1,12 @@
+{
+  "schema": "claim-harness.bindings/v0",
+  "bindings": {
+    "DIGEST-1": [
+      "examples/toy_agent/deliberate_failure/test_digest.py::test_digest_is_recorded_in_history",
+      "examples/toy_agent/deliberate_failure/test_digest.py::test_digest_reaches_the_subject"
+    ],
+    "AMBIGUOUS-1": [
+      "examples/toy_agent/tests/test_side_effects.py::test_ambiguous_send_is_not_resent"
+    ]
+  }
+}

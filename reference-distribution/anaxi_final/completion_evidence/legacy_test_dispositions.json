@@ -1,0 +1,67 @@
+{
+  "disposition_version": 1,
+  "purpose": "Explicit, machine-checked disposition of every test module excluded from the broad pytest collection. A module may not be silently excluded: it is either gated through a wrapper, or it is unrunnable offline for a named, re-verified reason. test_legacy_dispositions.py re-checks each entry on every run, so restoring a missing dependency (or a new failure mode) makes the disposition visibly stale.",
+  "modules": {
+    "test_llama_interface.py": {
+      "disposition": "REPAIRED_COLLECTION_SAFE",
+      "note": "Rewritten with ast-based structural checks; no import of llama_gui, no model calls. Runs in the ordinary collection."
+    },
+    "test_relationship_normalization.py": {
+      "disposition": "GATED_BY_WRAPPER",
+      "expected_summary": "5/5 pass",
+      "gate": "completion_evidence/custom_runner_suites.json"
+    },
+    "test_sleep_v1_acceptance.py": {
+      "disposition": "GATED_BY_WRAPPER",
+      "expected_summary": "35/35 pass",
+      "gate": "completion_evidence/custom_runner_suites.json"
+    },
+    "test_api1_control_plane.py": {
+      "disposition": "UNRUNNABLE_FROZEN_PROTOTYPE_ABSENT",
+      "missing_dependency": "aab1",
+      "expected_signature": "No module named 'aab1'",
+      "scope_note": "Historical API1 acceptance suite. Its oracle (the AAB1 authentication prototype in the untracked scratchpad) is not part of the repository. The API1 control plane is disabled by default and is not imported by ordinary waking. Ordinary human-authority behaviour is exercised by test_human_session_binding.py and test_human_waking_authority_end_to_end.py."
+    },
+    "test_api2_lr1_s1.py": {
+      "disposition": "UNRUNNABLE_FROZEN_PROTOTYPE_ABSENT",
+      "missing_dependency": "aab1",
+      "expected_signature": "No module named 'aab1'",
+      "scope_note": "Historical API2 LR1 suite; same absent AAB1 oracle. API2 is disabled by default and outside ordinary waking."
+    },
+    "test_hir1_registration.py": {
+      "disposition": "UNRUNNABLE_FROZEN_PROTOTYPE_ABSENT",
+      "missing_dependency": "aab1",
+      "expected_signature": "No module named 'aab1'",
+      "scope_note": "Historical HIR1 registration acceptance suite; same absent AAB1 oracle and a live-database copy. Bound-human authority on the ordinary route is covered by test_human_session_binding.py and test_human_waking_authority_end_to_end.py."
+    },
+    "test_api2_control_plane.py": {
+      "disposition": "UNRUNNABLE_LIVE_DATABASE_COPY_REQUIRED",
+      "expected_signature": "FileNotFoundError",
+      "scope_note": "Requires a copy of the live migrated canonical provenance database and a dated live-DB backup file. Canonical production history must not be copied or mutated to satisfy a test; API2 is disabled by default."
+    },
+    "test_compatibility_harness.py": {
+      "disposition": "UNRUNNABLE_FROZEN_PACKAGES_ABSENT",
+      "missing_dependency": "substrate_compatibility_packages",
+      "expected_signature": "No module named 'substrate_compatibility_packages'",
+      "scope_note": "Substrate-comparison harness over frozen evaluation packages that are not repository content. Not an owner capability."
+    },
+    "test_judge_rubric.py": {
+      "disposition": "UNRUNNABLE_FROZEN_PACKAGES_ABSENT",
+      "missing_dependency": "substrate_compatibility_packages",
+      "expected_signature": "No module named 'substrate_compatibility_packages'",
+      "scope_note": "Substrate-evaluation rubric over the same absent frozen packages. Not an owner capability."
+    },
+    "test_substrate_evaluation.py": {
+      "disposition": "UNRUNNABLE_FROZEN_PACKAGES_ABSENT",
+      "missing_dependency": "substrate_compatibility_packages",
+      "expected_signature": "No module named 'substrate_compatibility_packages'",
+      "scope_note": "Substrate-evaluation runner over the same absent frozen packages. Not an owner capability."
+    },
+    "test_decision_path_core_parity.py": {
+      "disposition": "UNRUNNABLE_FROZEN_PROTOTYPE_ABSENT",
+      "missing_dependency": "hdi2",
+      "expected_signature": "No module named 'hdi2'",
+      "scope_note": "Parity test between decision_path_core.py and the frozen scratchpad/hdi2 prototype it was promoted from. The prototype is not repository content, so the historical parity claim cannot be re-established here; decision_path_core itself is exercised by ordinary tests."
+    }
+  }
+}

@@ -1,0 +1,662 @@
+{
+  "inventory_version": 1,
+  "owner_directive_sha256": "9db995ba5ac28710739cc344e209cfaf1ebc592b85e3e817962733302a213318",
+  "evidence_law_addendum_sha256": "c2ace753b115bbe4b938ec620e10e5552c9039137150d70d6fcb040d1c88eea1",
+  "capabilities": [
+    {
+      "id": "01_ordinary_waking_continuity_temporal_grounding",
+      "scenarios": [
+        "ordinary_h_to_x",
+        "canonical_continuity",
+        "truthful_recent_dialogue",
+        "present_oriented_temporal_grounding",
+        "waking_completion_boundary",
+        "no_fabricated_continuity",
+        "optional_accumulated_state_cannot_veto_waking",
+        "realistic_history_context_budgeting",
+        "failure_containment",
+        "exact_production_launcher_path",
+        "restart_behavior",
+        "persistence",
+        "model_runtime_integration"
+      ],
+      "live_only_requirements": [
+        "live_ordinary_waking_and_continuity"
+      ]
+    },
+    {
+      "id": "02_conversation_direction",
+      "scenarios": [
+        "alex_leads",
+        "subject_leads",
+        "open_shared_state",
+        "lawful_transitions",
+        "persistence",
+        "ui_reflection",
+        "model_visible_state",
+        "workspace_interaction",
+        "null_refusal_defer_interaction",
+        "no_false_authority_widening",
+        "lawful_combinations_no_false_workspace_conflict",
+        "invalid_combinations_fail_closed"
+      ],
+      "live_only_requirements": [
+        "live_direction_transitions"
+      ]
+    },
+    {
+      "id": "03_public_workspace_resource_ingest",
+      "scenarios": [
+        "human_source_to_production_path",
+        "deterministic_ingest_sync",
+        "source_preservation",
+        "idempotence",
+        "provenance",
+        "safe_reconcile",
+        "no_hidden_second_root",
+        "all_classified_resources_represented",
+        "pagination_continuation",
+        "nested_navigation",
+        "no_collection_amputation_from_bounds"
+      ],
+      "live_only_requirements": []
+    },
+    {
+      "id": "04_library_books_documents",
+      "scenarios": [
+        "complete_collection_reachability",
+        "text_documents",
+        "long_document_continuation",
+        "pdf_text",
+        "scanned_image_only_pdf",
+        "page_rendering_or_lawful_equivalent",
+        "substantive_not_metadata_only",
+        "source_provenance_preservation",
+        "ordinary_subject_selection_and_reading"
+      ],
+      "live_only_requirements": [
+        "live_library_text",
+        "live_scanned_pdf",
+        "live_subject_selection_and_reading"
+      ]
+    },
+    {
+      "id": "05_photographs_vision",
+      "scenarios": [
+        "every_intended_photo_discoverable",
+        "source_originals_preserved",
+        "bounded_derivatives",
+        "orientation",
+        "common_formats",
+        "gif_bounded_static_handling",
+        "pixel_bearing_vision_path",
+        "bounds_do_not_exclude_collection",
+        "subject_originated_viewing"
+      ],
+      "live_only_requirements": [
+        "live_subject_originated_photo_view"
+      ]
+    },
+    {
+      "id": "06_music_audio_resource_access",
+      "scenarios": [
+        "complete_music_collection_discoverable",
+        "pagination",
+        "mp3",
+        "flac",
+        "wav",
+        "wma_where_reasonable",
+        "bounded_transcode_or_derivative",
+        "long_track_segment_navigation",
+        "late_end_window_decoding",
+        "source_originals_untouched",
+        "provenance",
+        "truthful_mechanical_audio_capability",
+        "semantic_hearing_not_established_without_acoustic_proof",
+        "whole_source_observation_bounded_measurement"
+      ],
+      "live_only_requirements": [
+        "live_subject_originated_music_access_with_truthful_scope"
+      ]
+    },
+    {
+      "id": "07_journal",
+      "scenarios": [
+        "write",
+        "append",
+        "list",
+        "read",
+        "authorship",
+        "provenance",
+        "persistence",
+        "restart_replay",
+        "idempotence",
+        "ordinary_subject_originated_use",
+        "legacy_markdown_not_blindly_merged"
+      ],
+      "live_only_requirements": [
+        "live_subject_originated_journal_use"
+      ]
+    },
+    {
+      "id": "08_private_space",
+      "scenarios": [
+        "exclusion_boundaries",
+        "principal_isolation",
+        "no_accidental_retrieval",
+        "no_sync_sweep",
+        "no_logging_leakage",
+        "no_sleep_web_workspace_cross_contamination",
+        "production_private_space_not_inspected"
+      ],
+      "live_only_requirements": [
+        "live_private_boundary_without_inspection"
+      ]
+    },
+    {
+      "id": "09_family_shared_interaction",
+      "scenarios": [
+        "speaker_attribution",
+        "principal_identity",
+        "family_shared_scope",
+        "private_shared_isolation",
+        "no_cross_principal_leakage",
+        "membership_does_not_widen_authority",
+        "ordinary_production_integration"
+      ],
+      "live_only_requirements": [
+        "live_family_shared_interaction"
+      ]
+    },
+    {
+      "id": "10_read_only_external_information",
+      "scenarios": [
+        "search",
+        "fetch",
+        "subject_originated_invocation",
+        "ordinary_production_discoverability",
+        "substantive_results",
+        "source_provenance",
+        "request_result_binding",
+        "continuation",
+        "hostile_content_no_authority",
+        "read_does_not_imply_action",
+        "network_failures_honest"
+      ],
+      "live_only_requirements": [
+        "live_search",
+        "live_fetch"
+      ]
+    },
+    {
+      "id": "11_caret_discord",
+      "scenarios": [
+        "authorized_destination_discovery",
+        "inbound_delivery",
+        "subject_originated_outbound",
+        "exact_message_text",
+        "destination_authority",
+        "revocation_recheck",
+        "durability",
+        "confirmation_or_uncertainty",
+        "retry_safety",
+        "no_duplicate_unsafe_resend",
+        "self_echo_suppression",
+        "ordinary_production_path",
+        "no_surprise_engineering_message"
+      ],
+      "live_only_requirements": [
+        "live_caret_inbound",
+        "live_caret_outbound_with_alex"
+      ]
+    },
+    {
+      "id": "12_reversible_operative_directive",
+      "scenarios": [
+        "set",
+        "persistence_and_effect",
+        "replace",
+        "withdraw",
+        "null_no_directive",
+        "subject_authors_content",
+        "correct_scope",
+        "below_constitutional_authority",
+        "no_identity_promotion",
+        "no_permission_grant",
+        "no_repetition_strengthening",
+        "ordinary_production_integration",
+        "alex_does_not_author_for_subject"
+      ],
+      "live_only_requirements": [
+        "live_directive_set",
+        "live_directive_persistence_effect",
+        "live_directive_replace",
+        "live_directive_withdraw"
+      ]
+    },
+    {
+      "id": "13_sleep_rem",
+      "scenarios": [
+        "subject_originated_sleep_request",
+        "knock_timing",
+        "transition",
+        "selection",
+        "transformation",
+        "consolidation",
+        "atomic_completion",
+        "watermark",
+        "retrieval_rebuild",
+        "provenance",
+        "tentative_inference_distinctions",
+        "later_waking",
+        "continuity_across_cycle",
+        "no_fabricated_subjectivity",
+        "no_host_authored_meaning",
+        "no_duplicate_events",
+        "human_absence_not_sleep",
+        "background_inactivity_not_sleep",
+        "ordinary_owner_control_surface",
+        "budget_production_sized_exchanges_admitted",
+        "budget_true_overflow_fails_closed_no_fabricated_sleep",
+        "budget_full_day_completes_with_bounded_probing",
+        "generation_bounded_and_truncation_never_parsed",
+        "production_entrypoint_opts_into_measured_admission",
+        "whole_cycle_atomic_contiguous_windows",
+        "sleep_derived_material_reaches_next_waking_at_production_sizes"
+      ],
+      "live_only_requirements": [
+        "genuine_live_subject_chosen_sleep_cycle",
+        "live_later_waking_after_cycle"
+      ]
+    },
+    {
+      "id": "14_public_space_background_activity",
+      "scenarios": [
+        "lawful_occasions",
+        "structured_subject_originated_public_actions",
+        "wait_null",
+        "stop_resume",
+        "ordinary_capability_invocation",
+        "host_occasion_distinct_from_subject_act",
+        "periodic_wait_not_autonomous_choice",
+        "no_hidden_heartbeat_meaning"
+      ],
+      "live_only_requirements": [
+        "live_public_space_background_pathway"
+      ]
+    },
+    {
+      "id": "15_recovery_wtr0",
+      "scenarios": [
+        "durable_prospective_failure_evidence",
+        "authoritative_failure_classification",
+        "eligibility",
+        "retry_safe_determination",
+        "canonical_same_h_reuse",
+        "no_duplicate_h",
+        "answered_h_rejected",
+        "cold_reset",
+        "authenticated_substantive_projectable_x",
+        "one_bounded_retry",
+        "stop_after_terminal_failure",
+        "no_duplicate_external_effects",
+        "restart_persistence",
+        "production_shaped_failure_classes",
+        "owner_ui_recovery_surface",
+        "specific_h_01M2V4ZPX0JM2Q0JA0S1WZW11R_assessed_without_fabrication"
+      ],
+      "live_only_requirements": [
+        "live_safe_recovery_checkout_where_lawful"
+      ]
+    },
+    {
+      "id": "16_null_refusal_defer_no_action",
+      "scenarios": [
+        "decline",
+        "delay",
+        "uncertainty",
+        "no_preference",
+        "wait",
+        "null",
+        "refusal",
+        "no_action",
+        "availability_never_obligation"
+      ],
+      "live_only_requirements": [
+        "live_null_refusal_defer_no_action"
+      ]
+    },
+    {
+      "id": "17_provenance_canonical_history_event_identity",
+      "scenarios": [
+        "authoritative_event_identity",
+        "h_x_linkage",
+        "provenance_fields",
+        "occurrence_vs_discovery",
+        "delivered_vs_selected_vs_acted",
+        "retries",
+        "side_effects",
+        "receipts",
+        "persistence",
+        "source_identity",
+        "no_fabricated_history",
+        "host_constructs_authoritative_identity"
+      ],
+      "live_only_requirements": []
+    },
+    {
+      "id": "18_kardia",
+      "scenarios": [
+        "production_integration",
+        "provenance",
+        "current_values",
+        "authority_boundaries",
+        "unrelated_subsystems_do_not_rewrite",
+        "no_host_personality_governor",
+        "no_identity_conflation",
+        "inference_provider_not_kardia_authority",
+        "persistence_restart",
+        "constitutional_meaning_unchanged"
+      ],
+      "live_only_requirements": []
+    },
+    {
+      "id": "19_memory_retrieval_sleep_continuity",
+      "scenarios": [
+        "canonical_history_retrieval",
+        "derived_inference_labeling",
+        "source_identifiers",
+        "tentative_state",
+        "repeated_retrieval_no_promotion",
+        "contradictions_coexist",
+        "truncation_preserves_framing_or_drops_whole",
+        "no_hidden_canonization",
+        "provenance_survives_delivery",
+        "singleton_correction_survives_repetition"
+      ],
+      "live_only_requirements": []
+    },
+    {
+      "id": "20_public_private_shared_authority",
+      "scenarios": [
+        "principal_identity",
+        "authorization",
+        "visibility_scope",
+        "cross_surface_leakage",
+        "no_permission_widening",
+        "subject_vs_host_authority",
+        "alex_vs_subject_authority",
+        "external_action_boundaries",
+        "read_write_separation"
+      ],
+      "live_only_requirements": []
+    },
+    {
+      "id": "21_side_effects_idempotence",
+      "scenarios": [
+        "journal_writes",
+        "discord_sends",
+        "external_information",
+        "resource_ingestion",
+        "recovery",
+        "sleep_completion",
+        "standing_directives",
+        "workspace_actions",
+        "other_state_changes",
+        "no_duplicate_side_effects_on_retry",
+        "durable_identity",
+        "safe_restart",
+        "accurate_confirmation"
+      ],
+      "live_only_requirements": []
+    },
+    {
+      "id": "22_launcher_runtime_dependencies",
+      "scenarios": [
+        "launch_anaxi_command",
+        "dependency_availability",
+        "environment",
+        "pdf_renderer",
+        "audio_stack",
+        "resource_sync",
+        "runtime_startup",
+        "clean_shutdown",
+        "restart",
+        "production_path",
+        "no_hidden_developer_bootstrap",
+        "offline_embedding_artifact_preflight"
+      ],
+      "live_only_requirements": [
+        "live_launcher_startup",
+        "live_clean_shutdown",
+        "live_launcher_restart"
+      ]
+    },
+    {
+      "id": "23_ui_host_delivery",
+      "scenarios": [
+        "canonical_x_appears",
+        "contained_failure_legible",
+        "controls_reflect_authoritative_state",
+        "no_gui_only_truncation",
+        "no_hidden_inaccessible_result",
+        "restart_reconnect_consistency",
+        "sleep_owner_control",
+        "waking_recovery_owner_control"
+      ],
+      "live_only_requirements": [
+        "live_ui_delivery_and_reconnect"
+      ]
+    },
+    {
+      "id": "24_architecture_wide_invariants",
+      "scenarios": [
+        "subject_not_checkpoint_model_server",
+        "host_owns_facts_provenance_permissions_tools_runtime",
+        "subject_supplies_interpretation_preference_meaning",
+        "pathways_not_organs",
+        "retrieval_host_side_meaning_subject_side",
+        "permission_not_obligation",
+        "capability_not_evidence_of_need",
+        "delivered_not_acted_upon",
+        "observability_not_autobiographical_memory",
+        "unknown_false_absent_failed_not_established_distinct",
+        "correlated_not_independent_corroboration",
+        "no_persistent_hidden_monologue_or_chain_of_thought",
+        "no_host_personality_governor",
+        "no_hidden_critic",
+        "no_assistant_prior_suppression",
+        "no_host_emotion_vector",
+        "no_fabricated_continuity_history",
+        "no_silent_current_h_rewrite",
+        "external_read_does_not_widen_action",
+        "private_space_absolute",
+        "self_report_not_telemetry",
+        "alex_absence_not_sleep",
+        "represented_surface_fully_dispositioned"
+      ],
+      "live_only_requirements": []
+    },
+    {
+      "id": "25_cross_component_integration",
+      "scenarios": [
+        "direction_x_workspace",
+        "workspace_x_waking",
+        "workspace_x_provenance",
+        "resource_ingest_x_workspace",
+        "vision_x_resource_selection",
+        "audio_x_resource_selection",
+        "journal_x_principal_authorship",
+        "family_shared_x_authority",
+        "external_info_x_waking",
+        "caret_x_authority_retry",
+        "directive_x_waking_context",
+        "sleep_x_memory_provenance",
+        "recovery_x_side_effects",
+        "recovery_x_ui",
+        "null_refusal_x_each_capability",
+        "restart_x_durable_state"
+      ],
+      "live_only_requirements": [
+        "live_cross_surface_checkout"
+      ]
+    },
+    {
+      "id": "26_workspace_organization_overlay",
+      "source": "represented_production_surface: workspace_direction.LIVE_ALLOWED_SURFACE['organization'] (roaming/explicit WSP1)",
+      "scenarios": [
+        "containers_lifecycle",
+        "references_lifecycle",
+        "source_originals_never_mutated",
+        "invalid_requests_fail_closed",
+        "every_attempt_recorded_without_content_leak",
+        "reachable_through_ordinary_typed_dispatch",
+        "no_model_or_network_dependency"
+      ],
+      "live_only_requirements": [
+        "live_subject_originated_organization_use"
+      ]
+    },
+    {
+      "id": "27_boundary_inspection",
+      "source": "represented_production_surface: conversation_direction boundary_inquiry_request + boundary_inspector",
+      "scenarios": [
+        "closed_query_vocabulary",
+        "capability_boundaries_governed",
+        "host_report_provenance_and_binding",
+        "report_reaches_subject_only_if_composed",
+        "private_space_not_disclosed",
+        "unknown_absent_failed_not_established_stay_distinct",
+        "hostframed_bounded_delivery"
+      ],
+      "live_only_requirements": [
+        "live_boundary_inquiry"
+      ]
+    },
+    {
+      "id": "28_signal_gated_artifact_decision",
+      "source": "represented_production_surface: artifact_judgment path (budget_compliance_registry ARTIFACT_JUDGMENT)",
+      "scenarios": [
+        "canonical_response_persisted_before_artifact_pass",
+        "signal_gate_integration",
+        "role_unchanged_and_not_an_output_governor"
+      ],
+      "live_only_requirements": [
+        "live_artifact_decision"
+      ]
+    },
+    {
+      "id": "29_subject_private_space_use",
+      "source": "represented_production_surface: workspace_private / roaming private_act",
+      "scenarios": [
+        "private_root_confinement",
+        "subject_private_operations_work",
+        "no_leak_to_other_surfaces",
+        "observation_process_local_never_durable",
+        "engineering_tooling_never_inspects_private_space"
+      ],
+      "live_only_requirements": [
+        "live_private_space_use_without_inspection"
+      ]
+    },
+    {
+      "id": "30_delivery_to_subject_at_production_sizes",
+      "source": "cross_cutting: every host result/context must reach the subject at production prompt sizes",
+      "scenarios": [
+        "ordinary_recent_dialogue_survives",
+        "workspace_library_read_window_and_continuation",
+        "workspace_collection_listing_walkable",
+        "journal_progressive_read",
+        "photograph_view_at_production_sizes",
+        "production_shaped_waking_completes_with_canonical_x",
+        "long_message_recovers_by_measurement",
+        "true_overflow_still_fails_closed_without_action",
+        "fetched_page_reaches_subject_with_continuation",
+        "caret_inbound_fifo_delivery",
+        "roaming_observation_window",
+        "operative_directive_reaches_the_prompt",
+        "no_composed_but_undelivered_kind",
+        "measurement_never_lowers_a_deliberate_cost",
+        "every_real_public_resource_reaches_subject"
+      ],
+      "live_only_requirements": [
+        "live_result_delivery_checkout"
+      ]
+    },
+    {
+      "id": "31_canonical_person_identity_relational_provenance",
+      "source": "owner_final_completion_directive_2026-09-23: section 12 (Step 1)",
+      "scenarios": [
+        "identity_independent_of_authority",
+        "owner_only_identity_binding",
+        "ambiguous_identity_fails_closed",
+        "framed_utterance_retrieval_never_host_fact",
+        "later_identity_recontextualizes_without_rewrite",
+        "no_relationship_fields_exist",
+        "clark_reflection_stays_clarks"
+      ],
+      "live_only_requirements": [
+        "live_identity_recontextualization_checkout"
+      ]
+    },
+    {
+      "id": "32_external_correspondence_scoped_continuity",
+      "source": "owner_final_completion_directive_2026-09-23: sections 12-13 (Step 2)",
+      "scenarios": [
+        "unknown_source_converses_on_owner_opened_surface",
+        "closed_surface_holds_unknown_source",
+        "opening_is_prospective",
+        "owner_block_is_safety_not_meaning",
+        "clark_controls_standing_db_enforced",
+        "standing_is_prospective_continuity_only",
+        "no_standing_no_continuity",
+        "correspondents_isolated_from_principals_and_each_other",
+        "reply_follow_up_initiation_distinct",
+        "initiation_requires_standing_and_surface_policy",
+        "revocation_ends_prospective_initiation",
+        "standing_never_widens_authority",
+        "general_not_person_or_channel_specific",
+        "restart_stable"
+      ],
+      "live_only_requirements": [
+        "live_second_correspondent_checkout"
+      ]
+    },
+    {
+      "id": "33_correspondence_lifecycle_silence_attribution",
+      "source": "owner_final_completion_directive_2026-09-23: sections 4-5, 20",
+      "scenarios": [
+        "only_typed_null_is_clarks_silence",
+        "retry_exhaustion_durable_across_restart",
+        "owner_close_reopen",
+        "stranded_authored_send_completes_once",
+        "clark_withdrawal_is_second_authored_act",
+        "owner_closure_is_owner_act",
+        "host_resume_exhaustion_not_withdrawal",
+        "delivery_not_reception"
+      ],
+      "live_only_requirements": [
+        "live_lifecycle_checkout"
+      ]
+    },
+    {
+      "id": "34_collaborative_obsidian_workspace",
+      "source": "owner_final_completion_directive_2026-09-23: section 16",
+      "scenarios": [
+        "clark_reaches_vault_through_ordinary_interface",
+        "list_and_windowed_read_with_provenance",
+        "authorship_decided_by_provenance_not_location",
+        "clark_creates_note_create_only_never_overwrites",
+        "exact_replay_creates_nothing_new",
+        "private_space_traversal_and_internal_store_refused",
+        "owner_private_only_never_roaming",
+        "unavailable_vault_is_absent_not_empty",
+        "artifacts_carry_canonical_identity_and_never_overwrite",
+        "tests_and_probes_cannot_reach_the_real_vault"
+      ],
+      "live_only_requirements": [
+        "live_vault_checkout"
+      ]
+    }
+  ]
+}

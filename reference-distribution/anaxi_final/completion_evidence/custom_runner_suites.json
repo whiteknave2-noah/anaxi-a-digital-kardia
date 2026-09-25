@@ -1,0 +1,78 @@
+{
+  "registry_version": 1,
+  "purpose": "Custom-runner test suites (python <file>) that pytest collects ZERO tests from. Before this registry they were silently absent from the broad regression. Each is run by test_custom_runner_suites.py, must exit 0, and must print an N/N summary with N equal to the pinned expected_total (a shrinking suite fails).",
+  "suites": {
+    "test_a1_claude_fail_closed.py": {
+      "expected_total": 9
+    },
+    "test_bounded_clause_integration.py": {
+      "expected_total": 25
+    },
+    "test_bounded_hippocampus_integration.py": {
+      "expected_total": 103
+    },
+    "test_clark_journal.py": {
+      "expected_total": 24
+    },
+    "test_free_prose_matcher.py": {
+      "expected_total": 38
+    },
+    "test_gemma_substrate_switch.py": {
+      "expected_total": 22
+    },
+    "test_hippocampus_retrieval.py": {
+      "expected_total": 50
+    },
+    "test_hippocampus_store.py": {
+      "expected_total": 69
+    },
+    "test_human_waking_authority_end_to_end.py": {
+      "expected_total": 26
+    },
+    "test_native_provenance_integration.py": {
+      "expected_total": 88
+    },
+    "test_native_turn_staging_hardening.py": {
+      "expected_total": 21
+    },
+    "test_native_waking_turn_end_to_end.py": {
+      "expected_total": 12
+    },
+    "test_provenance_schema.py": {
+      "expected_total": 93
+    },
+    "test_q05_canonical_before_artifact_ordering.py": {
+      "expected_total": 12
+    },
+    "test_relationship_normalization.py": {
+      "expected_total": 5
+    },
+    "test_session_attribution_s1.py": {
+      "expected_total": 19
+    },
+    "test_signal_gate_integration.py": {
+      "expected_total": 15
+    },
+    "test_sleep_cycle.py": {
+      "expected_total": 36
+    },
+    "test_sleep_landing.py": {
+      "expected_total": 20
+    },
+    "test_sleep_selection.py": {
+      "expected_total": 38
+    },
+    "test_sleep_transformation.py": {
+      "expected_total": 29
+    },
+    "test_sleep_v1_acceptance.py": {
+      "expected_total": 35
+    },
+    "test_standing_hippocampus_audit.py": {
+      "expected_total": 36
+    },
+    "test_standing_provenance_audit.py": {
+      "expected_total": 38
+    }
+  }
+}

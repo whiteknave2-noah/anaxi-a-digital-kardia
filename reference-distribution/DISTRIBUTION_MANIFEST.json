@@ -1,0 +1,984 @@
+{
+ "schema": "anaxi-distribution-a-manifest/1",
+ "source_commit": "4e950d069885e0ec666244edd9d9d86f8d8640a1",
+ "a1_packaging_commit": "2d06d79fadd4ae0ddaf262b981284fd9999970db",
+ "classes": {
+  "REQUIRED_TRANSFORM": "Required by the reference distribution; exported as the deterministic a2_rules.json transform of its pinned git blob, preserving the tested relationship.",
+  "REQUIRED_REGENERATED_EVIDENCE": "Required evidence regenerated for the public package from synthetic/public inputs (public_path); the production artifact is never published.",
+  "EXCLUDED_BY_DESIGN": "Not required by the reference distribution; its absence leaves no reproducible claim unbacked (why_excluded)."
+ },
+ "synthetic_identities": {
+  "note": "Role labels only; the private values are never recorded.",
+  "OWNER": "Alex",
+  "FAMILY_MEMBER_A": "Blair",
+  "FAMILY_MEMBER_B": "Dominique",
+  "FAMILY_MEMBER_C": "Kit",
+  "FAMILY_MEMBER_D": "Remy",
+  "CORRESPONDENT_A": "Cole",
+  "OWNER_DISCORD_USERNAME": "synthuser",
+  "OWNER_DISCORD_AUTHOR_ID": "700000000000000101"
+ },
+ "generated_evidence": [
+  "anaxi_final/completion_evidence/synthetic_public_resources.json"
+ ],
+ "generated_evidence_note": "synthetic_public_resources.json replaces the A1 EXCLUDED_BY_DESIGN production public_resources.json as artifact evidence; the production file stays excluded.",
+ "resolution": {
+  "anaxi_final/ANAXI_IMPLEMENTATION_CONTRACT.md": {
+   "a1_class": "DEFERRED_OWNER_REVIEW",
+   "a2_class": "EXCLUDED_BY_DESIGN",
+   "why_excluded": "owner decision 6 (A2): narrative/spec documents are excluded; none is read by code, tests or the bindings on the reproducibility path"
+  },
+  "anaxi_final/CANONICAL_PERSON_IDENTITY.md": {
+   "a1_class": "DEFERRED_OWNER_REVIEW",
+   "a2_class": "EXCLUDED_BY_DESIGN",
+   "why_excluded": "owner decision 6 (A2): narrative/spec documents are excluded; none is read by code, tests or the bindings on the reproducibility path"
+  },
+  "anaxi_final/CARET_PRIMARY_CORRESPONDENCE.md": {
+   "a1_class": "DEFERRED_OWNER_REVIEW",
+   "a2_class": "EXCLUDED_BY_DESIGN",
+   "why_excluded": "owner decision 6 (A2): narrative/spec documents are excluded; none is read by code, tests or the bindings on the reproducibility path"
+  },
+  "anaxi_final/DESIGN_NOTE_identity_provenance_schema.md": {
+   "a1_class": "DEFERRED_OWNER_REVIEW",
+   "a2_class": "EXCLUDED_BY_DESIGN",
+   "why_excluded": "owner decision 6 (A2): narrative/spec documents are excluded; none is read by code, tests or the bindings on the reproducibility path"
+  },
+  "anaxi_final/KNOWN_CONSTITUTIONAL_QUESTIONS.md": {
+   "a1_class": "DEFERRED_OWNER_REVIEW",
+   "a2_class": "EXCLUDED_BY_DESIGN",
+   "why_excluded": "owner decision 6 (A2): narrative/spec documents are excluded; none is read by code, tests or the bindings on the reproducibility path"
+  },
+  "anaxi_final/OPERATOR_RECOVERY_AND_AUDIT_RUNBOOK.md": {
+   "a1_class": "DEFERRED_OWNER_REVIEW",
+   "a2_class": "EXCLUDED_BY_DESIGN",
+   "why_excluded": "owner decision 6 (A2): narrative/spec documents are excluded; none is read by code, tests or the bindings on the reproducibility path"
+  },
+  "anaxi_final/bootstrap_macos.sh": {
+   "a1_class": "PENDING_SYNTHETIC_REPLACEMENT",
+   "a2_class": "REQUIRED_TRANSFORM",
+   "why_required": "macOS bootstrap (referenced by embedding_model.py and the launcher tests)",
+   "sensitive_categories": [
+    "owner Windows profile path in a printed note"
+   ],
+   "value_kind": "presentation_only (text of a printed note)",
+   "replacement_rules": [
+    "path_windows_profile"
+   ],
+   "claim_evidence": "bash -n passes; only a printed note string changed"
+  },
+  "anaxi_final/boundary_rationale_registry.py": {
+   "a1_class": "PENDING_SYNTHETIC_REPLACEMENT",
+   "a2_class": "REQUIRED_TRANSFORM",
+   "why_required": "production module of the reference distribution",
+   "sensitive_categories": [
+    "real owner/family/correspondent name tokens"
+   ],
+   "value_kind": "behavior_bearing",
+   "replacement_rules": [
+    "name_map"
+   ],
+   "claim_evidence": "exercised by the focused runs of transformed tests that import it: "
+  },
+  "anaxi_final/canonical_person.py": {
+   "a1_class": "PENDING_SYNTHETIC_REPLACEMENT",
+   "a2_class": "REQUIRED_TRANSFORM",
+   "why_required": "production module of the reference distribution",
+   "sensitive_categories": [
+    "real owner/family/correspondent name tokens"
+   ],
+   "value_kind": "comments_or_docstrings_only",
+   "replacement_rules": [
+    "name_map"
+   ],
+   "claim_evidence": "AST with docstrings removed is identical to the source blob: execution cannot differ"
+  },
+  "anaxi_final/completion_evidence/public_resource_delivery.json": {
+   "a1_class": "PENDING_SYNTHETIC_REPLACEMENT",
+   "a2_class": "REQUIRED_REGENERATED_EVIDENCE",
+   "public_path": "anaxi_final/completion_evidence/synthetic_public_resource_delivery.json",
+   "why_required": "artifact evidence for the delivery scenarios",
+   "sensitive_categories": [
+    "production resource assay (owner host paths, owner collection)"
+   ],
+   "value_kind": "behavior_bearing (artifact record)",
+   "replacement_rules": [
+    "a2_synthetic_collection",
+    "a2_resource_evidence (unmodified public_resource_delivery_assay)"
+   ],
+   "claim_evidence": "delivery assay over the synthetic collection is COMPLETE, exact N==M per class"
+  },
+  "anaxi_final/completion_evidence/scenario_bindings.json": {
+   "a1_class": "PENDING_SYNTHETIC_REPLACEMENT",
+   "a2_class": "REQUIRED_REGENERATED_EVIDENCE",
+   "public_path": "anaxi_final/completion_evidence/scenario_bindings.json",
+   "why_required": "scenario accounting of the reference distribution",
+   "sensitive_categories": [
+    "real owner name in scenario keys",
+    "artifact claims bound to production-derived evidence"
+   ],
+   "value_kind": "behavior_bearing (scenario keys, artifact bindings)",
+   "replacement_rules": [
+    "name_map",
+    "a2_public_bindings.build"
+   ],
+   "claim_evidence": "public accounting check: inventory and public bindings validate; every artifact exact-complete (N==M) against synthetic evidence; every bound test file present; production-only scenarios omitted and reported NOT_ATTEMPTED"
+  },
+  "anaxi_final/conversation_direction.py": {
+   "a1_class": "PENDING_SYNTHETIC_REPLACEMENT",
+   "a2_class": "REQUIRED_TRANSFORM",
+   "why_required": "production module of the reference distribution",
+   "sensitive_categories": [
+    "live-message quote in a comment",
+    "real owner/family/correspondent name tokens"
+   ],
+   "value_kind": "behavior_bearing",
+   "replacement_rules": [
+    "line_01",
+    "line_02",
+    "name_map"
+   ],
+   "claim_evidence": "exercised by the focused runs of transformed tests that import it: test_collaborative_obsidian_workspace.py, test_conversation_direction.py, test_discord_correspondence_v0.py, test_general_correspondence.py, test_lawful_null_reply_choice.py, test_owc5_s2_integration.py, test_pass1_budget_bugfix_v0.py, test_shared_ordinary_expression_seam.py, test_workspace_roaming.py, test_workspace_target_discovery.py, test_wsp1_production_hard_floor.py"
+  },
+  "anaxi_final/llama_anaxi.py": {
+   "a1_class": "PENDING_SYNTHETIC_REPLACEMENT",
+   "a2_class": "REQUIRED_TRANSFORM",
+   "why_required": "production module of the reference distribution",
+   "sensitive_categories": [
+    "real owner/family/correspondent name tokens"
+   ],
+   "value_kind": "behavior_bearing",
+   "replacement_rules": [
+    "name_map"
+   ],
+   "claim_evidence": "exercised by the focused runs of transformed tests that import it: test_collaborative_obsidian_workspace.py, test_legacy_owner_private_compat.py, test_owc5_s2_integration.py, test_pass1_budget_bugfix_v0.py"
+  },
+  "anaxi_final/llama_gui.py": {
+   "a1_class": "PENDING_SYNTHETIC_REPLACEMENT",
+   "a2_class": "REQUIRED_TRANSFORM",
+   "why_required": "production module of the reference distribution",
+   "sensitive_categories": [
+    "real owner/family/correspondent name tokens"
+   ],
+   "value_kind": "comments_or_docstrings_only",
+   "replacement_rules": [
+    "name_map"
+   ],
+   "claim_evidence": "AST with docstrings removed is identical to the source blob: execution cannot differ"
+  },
+  "anaxi_final/obsidian_workspace.py": {
+   "a1_class": "PENDING_SYNTHETIC_REPLACEMENT",
+   "a2_class": "REQUIRED_TRANSFORM",
+   "why_required": "production module of the reference distribution",
+   "sensitive_categories": [
+    "real owner/family/correspondent name tokens"
+   ],
+   "value_kind": "comments_or_docstrings_only",
+   "replacement_rules": [
+    "name_map"
+   ],
+   "claim_evidence": "AST with docstrings removed is identical to the source blob: execution cannot differ"
+  },
+  "anaxi_final/owner_completion_inventory.json": {
+   "a1_class": "PENDING_SYNTHETIC_REPLACEMENT",
+   "a2_class": "REQUIRED_TRANSFORM",
+   "why_required": "owner completion inventory (defines the scenarios public accounting counts)",
+   "sensitive_categories": [
+    "real owner/family/correspondent name tokens"
+   ],
+   "value_kind": "behavior_bearing (scenario keys)",
+   "replacement_rules": [
+    "name_map"
+   ],
+   "claim_evidence": "renamed scenario keys match the public bindings and bound node ids: public accounting check reports zero validation errors"
+  },
+  "anaxi_final/sleep_decision_test_support.py": {
+   "a1_class": "PENDING_SYNTHETIC_REPLACEMENT",
+   "a2_class": "REQUIRED_TRANSFORM",
+   "why_required": "production module of the reference distribution",
+   "sensitive_categories": [
+    "real owner/family/correspondent name tokens"
+   ],
+   "value_kind": "behavior_bearing",
+   "replacement_rules": [
+    "name_map"
+   ],
+   "claim_evidence": "exercised by the focused runs of transformed tests that import it: test_shared_ordinary_expression_seam.py, test_web_waking_seam.py"
+  },
+  "anaxi_final/test_bounded_hippocampus_integration.py": {
+   "a1_class": "PENDING_SYNTHETIC_REPLACEMENT",
+   "a2_class": "REQUIRED_TRANSFORM",
+   "why_required": "custom-runner suite pinned in custom_runner_suites.json",
+   "sensitive_categories": [
+    "real owner/family/correspondent name tokens"
+   ],
+   "value_kind": "behavior_bearing",
+   "replacement_rules": [
+    "name_map"
+   ],
+   "claim_evidence": "focused run of this file in the assembled A2 tree has the same outcome as the unmodified file at the source release"
+  },
+  "anaxi_final/test_canonical_person_identity.py": {
+   "a1_class": "PENDING_SYNTHETIC_REPLACEMENT",
+   "a2_class": "REQUIRED_TRANSFORM",
+   "why_required": "bound test surface (28 node(s) in scenario bindings)",
+   "sensitive_categories": [
+    "real owner/family/correspondent name tokens"
+   ],
+   "value_kind": "behavior_bearing",
+   "replacement_rules": [
+    "name_map"
+   ],
+   "claim_evidence": "focused run of this file in the assembled A2 tree has the same outcome as the unmodified file at the source release"
+  },
+  "anaxi_final/test_capability_completion_v0.py": {
+   "a1_class": "PENDING_SYNTHETIC_REPLACEMENT",
+   "a2_class": "REQUIRED_TRANSFORM",
+   "why_required": "bound test surface (20 node(s) in scenario bindings)",
+   "sensitive_categories": [
+    "real owner/family/correspondent name tokens",
+    "repoint at the synthetic public-resource assay evidence"
+   ],
+   "value_kind": "behavior_bearing",
+   "replacement_rules": [
+    "evidence_path_resources",
+    "name_map"
+   ],
+   "claim_evidence": "focused run of this file in the assembled A2 tree has the same outcome as the unmodified file at the source release"
+  },
+  "anaxi_final/test_caret_correspondent_binding.py": {
+   "a1_class": "PENDING_SYNTHETIC_REPLACEMENT",
+   "a2_class": "REQUIRED_TRANSFORM",
+   "why_required": "offline test surface of the release",
+   "sensitive_categories": [
+    "real Discord author identifier",
+    "real owner/family/correspondent name tokens"
+   ],
+   "value_kind": "behavior_bearing",
+   "replacement_rules": [
+    "id_map",
+    "name_map"
+   ],
+   "claim_evidence": "focused run of this file in the assembled A2 tree has the same outcome as the unmodified file at the source release"
+  },
+  "anaxi_final/test_caret_family_live_completion.py": {
+   "a1_class": "PENDING_SYNTHETIC_REPLACEMENT",
+   "a2_class": "REQUIRED_TRANSFORM",
+   "why_required": "offline test surface of the release",
+   "sensitive_categories": [
+    "real Discord author identifier",
+    "real owner/family/correspondent name tokens"
+   ],
+   "value_kind": "behavior_bearing",
+   "replacement_rules": [
+    "id_map",
+    "name_map"
+   ],
+   "claim_evidence": "focused run of this file in the assembled A2 tree has the same outcome as the unmodified file at the source release"
+  },
+  "anaxi_final/test_caret_inbound_seam.py": {
+   "a1_class": "PENDING_SYNTHETIC_REPLACEMENT",
+   "a2_class": "REQUIRED_TRANSFORM",
+   "why_required": "offline test surface of the release",
+   "sensitive_categories": [
+    "live-message quote in a docstring",
+    "real Discord author identifier",
+    "real owner/family/correspondent name tokens",
+    "real production message id in a comment"
+   ],
+   "value_kind": "behavior_bearing",
+   "replacement_rules": [
+    "id_map",
+    "line_06",
+    "line_07",
+    "name_map"
+   ],
+   "claim_evidence": "focused run of this file in the assembled A2 tree has the same outcome as the unmodified file at the source release"
+  },
+  "anaxi_final/test_caret_outbound_seam.py": {
+   "a1_class": "PENDING_SYNTHETIC_REPLACEMENT",
+   "a2_class": "REQUIRED_TRANSFORM",
+   "why_required": "bound test surface (1 node(s) in scenario bindings)",
+   "sensitive_categories": [
+    "real Discord author identifier",
+    "real owner/family/correspondent name tokens"
+   ],
+   "value_kind": "behavior_bearing",
+   "replacement_rules": [
+    "id_map",
+    "name_map"
+   ],
+   "claim_evidence": "focused run of this file in the assembled A2 tree has the same outcome as the unmodified file at the source release"
+  },
+  "anaxi_final/test_caret_wake_service.py": {
+   "a1_class": "PENDING_SYNTHETIC_REPLACEMENT",
+   "a2_class": "REQUIRED_TRANSFORM",
+   "why_required": "bound test surface (2 node(s) in scenario bindings)",
+   "sensitive_categories": [
+    "real Discord author identifier",
+    "real owner/family/correspondent name tokens"
+   ],
+   "value_kind": "behavior_bearing",
+   "replacement_rules": [
+    "id_map",
+    "name_map"
+   ],
+   "claim_evidence": "focused run of this file in the assembled A2 tree has the same outcome as the unmodified file at the source release"
+  },
+  "anaxi_final/test_clark_sleep_request_from_reply.py": {
+   "a1_class": "PENDING_SYNTHETIC_REPLACEMENT",
+   "a2_class": "REQUIRED_TRANSFORM",
+   "why_required": "offline test surface of the release",
+   "sensitive_categories": [
+    "real owner/family/correspondent name tokens"
+   ],
+   "value_kind": "behavior_bearing",
+   "replacement_rules": [
+    "name_map"
+   ],
+   "claim_evidence": "focused run of this file in the assembled A2 tree has the same outcome as the unmodified file at the source release"
+  },
+  "anaxi_final/test_collaborative_obsidian_workspace.py": {
+   "a1_class": "PENDING_SYNTHETIC_REPLACEMENT",
+   "a2_class": "REQUIRED_TRANSFORM",
+   "why_required": "bound test surface (23 node(s) in scenario bindings)",
+   "sensitive_categories": [
+    "host-shaped example path; any absolute path outside the redirected test root preserves the test",
+    "real owner/family/correspondent name tokens"
+   ],
+   "value_kind": "behavior_bearing",
+   "replacement_rules": [
+    "name_map",
+    "path_example_vault"
+   ],
+   "claim_evidence": "focused run of this file in the assembled A2 tree has the same outcome as the unmodified file at the source release"
+  },
+  "anaxi_final/test_conversation_direction.py": {
+   "a1_class": "PENDING_SYNTHETIC_REPLACEMENT",
+   "a2_class": "REQUIRED_TRANSFORM",
+   "why_required": "bound test surface (40 node(s) in scenario bindings)",
+   "sensitive_categories": [
+    "real owner/family/correspondent name tokens"
+   ],
+   "value_kind": "comments_or_docstrings_only",
+   "replacement_rules": [
+    "name_map"
+   ],
+   "claim_evidence": "focused run of this file in the assembled A2 tree has the same outcome as the unmodified file at the source release"
+  },
+  "anaxi_final/test_discord_correspondence_v0.py": {
+   "a1_class": "PENDING_SYNTHETIC_REPLACEMENT",
+   "a2_class": "REQUIRED_TRANSFORM",
+   "why_required": "bound test surface (82 node(s) in scenario bindings)",
+   "sensitive_categories": [
+    "live-message paraphrase used as fixture text; the test checks only that these exact words are carried",
+    "real owner/family/correspondent name tokens"
+   ],
+   "value_kind": "behavior_bearing",
+   "replacement_rules": [
+    "line_05",
+    "name_map"
+   ],
+   "claim_evidence": "focused run of this file in the assembled A2 tree has the same outcome as the unmodified file at the source release"
+  },
+  "anaxi_final/test_general_correspondence.py": {
+   "a1_class": "PENDING_SYNTHETIC_REPLACEMENT",
+   "a2_class": "REQUIRED_TRANSFORM",
+   "why_required": "bound test surface (35 node(s) in scenario bindings)",
+   "sensitive_categories": [
+    "real owner/family/correspondent name tokens"
+   ],
+   "value_kind": "behavior_bearing",
+   "replacement_rules": [
+    "name_map"
+   ],
+   "claim_evidence": "focused run of this file in the assembled A2 tree has the same outcome as the unmodified file at the source release"
+  },
+  "anaxi_final/test_hippocampus_retrieval.py": {
+   "a1_class": "PENDING_SYNTHETIC_REPLACEMENT",
+   "a2_class": "REQUIRED_TRANSFORM",
+   "why_required": "custom-runner suite pinned in custom_runner_suites.json",
+   "sensitive_categories": [
+    "real owner/family/correspondent name tokens"
+   ],
+   "value_kind": "behavior_bearing",
+   "replacement_rules": [
+    "name_map"
+   ],
+   "claim_evidence": "focused run of this file in the assembled A2 tree has the same outcome as the unmodified file at the source release"
+  },
+  "anaxi_final/test_hippocampus_store.py": {
+   "a1_class": "PENDING_SYNTHETIC_REPLACEMENT",
+   "a2_class": "REQUIRED_TRANSFORM",
+   "why_required": "custom-runner suite pinned in custom_runner_suites.json",
+   "sensitive_categories": [
+    "real owner/family/correspondent name tokens"
+   ],
+   "value_kind": "behavior_bearing",
+   "replacement_rules": [
+    "name_map"
+   ],
+   "claim_evidence": "focused run of this file in the assembled A2 tree has the same outcome as the unmodified file at the source release"
+  },
+  "anaxi_final/test_journal_completion.py": {
+   "a1_class": "SAFE_AS_IS",
+   "a2_class": "REQUIRED_TRANSFORM",
+   "why_required": "bound test surface (10 node(s) in scenario bindings)",
+   "sensitive_categories": [
+    "real owner/family/correspondent name tokens"
+   ],
+   "value_kind": "behavior_bearing",
+   "replacement_rules": [
+    "name_map"
+   ],
+   "claim_evidence": "focused run of this file in the assembled A2 tree has the same outcome as the unmodified file at the source release",
+   "a1_gap": "owner first name fused to a string escape was missed by A1's exact-token rule; the A2 scanner check (compound/escape-aware) detects it",
+   "a1_corrected_to": "PENDING_SYNTHETIC_REPLACEMENT"
+  },
+  "anaxi_final/test_lawful_null_reply_choice.py": {
+   "a1_class": "PENDING_SYNTHETIC_REPLACEMENT",
+   "a2_class": "REQUIRED_TRANSFORM",
+   "why_required": "bound test surface (8 node(s) in scenario bindings)",
+   "sensitive_categories": [
+    "real owner/family/correspondent name tokens"
+   ],
+   "value_kind": "behavior_bearing",
+   "replacement_rules": [
+    "name_map"
+   ],
+   "claim_evidence": "focused run of this file in the assembled A2 tree has the same outcome as the unmodified file at the source release"
+  },
+  "anaxi_final/test_legacy_owner_private_compat.py": {
+   "a1_class": "PENDING_SYNTHETIC_REPLACEMENT",
+   "a2_class": "REQUIRED_TRANSFORM",
+   "why_required": "offline test surface of the release",
+   "sensitive_categories": [
+    "real owner/family/correspondent name tokens"
+   ],
+   "value_kind": "comments_or_docstrings_only",
+   "replacement_rules": [
+    "name_map"
+   ],
+   "claim_evidence": "focused run of this file in the assembled A2 tree has the same outcome as the unmodified file at the source release"
+  },
+  "anaxi_final/test_obsidian_workspace.py": {
+   "a1_class": "PENDING_SYNTHETIC_REPLACEMENT",
+   "a2_class": "REQUIRED_TRANSFORM",
+   "why_required": "bound test surface (5 node(s) in scenario bindings)",
+   "sensitive_categories": [
+    "real owner/family/correspondent name tokens"
+   ],
+   "value_kind": "behavior_bearing",
+   "replacement_rules": [
+    "name_map"
+   ],
+   "claim_evidence": "focused run of this file in the assembled A2 tree has the same outcome as the unmodified file at the source release"
+  },
+  "anaxi_final/test_owc5_s2_integration.py": {
+   "a1_class": "PENDING_SYNTHETIC_REPLACEMENT",
+   "a2_class": "REQUIRED_TRANSFORM",
+   "why_required": "bound test surface (5 node(s) in scenario bindings)",
+   "sensitive_categories": [
+    "real owner/family/correspondent name tokens"
+   ],
+   "value_kind": "behavior_bearing",
+   "replacement_rules": [
+    "name_map"
+   ],
+   "claim_evidence": "focused run of this file in the assembled A2 tree has the same outcome as the unmodified file at the source release"
+  },
+  "anaxi_final/test_owner_shared_note.py": {
+   "a1_class": "PENDING_SYNTHETIC_REPLACEMENT",
+   "a2_class": "REQUIRED_TRANSFORM",
+   "why_required": "bound test surface (4 node(s) in scenario bindings)",
+   "sensitive_categories": [
+    "real owner/family/correspondent name tokens"
+   ],
+   "value_kind": "behavior_bearing",
+   "replacement_rules": [
+    "name_map"
+   ],
+   "claim_evidence": "focused run of this file in the assembled A2 tree has the same outcome as the unmodified file at the source release"
+  },
+  "anaxi_final/test_pass1_budget_bugfix_v0.py": {
+   "a1_class": "PENDING_SYNTHETIC_REPLACEMENT",
+   "a2_class": "REQUIRED_TRANSFORM",
+   "why_required": "bound test surface (9 node(s) in scenario bindings)",
+   "sensitive_categories": [
+    "real owner/family/correspondent name tokens"
+   ],
+   "value_kind": "behavior_bearing",
+   "replacement_rules": [
+    "name_map"
+   ],
+   "claim_evidence": "focused run of this file in the assembled A2 tree has the same outcome as the unmodified file at the source release"
+  },
+  "anaxi_final/test_production_delivery_floor.py": {
+   "a1_class": "PENDING_SYNTHETIC_REPLACEMENT",
+   "a2_class": "REQUIRED_TRANSFORM",
+   "why_required": "bound test surface (29 node(s) in scenario bindings)",
+   "sensitive_categories": [
+    "real owner/family/correspondent name tokens"
+   ],
+   "value_kind": "behavior_bearing",
+   "replacement_rules": [
+    "name_map"
+   ],
+   "claim_evidence": "focused run of this file in the assembled A2 tree has the same outcome as the unmodified file at the source release"
+  },
+  "anaxi_final/test_real_model_caret_expression.py": {
+   "a1_class": "PENDING_SYNTHETIC_REPLACEMENT",
+   "a2_class": "REQUIRED_TRANSFORM",
+   "why_required": "opt-in real-model harness (owner disposition 6: runnable opt-in harnesses may ship)",
+   "sensitive_categories": [
+    "real owner/family/correspondent name tokens"
+   ],
+   "value_kind": "behavior_bearing",
+   "replacement_rules": [
+    "name_map"
+   ],
+   "claim_evidence": "skipped offline (needs ANAXI_REAL_MODEL_HARNESS=1 and a local model); transformed consistently with the offline seam tests it imports; syntax checked; not executed in A2"
+  },
+  "anaxi_final/test_real_model_caret_inbound.py": {
+   "a1_class": "PENDING_SYNTHETIC_REPLACEMENT",
+   "a2_class": "REQUIRED_TRANSFORM",
+   "why_required": "opt-in real-model harness (owner disposition 6: runnable opt-in harnesses may ship)",
+   "sensitive_categories": [
+    "real Discord author identifier",
+    "real owner/family/correspondent name tokens"
+   ],
+   "value_kind": "behavior_bearing",
+   "replacement_rules": [
+    "id_map",
+    "name_map"
+   ],
+   "claim_evidence": "skipped offline (needs ANAXI_REAL_MODEL_HARNESS=1 and a local model); transformed consistently with the offline seam tests it imports; syntax checked; not executed in A2"
+  },
+  "anaxi_final/test_real_model_live_journal_shape.py": {
+   "a1_class": "PENDING_SYNTHETIC_REPLACEMENT",
+   "a2_class": "EXCLUDED_BY_DESIGN",
+   "why_excluded": "opt-in real-model reproduction that copies the owner's live production journal (private journal material); it cannot run without that private state, the general workspace-thread behavior it probes is covered by the synthetic test_real_model_workspace_thread.py (A1 SAFE), and it is not bound by any scenario"
+  },
+  "anaxi_final/test_real_model_ordinary_resource_use.py": {
+   "a1_class": "PENDING_SYNTHETIC_REPLACEMENT",
+   "a2_class": "REQUIRED_TRANSFORM",
+   "why_required": "opt-in real-model harness (owner disposition 6: runnable opt-in harnesses may ship)",
+   "sensitive_categories": [
+    "real owner/family/correspondent name tokens"
+   ],
+   "value_kind": "behavior_bearing",
+   "replacement_rules": [
+    "name_map"
+   ],
+   "claim_evidence": "skipped offline (needs ANAXI_REAL_MODEL_HARNESS=1 and a local model); transformed consistently with the offline seam tests it imports; syntax checked; not executed in A2"
+  },
+  "anaxi_final/test_real_model_shared_notes.py": {
+   "a1_class": "PENDING_SYNTHETIC_REPLACEMENT",
+   "a2_class": "REQUIRED_TRANSFORM",
+   "why_required": "opt-in real-model harness (owner disposition 6: runnable opt-in harnesses may ship)",
+   "sensitive_categories": [
+    "real owner/family/correspondent name tokens"
+   ],
+   "value_kind": "behavior_bearing",
+   "replacement_rules": [
+    "name_map"
+   ],
+   "claim_evidence": "skipped offline (needs ANAXI_REAL_MODEL_HARNESS=1 and a local model); transformed consistently with the offline seam tests it imports; syntax checked; not executed in A2"
+  },
+  "anaxi_final/test_real_model_sleep_request.py": {
+   "a1_class": "PENDING_SYNTHETIC_REPLACEMENT",
+   "a2_class": "REQUIRED_TRANSFORM",
+   "why_required": "opt-in real-model harness (owner disposition 6: runnable opt-in harnesses may ship)",
+   "sensitive_categories": [
+    "real owner/family/correspondent name tokens"
+   ],
+   "value_kind": "behavior_bearing",
+   "replacement_rules": [
+    "name_map"
+   ],
+   "claim_evidence": "skipped offline (needs ANAXI_REAL_MODEL_HARNESS=1 and a local model); transformed consistently with the offline seam tests it imports; syntax checked; not executed in A2"
+  },
+  "anaxi_final/test_relationship_normalization.py": {
+   "a1_class": "PENDING_SYNTHETIC_REPLACEMENT",
+   "a2_class": "REQUIRED_TRANSFORM",
+   "why_required": "custom-runner suite pinned in custom_runner_suites.json",
+   "sensitive_categories": [
+    "real owner/family/correspondent name tokens"
+   ],
+   "value_kind": "behavior_bearing",
+   "replacement_rules": [
+    "name_map"
+   ],
+   "claim_evidence": "focused run of this file in the assembled A2 tree has the same outcome as the unmodified file at the source release"
+  },
+  "anaxi_final/test_roaming_waking_capacity.py": {
+   "a1_class": "PENDING_SYNTHETIC_REPLACEMENT",
+   "a2_class": "REQUIRED_TRANSFORM",
+   "why_required": "offline test surface of the release",
+   "sensitive_categories": [
+    "real owner/family/correspondent name tokens"
+   ],
+   "value_kind": "behavior_bearing",
+   "replacement_rules": [
+    "name_map"
+   ],
+   "claim_evidence": "focused run of this file in the assembled A2 tree has the same outcome as the unmodified file at the source release"
+  },
+  "anaxi_final/test_scenario_evidence.py": {
+   "a1_class": "PENDING_SYNTHETIC_REPLACEMENT",
+   "a2_class": "REQUIRED_TRANSFORM",
+   "why_required": "offline test surface of the release",
+   "sensitive_categories": [
+    "real owner/family/correspondent name tokens",
+    "repoint at the synthetic public-resource assay evidence"
+   ],
+   "value_kind": "behavior_bearing",
+   "replacement_rules": [
+    "evidence_path_resources",
+    "name_map"
+   ],
+   "claim_evidence": "focused run of this file in the assembled A2 tree has the same outcome as the unmodified file at the source release"
+  },
+  "anaxi_final/test_shared_ordinary_expression_seam.py": {
+   "a1_class": "PENDING_SYNTHETIC_REPLACEMENT",
+   "a2_class": "REQUIRED_TRANSFORM",
+   "why_required": "offline test surface of the release",
+   "sensitive_categories": [
+    "real owner/family/correspondent name tokens"
+   ],
+   "value_kind": "behavior_bearing",
+   "replacement_rules": [
+    "name_map"
+   ],
+   "claim_evidence": "focused run of this file in the assembled A2 tree has the same outcome as the unmodified file at the source release"
+  },
+  "anaxi_final/test_sleep_absence_completion.py": {
+   "a1_class": "PENDING_SYNTHETIC_REPLACEMENT",
+   "a2_class": "REQUIRED_TRANSFORM",
+   "why_required": "bound test surface (6 node(s) in scenario bindings)",
+   "sensitive_categories": [
+    "real owner/family/correspondent name tokens"
+   ],
+   "value_kind": "comments_or_docstrings_only",
+   "replacement_rules": [
+    "name_map"
+   ],
+   "claim_evidence": "focused run of this file in the assembled A2 tree has the same outcome as the unmodified file at the source release"
+  },
+  "anaxi_final/test_sleep_evidence.py": {
+   "a1_class": "PENDING_SYNTHETIC_REPLACEMENT",
+   "a2_class": "REQUIRED_TRANSFORM",
+   "why_required": "bound test surface (22 node(s) in scenario bindings)",
+   "sensitive_categories": [
+    "real owner/family/correspondent name tokens"
+   ],
+   "value_kind": "behavior_bearing",
+   "replacement_rules": [
+    "name_map"
+   ],
+   "claim_evidence": "focused run of this file in the assembled A2 tree has the same outcome as the unmodified file at the source release"
+  },
+  "anaxi_final/test_sleep_production_budget.py": {
+   "a1_class": "PENDING_SYNTHETIC_REPLACEMENT",
+   "a2_class": "REQUIRED_TRANSFORM",
+   "why_required": "bound test surface (14 node(s) in scenario bindings)",
+   "sensitive_categories": [
+    "real owner/family/correspondent name tokens"
+   ],
+   "value_kind": "behavior_bearing",
+   "replacement_rules": [
+    "name_map"
+   ],
+   "claim_evidence": "focused run of this file in the assembled A2 tree has the same outcome as the unmodified file at the source release"
+  },
+  "anaxi_final/test_sleep_wmu_window_integrity.py": {
+   "a1_class": "PENDING_SYNTHETIC_REPLACEMENT",
+   "a2_class": "REQUIRED_TRANSFORM",
+   "why_required": "bound test surface (10 node(s) in scenario bindings)",
+   "sensitive_categories": [
+    "real owner/family/correspondent name tokens"
+   ],
+   "value_kind": "behavior_bearing",
+   "replacement_rules": [
+    "name_map"
+   ],
+   "claim_evidence": "focused run of this file in the assembled A2 tree has the same outcome as the unmodified file at the source release"
+  },
+  "anaxi_final/test_standing_hippocampus_audit.py": {
+   "a1_class": "PENDING_SYNTHETIC_REPLACEMENT",
+   "a2_class": "REQUIRED_TRANSFORM",
+   "why_required": "custom-runner suite pinned in custom_runner_suites.json",
+   "sensitive_categories": [
+    "real owner/family/correspondent name tokens"
+   ],
+   "value_kind": "behavior_bearing",
+   "replacement_rules": [
+    "name_map"
+   ],
+   "claim_evidence": "focused run of this file in the assembled A2 tree has the same outcome as the unmodified file at the source release"
+  },
+  "anaxi_final/test_ui_turn_diagnostics.py": {
+   "a1_class": "PENDING_SYNTHETIC_REPLACEMENT",
+   "a2_class": "REQUIRED_TRANSFORM",
+   "why_required": "bound test surface (8 node(s) in scenario bindings)",
+   "sensitive_categories": [
+    "real owner/family/correspondent name tokens"
+   ],
+   "value_kind": "behavior_bearing",
+   "replacement_rules": [
+    "name_map"
+   ],
+   "claim_evidence": "focused run of this file in the assembled A2 tree has the same outcome as the unmodified file at the source release"
+  },
+  "anaxi_final/test_web_waking_seam.py": {
+   "a1_class": "PENDING_SYNTHETIC_REPLACEMENT",
+   "a2_class": "REQUIRED_TRANSFORM",
+   "why_required": "offline test surface of the release",
+   "sensitive_categories": [
+    "live-message paraphrase used as fixture text; any ordinary non-question statement preserves the tested structure",
+    "live-message quote in a docstring",
+    "real owner/family/correspondent name tokens"
+   ],
+   "value_kind": "behavior_bearing",
+   "replacement_rules": [
+    "line_03",
+    "line_04",
+    "name_map"
+   ],
+   "claim_evidence": "focused run of this file in the assembled A2 tree has the same outcome as the unmodified file at the source release"
+  },
+  "anaxi_final/test_workspace_audio.py": {
+   "a1_class": "PENDING_SYNTHETIC_REPLACEMENT",
+   "a2_class": "REQUIRED_TRANSFORM",
+   "why_required": "bound test surface (27 node(s) in scenario bindings)",
+   "sensitive_categories": [
+    "real owner/family/correspondent name tokens"
+   ],
+   "value_kind": "comments_or_docstrings_only",
+   "replacement_rules": [
+    "name_map"
+   ],
+   "claim_evidence": "focused run of this file in the assembled A2 tree has the same outcome as the unmodified file at the source release"
+  },
+  "anaxi_final/test_workspace_private.py": {
+   "a1_class": "PENDING_SYNTHETIC_REPLACEMENT",
+   "a2_class": "REQUIRED_TRANSFORM",
+   "why_required": "bound test surface (41 node(s) in scenario bindings)",
+   "sensitive_categories": [
+    "real owner/family/correspondent name tokens"
+   ],
+   "value_kind": "behavior_bearing",
+   "replacement_rules": [
+    "name_map"
+   ],
+   "claim_evidence": "focused run of this file in the assembled A2 tree has the same outcome as the unmodified file at the source release"
+  },
+  "anaxi_final/test_workspace_resource_provenance.py": {
+   "a1_class": "PENDING_SYNTHETIC_REPLACEMENT",
+   "a2_class": "REQUIRED_TRANSFORM",
+   "why_required": "offline test surface of the release",
+   "sensitive_categories": [
+    "real owner/family/correspondent name tokens"
+   ],
+   "value_kind": "behavior_bearing",
+   "replacement_rules": [
+    "name_map"
+   ],
+   "claim_evidence": "focused run of this file in the assembled A2 tree has the same outcome as the unmodified file at the source release"
+  },
+  "anaxi_final/test_workspace_roaming.py": {
+   "a1_class": "PENDING_SYNTHETIC_REPLACEMENT",
+   "a2_class": "REQUIRED_TRANSFORM",
+   "why_required": "bound test surface (91 node(s) in scenario bindings)",
+   "sensitive_categories": [
+    "real owner/family/correspondent name tokens"
+   ],
+   "value_kind": "behavior_bearing",
+   "replacement_rules": [
+    "name_map"
+   ],
+   "claim_evidence": "focused run of this file in the assembled A2 tree has the same outcome as the unmodified file at the source release"
+  },
+  "anaxi_final/test_workspace_source_text_role_binding.py": {
+   "a1_class": "PENDING_SYNTHETIC_REPLACEMENT",
+   "a2_class": "REQUIRED_TRANSFORM",
+   "why_required": "offline test surface of the release",
+   "sensitive_categories": [
+    "real owner/family/correspondent name tokens"
+   ],
+   "value_kind": "behavior_bearing",
+   "replacement_rules": [
+    "name_map"
+   ],
+   "claim_evidence": "focused run of this file in the assembled A2 tree has the same outcome as the unmodified file at the source release"
+  },
+  "anaxi_final/test_workspace_target_discovery.py": {
+   "a1_class": "PENDING_SYNTHETIC_REPLACEMENT",
+   "a2_class": "REQUIRED_TRANSFORM",
+   "why_required": "offline test surface of the release",
+   "sensitive_categories": [
+    "real owner/family/correspondent name tokens"
+   ],
+   "value_kind": "behavior_bearing",
+   "replacement_rules": [
+    "name_map"
+   ],
+   "claim_evidence": "focused run of this file in the assembled A2 tree has the same outcome as the unmodified file at the source release"
+  },
+  "anaxi_final/test_wsp1_production_hard_floor.py": {
+   "a1_class": "PENDING_SYNTHETIC_REPLACEMENT",
+   "a2_class": "REQUIRED_TRANSFORM",
+   "why_required": "bound test surface (19 node(s) in scenario bindings)",
+   "sensitive_categories": [
+    "real owner/family/correspondent name tokens"
+   ],
+   "value_kind": "behavior_bearing",
+   "replacement_rules": [
+    "name_map"
+   ],
+   "claim_evidence": "focused run of this file in the assembled A2 tree has the same outcome as the unmodified file at the source release"
+  },
+  "anaxi_final/ui_turn_diagnostics.py": {
+   "a1_class": "PENDING_SYNTHETIC_REPLACEMENT",
+   "a2_class": "REQUIRED_TRANSFORM",
+   "why_required": "production module of the reference distribution",
+   "sensitive_categories": [
+    "real owner/family/correspondent name tokens"
+   ],
+   "value_kind": "comments_or_docstrings_only",
+   "replacement_rules": [
+    "name_map"
+   ],
+   "claim_evidence": "AST with docstrings removed is identical to the source blob: execution cannot differ"
+  },
+  "anaxi_final/workspace_audio.py": {
+   "a1_class": "PENDING_SYNTHETIC_REPLACEMENT",
+   "a2_class": "REQUIRED_TRANSFORM",
+   "why_required": "production module of the reference distribution",
+   "sensitive_categories": [
+    "real owner/family/correspondent name tokens"
+   ],
+   "value_kind": "comments_or_docstrings_only",
+   "replacement_rules": [
+    "name_map"
+   ],
+   "claim_evidence": "AST with docstrings removed is identical to the source blob: execution cannot differ"
+  },
+  "anaxi_final/workspace_discovery.py": {
+   "a1_class": "PENDING_SYNTHETIC_REPLACEMENT",
+   "a2_class": "REQUIRED_TRANSFORM",
+   "why_required": "production module of the reference distribution",
+   "sensitive_categories": [
+    "real owner/family/correspondent name tokens"
+   ],
+   "value_kind": "comments_or_docstrings_only",
+   "replacement_rules": [
+    "name_map"
+   ],
+   "claim_evidence": "AST with docstrings removed is identical to the source blob: execution cannot differ"
+  },
+  "anaxi_final/workspace_episode_provenance.py": {
+   "a1_class": "PENDING_SYNTHETIC_REPLACEMENT",
+   "a2_class": "REQUIRED_TRANSFORM",
+   "why_required": "production module of the reference distribution",
+   "sensitive_categories": [
+    "real owner/family/correspondent name tokens"
+   ],
+   "value_kind": "comments_or_docstrings_only",
+   "replacement_rules": [
+    "name_map"
+   ],
+   "claim_evidence": "AST with docstrings removed is identical to the source blob: execution cannot differ"
+  },
+  "anaxi_final/workspace_private.py": {
+   "a1_class": "PENDING_SYNTHETIC_REPLACEMENT",
+   "a2_class": "REQUIRED_TRANSFORM",
+   "why_required": "production module of the reference distribution",
+   "sensitive_categories": [
+    "real owner/family/correspondent name tokens"
+   ],
+   "value_kind": "behavior_bearing",
+   "replacement_rules": [
+    "name_map"
+   ],
+   "claim_evidence": "exercised by the focused runs of transformed tests that import it: test_workspace_private.py, test_workspace_roaming.py"
+  },
+  "anaxi_final/workspace_provenance.py": {
+   "a1_class": "PENDING_SYNTHETIC_REPLACEMENT",
+   "a2_class": "REQUIRED_TRANSFORM",
+   "why_required": "production module of the reference distribution",
+   "sensitive_categories": [
+    "real owner/family/correspondent name tokens"
+   ],
+   "value_kind": "comments_or_docstrings_only",
+   "replacement_rules": [
+    "name_map"
+   ],
+   "claim_evidence": "AST with docstrings removed is identical to the source blob: execution cannot differ"
+  },
+  "anaxi_final/workspace_public_continuity.py": {
+   "a1_class": "PENDING_SYNTHETIC_REPLACEMENT",
+   "a2_class": "REQUIRED_TRANSFORM",
+   "why_required": "production module of the reference distribution",
+   "sensitive_categories": [
+    "real owner/family/correspondent name tokens"
+   ],
+   "value_kind": "behavior_bearing",
+   "replacement_rules": [
+    "name_map"
+   ],
+   "claim_evidence": "exercised by the focused runs of transformed tests that import it: test_legacy_owner_private_compat.py, test_pass1_budget_bugfix_v0.py, test_roaming_waking_capacity.py, test_workspace_roaming.py"
+  },
+  "anaxi_final/workspace_roaming.py": {
+   "a1_class": "PENDING_SYNTHETIC_REPLACEMENT",
+   "a2_class": "REQUIRED_TRANSFORM",
+   "why_required": "production module of the reference distribution",
+   "sensitive_categories": [
+    "real owner/family/correspondent name tokens"
+   ],
+   "value_kind": "behavior_bearing",
+   "replacement_rules": [
+    "name_map"
+   ],
+   "claim_evidence": "exercised by the focused runs of transformed tests that import it: test_collaborative_obsidian_workspace.py, test_production_delivery_floor.py, test_workspace_roaming.py"
+  }
+ },
+ "public_execution_contract": {
+  "platform": "macOS, Python 3.14 (virtual environment). No other platform is claimed.",
+  "commands": [
+   "python3.14 -m venv .venv",
+   ".venv/bin/python -m pip install -r requirements.txt",
+   ".venv/bin/python reference/run_reference.py setup-model",
+   ".venv/bin/python reference/run_reference.py run",
+   ".venv/bin/python reference/run_reference.py reset"
+  ],
+  "network": "Required only for pip install and setup-model (one embedding model, cached in .hf_home/). The run step is offline: Hugging Face offline mode and ANAXI's network guard.",
+  "reproducible": "Every publicly bound owner-inventory scenario (offline bound tests plus synthetic public-resource artifacts, exact N==M), the offline reference harness, and byte-identical regeneration of the synthetic fixtures and their assay evidence.",
+  "not_reproducible": [
+   "live-only requirements (need genuine live occasions; no live evidence ships)",
+   "two production-only scenarios, omitted from the public bindings (NOT_ATTEMPTED)",
+   "the Windows launcher node (outside the macOS-only contract)",
+   "owner live dispositions recorded in production acceptance (not published raw)",
+   "optional real-model harnesses (need a local Ollama model; probabilistic; skipped by default)"
+  ],
+  "outside_the_public_command": {
+   "unbound_tests_reading_excluded_production_evidence": [
+    "anaxi_final/test_evidence_boundary.py",
+    "anaxi_final/test_live_acceptance_evidence.py"
+   ],
+   "note": "The public run executes exactly the bound test nodes (scenario_evidence.py) plus the reference harness; it does not run the whole historical suite. Unbound tests that read excluded raw production evidence ship unchanged but are not part of the public command."
+  }
+ },
+ "a3_resolutions": {
+  "claude_agent.py": {
+   "disposition": "INCLUDED (unchanged git blob)",
+   "reason": "Imported by the pinned custom-runner suite test_bounded_hippocampus_integration.py, whose runner node is bound in two public scenarios (Claude fail-closed guard); A1 had classed it obsolete. Its tests use a poison key and never reach a network or credential."
+  },
+  "unbound_tests_reading_excluded_production_evidence": {
+   "unbound_tests_reading_excluded_production_evidence": [
+    "anaxi_final/test_evidence_boundary.py",
+    "anaxi_final/test_live_acceptance_evidence.py"
+   ],
+   "note": "The public run executes exactly the bound test nodes (scenario_evidence.py) plus the reference harness; it does not run the whole historical suite. Unbound tests that read excluded raw production evidence ship unchanged but are not part of the public command."
+  }
+ }
+}

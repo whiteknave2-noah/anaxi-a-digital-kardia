@@ -1,0 +1,13 @@
+{
+  "schema": "claim-harness.bindings/v0",
+  "bindings": {
+    "DIGEST-1": [
+      "examples/toy_agent/deliberate_failure/test_digest.py::test_digest_is_recorded_in_history",
+      "examples/toy_agent/deliberate_failure/test_digest.py::test_digest_is_delivered",
+      "examples/toy_agent/deliberate_failure/test_digest.py::test_digest_is_recorded_in_history"
+    ],
+    "SPEED-1": [
+      "examples/toy_agent/deliberate_failure/test_digest.py::test_digest_is_recorded_in_history"
+    ]
+  }
+}

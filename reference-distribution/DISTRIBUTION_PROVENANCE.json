@@ -1,0 +1,3379 @@
+{
+ "generator": "anaxi-reference-distribution/a3_export.py",
+ "source_commit": "4e950d069885e0ec666244edd9d9d86f8d8640a1",
+ "source_tree": "9049cdf05d56123e64aeca6ecb39f629c6fc14ad",
+ "packaging_commits": {
+  "a1": "2d06d79fadd4ae0ddaf262b981284fd9999970db",
+  "a2": "ce20430904111b18808aa02364d9f413df292fe9"
+ },
+ "generated_at": "2026-09-25T16:45:55Z",
+ "a2_rules_sha256": "44810b374055e1aa65ec25ad59998106b86e24466ea4edd9638a6029ade4f6f2",
+ "scan_policy_sha256": "b0f18e5aa0fa37aa95b4db47369bc1faedb04e8c7e1049c33ea344a7bb72bc58",
+ "evidence_interpreter": "3.14.2 av 16.1.0 Pillow 12.3.0 pypdf 6.16.2",
+ "exported_file_count": 346,
+ "kind_counts": {
+  "packaging_authored": 6,
+  "unchanged_git_blob": 261,
+  "transformed_git_blob": 63,
+  "generated_evidence": 3,
+  "generated_fixture": 13
+ },
+ "metadata_files": [
+  "DISTRIBUTION_PROVENANCE.json",
+  "DISTRIBUTION_STATUS.md",
+  "DISTRIBUTION_MANIFEST.json"
+ ],
+ "public_accounting": {
+  "bound_test_nodes": 1044,
+  "errors": [],
+  "inventory_scenarios": 378,
+  "omitted_production_only": 2,
+  "publicly_bound_scenarios": 376,
+  "unbound_not_attempted": 2
+ },
+ "public_artifact_outcomes": {
+  "completion_evidence/synthetic_public_resource_delivery.json#public_resource_delivery.library": [
+   "passed",
+   5,
+   5
+  ],
+  "completion_evidence/synthetic_public_resource_delivery.json#public_resource_delivery.music": [
+   "passed",
+   3,
+   3
+  ],
+  "completion_evidence/synthetic_public_resource_delivery.json#public_resource_delivery.photographs": [
+   "passed",
+   5,
+   5
+  ],
+  "completion_evidence/synthetic_public_resources.json#public_resources.library": [
+   "passed",
+   5,
+   5
+  ],
+  "completion_evidence/synthetic_public_resources.json#public_resources.music": [
+   "passed",
+   3,
+   3
+  ],
+  "completion_evidence/synthetic_public_resources.json#public_resources.photographs": [
+   "passed",
+   5,
+   5
+  ]
+ },
+ "distribution_status": {
+  "stage": "FINAL_PUBLIC_DISTRIBUTION_A",
+  "supported_platform": "macOS + Python 3.14",
+  "reproducible": "Every publicly bound owner-inventory scenario (offline bound tests plus synthetic public-resource artifacts, exact N==M), the offline reference harness, and byte-identical regeneration of the synthetic fixtures and their assay evidence.",
+  "not_reproducible": [
+   "live-only requirements (need genuine live occasions; no live evidence ships)",
+   "two production-only scenarios, omitted from the public bindings (NOT_ATTEMPTED)",
+   "the Windows launcher node (outside the macOS-only contract)",
+   "owner live dispositions recorded in production acceptance (not published raw)",
+   "optional real-model harnesses (need a local Ollama model; probabilistic; skipped by default)"
+  ]
+ },
+ "files": [
+  {
+   "path": "LICENSE",
+   "sha256": "396a19539f5c91f8c5be744f758ca3c211ecc8b75ebcbe071405bb3f788afb7e",
+   "size": 34709,
+   "kind": "packaging_authored",
+   "packaging_source": "copyright line of the anaxi_final/LICENSE git blob + packaging/reference_distribution/distribution/AGPL-3.0.txt (canonical AGPL-3.0 text)",
+   "agpl_text_sha256": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0"
+  },
+  {
+   "path": "README.md",
+   "sha256": "28f3a5e66fb95fd0c16fd4cad900ca37eaea66d0c759c43059de40af8f66b892",
+   "size": 8880,
+   "kind": "packaging_authored",
+   "packaging_source": "packaging/reference_distribution/distribution/README.md"
+  },
+  {
+   "path": "anaxi_final/.gitattributes",
+   "sha256": "03db3f211da1f302b33ac5441bed4768df68ef1a7638e6aa49f3175d338385b9",
+   "size": 327,
+   "kind": "unchanged_git_blob",
+   "git_blob": "96e5c6cf6ae2433d615413576a181396ef1ecb65",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/LICENSE",
+   "sha256": "9ecb451b85bac31415129e576198e8f2719bc93f01d4c245faeae7a5d31dd9b4",
+   "size": 216,
+   "kind": "unchanged_git_blob",
+   "git_blob": "6b06f25566cf01c6dcca7bcd202cad6478bb3abc",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/Launch Anaxi.command",
+   "sha256": "6187e9b71254b061505c844704b304ff44f5977fcbde4d5a4a441dc93ba282a5",
+   "size": 4310,
+   "kind": "unchanged_git_blob",
+   "git_blob": "c0a15a1ded01818c1a5cf3182f01869c4d6052ce",
+   "git_mode": "100755"
+  },
+  {
+   "path": "anaxi_final/anaxi_protocol.py",
+   "sha256": "b77f1f190f6ccc58240228e87ded57f90d9bea294b99416f24543714cb926d79",
+   "size": 57949,
+   "kind": "unchanged_git_blob",
+   "git_blob": "fd170f23ed53ca9f3e5768e4be2011d39e5a025f",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/anaxi_protocol_sqlite.py",
+   "sha256": "4adcf898a3f417ebb59f5a028ead22656112168b90ba8a0f1bc06ddf1798f228",
+   "size": 55668,
+   "kind": "unchanged_git_blob",
+   "git_blob": "17f3c14b594b9474bef09aa3de98b9abaa39f2e0",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/anaxi_sleep.py",
+   "sha256": "85764f60fd8b188026e22d1405e5c70c665369dd287f20a21eea715297c80d1d",
+   "size": 6610,
+   "kind": "unchanged_git_blob",
+   "git_blob": "4a66a3fd3491e9b04c1b2ca36e8359c71e1ac0c5",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/api1_control_plane.py",
+   "sha256": "b98c648c28168e69590a10c0e8421ab08b67a8885c47cd8236c71239af9cb5fc",
+   "size": 17249,
+   "kind": "unchanged_git_blob",
+   "git_blob": "c1c360ba8a6f70f861d25a155feabfca3d94883e",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/api1_schema_migration.py",
+   "sha256": "f31e2f85d7096476e19d4fc74bec4645027036979064d70d9a24d95ec39ff9cf",
+   "size": 5592,
+   "kind": "unchanged_git_blob",
+   "git_blob": "3b4463cbb474ac3e97dfb895abbbfbf3d9b70f57",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/api2_control_plane.py",
+   "sha256": "b40aed1b38989bb9fb61721e0e8fd05cd5824e8decf4beba44f9274e1a6e4c72",
+   "size": 51212,
+   "kind": "unchanged_git_blob",
+   "git_blob": "d283f38ffe30c7ff8c4e51b5c483bec09bf57f04",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/api2_schema_migration.py",
+   "sha256": "1a64536822aa5828a296091d45241b7926e38f272ab9fc930f088a979b9402b4",
+   "size": 4964,
+   "kind": "unchanged_git_blob",
+   "git_blob": "9713f2cc9d652c0205240f7007beaacef4f0659a",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/api2_supervisor.py",
+   "sha256": "74b48d59a052689b6c6aced5823036de1d499af73e156e4418e2f46cf65b3ca6",
+   "size": 4259,
+   "kind": "unchanged_git_blob",
+   "git_blob": "cc222f37993a691fe83ab42adcb09b01807de5ef",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/artifact_prompts.py",
+   "sha256": "19674fc4d460d08b4a339e1e94f9e0a5ed20866bf7eaba6c3d34ca02bcf1210b",
+   "size": 5530,
+   "kind": "unchanged_git_blob",
+   "git_blob": "7f00190456b62d71ae614b3d3f8d91467682bc0b",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/bootstrap_macos.sh",
+   "sha256": "b5645b0ff2a248b76ec1fef0ba7ce529793b142135cae10a12244ac080b05726",
+   "size": 6654,
+   "kind": "transformed_git_blob",
+   "source_path": "anaxi_final/bootstrap_macos.sh",
+   "source_git_blob": "8e5cf77c4a09c46a4cf4472e62adc6de13f51394",
+   "git_mode": "100755",
+   "rule_set": "a2_rules.json",
+   "rule_set_version": "a2.1",
+   "rule_set_sha256": "44810b374055e1aa65ec25ad59998106b86e24466ea4edd9638a6029ade4f6f2",
+   "rule_applications": {
+    "path_windows_profile": 1
+   },
+   "change_kind": "behavior_bearing"
+  },
+  {
+   "path": "anaxi_final/boundary_inspect_cli.py",
+   "sha256": "99924ab56db0f727c91812c7ff470a9a3ff5a1f6616f5b4bb3ad59bfc950a52a",
+   "size": 6927,
+   "kind": "unchanged_git_blob",
+   "git_blob": "10fdb4023bf933c5cf93b0eeb8e755ae5a6fd09f",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/boundary_inspector.py",
+   "sha256": "5a6efd9c9338fe7134990458cdc365dfa299a6d502bef0cb15b5634ac2d80313",
+   "size": 79383,
+   "kind": "unchanged_git_blob",
+   "git_blob": "732a2e579ec91310b4b2940cf004a276b39136fc",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/boundary_inspector_schema_migration.py",
+   "sha256": "55befd34c518c37766178cc4aa2d42f3dec08c32581f50d8753854a80775d415",
+   "size": 8054,
+   "kind": "unchanged_git_blob",
+   "git_blob": "9fe9bea9fe4fe542e479c4f18c5bd3ea6533dd52",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/boundary_rationale_registry.py",
+   "sha256": "3aecee6ec8c03ba5c53ac5b35a13faf63ffaa083aefc0900517e64da9c91d584",
+   "size": 20529,
+   "kind": "transformed_git_blob",
+   "source_path": "anaxi_final/boundary_rationale_registry.py",
+   "source_git_blob": "6b5439fd1f1b2d590f82a3c1b968f437ee4c154a",
+   "git_mode": "100644",
+   "rule_set": "a2_rules.json",
+   "rule_set_version": "a2.1",
+   "rule_set_sha256": "44810b374055e1aa65ec25ad59998106b86e24466ea4edd9638a6029ade4f6f2",
+   "rule_applications": {
+    "name_map": 1
+   },
+   "change_kind": "behavior_bearing"
+  },
+  {
+   "path": "anaxi_final/bounded_clause.py",
+   "sha256": "c177bbc9a03cc9125f019ec6590d178378ebc2019810f90fb2d1d1224c03cabb",
+   "size": 2970,
+   "kind": "unchanged_git_blob",
+   "git_blob": "be586ebc6f70ae8c65a1af6729cf45addc8433bb",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/budget_compliance_registry.py",
+   "sha256": "6bdb273bf75f943545830ff48c3bc1fc5153c16b391d4001979c897c7a0338bf",
+   "size": 22178,
+   "kind": "unchanged_git_blob",
+   "git_blob": "a1f31ab400988791aac27b32ccfce6ba7bb47704",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/canonical_person.py",
+   "sha256": "f0b2e33246528eca6126aacf430f203759f0c48036326471370e170656f9b62d",
+   "size": 39847,
+   "kind": "transformed_git_blob",
+   "source_path": "anaxi_final/canonical_person.py",
+   "source_git_blob": "eb8f3e1b63508fdcf13406f67b3a0f127942b05f",
+   "git_mode": "100644",
+   "rule_set": "a2_rules.json",
+   "rule_set_version": "a2.1",
+   "rule_set_sha256": "44810b374055e1aa65ec25ad59998106b86e24466ea4edd9638a6029ade4f6f2",
+   "rule_applications": {
+    "name_map": 1
+   },
+   "change_kind": "comments_or_docstrings_only"
+  },
+  {
+   "path": "anaxi_final/caret_correspondent_admin.py",
+   "sha256": "349d3b113a37897ec66885212698b3d6137d0a489da15ce09f35c20f691b5d98",
+   "size": 4484,
+   "kind": "unchanged_git_blob",
+   "git_blob": "4b264c6d1720756f7bbfe898e1dd49ef2219058c",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/caret_owner_status.py",
+   "sha256": "736d5aea9f9ec0706d7694732c2edbd5a8f83b077068dedda14f2d9c5060bcdf",
+   "size": 17078,
+   "kind": "unchanged_git_blob",
+   "git_blob": "7ae195450ed248a4fb9bccc65a5bc4c040a49a3b",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/caret_wake.py",
+   "sha256": "96c3ae656ba6f09626260c339f805a44128b7171bfd46ac8b3f49070caa2200f",
+   "size": 9727,
+   "kind": "unchanged_git_blob",
+   "git_blob": "5f287a12c6597e856732397713f0c3d6f6b9eeab",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/clark_journal.py",
+   "sha256": "819a8ba9bc93796619958b7cee8feff6b5c332e52c17a1f80c21ca6fdc962454",
+   "size": 22750,
+   "kind": "unchanged_git_blob",
+   "git_blob": "c72a5310d3c2f74beb32997c4966a84f5cd2fdfd",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/claude_anaxi.py",
+   "sha256": "342512202ef42326ebf7a185414c7fe2ddc21700c26280e4e3541d27dc8b7176",
+   "size": 3463,
+   "kind": "unchanged_git_blob",
+   "git_blob": "f9fac24025ae7968c8683d9563bb7ff064369708",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/claude_anaxi_battery.py",
+   "sha256": "cc45a04ce030e883a599520b9873b54955f6955806f9006a3f2d28f36f7265ed",
+   "size": 4604,
+   "kind": "unchanged_git_blob",
+   "git_blob": "3ba4e5230a0fd739e755b44267be22aa021754d0",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/claude_native_waking_guard.py",
+   "sha256": "b4e5aed8e90ace45c75147c7e3ec881ff87d5e0f53e34e4cbfe0ecad73fd287b",
+   "size": 2038,
+   "kind": "unchanged_git_blob",
+   "git_blob": "ca53cdbc161d7ba994428cfd6af6d3895854a249",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/compatibility_blinding.py",
+   "sha256": "d5995d1e34a7471ef2c34f9170532f5b986ad5ef293d7da7b3ca931b3c8b818a",
+   "size": 3036,
+   "kind": "unchanged_git_blob",
+   "git_blob": "82cf1c081baae57456eabcb3e927ee5cac47487c",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/compatibility_harness.py",
+   "sha256": "2fa764272ced0073e14f5fbb6e85c0cf0b7d2f5b7e0190d8858e84b3562f56e4",
+   "size": 10962,
+   "kind": "unchanged_git_blob",
+   "git_blob": "80463cf26656fbab69f99f6384a77871f439fcd2",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/completion_evidence.py",
+   "sha256": "9ec04f0e2e526276f81e0c4e9bf70fad2dcf276ab313bec9498f5a8201126199",
+   "size": 6941,
+   "kind": "unchanged_git_blob",
+   "git_blob": "38fbc7a9fae4abc847b6e92a3be5f3ae00c9909f",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/completion_evidence/blocked_items.json",
+   "sha256": "79e1c6acab278c8776aa4a064c8d6a74882ddb9de5d4d5a9f568aaacad5da33b",
+   "size": 725,
+   "kind": "unchanged_git_blob",
+   "git_blob": "6038177a5b3a7d04a171d496c6830f0864148c36",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/completion_evidence/constitutional_baseline.json",
+   "sha256": "9733f6e525bfc0909e319a267be6d16df267b672b67413ba6d35464f7abc19e4",
+   "size": 1766,
+   "kind": "unchanged_git_blob",
+   "git_blob": "824de3dc01aacc1c45b1974225820c8d6069be6f",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/completion_evidence/custom_runner_suites.json",
+   "sha256": "2093b5784f5e496f2f74403e39e47c839e31b6e932fd0ca9763535d44186d57c",
+   "size": 2164,
+   "kind": "unchanged_git_blob",
+   "git_blob": "69d71cd927ce7c12d6fa0ab7a88d715cd3c18661",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/completion_evidence/legacy_test_dispositions.json",
+   "sha256": "b4977ce5f87607122b643c8472c8bd1541e1e125554b2e8029fb7e77eaa31418",
+   "size": 4372,
+   "kind": "unchanged_git_blob",
+   "git_blob": "5995cb0b2843285a9407b8dd405045d3f44d4cc1",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/completion_evidence/offline_regression_checkpoint.json",
+   "sha256": "13c7327362e534c7829cd058b8f8926c8288ad263f9b4678426123f5a2e6a0cd",
+   "size": 2751,
+   "kind": "unchanged_git_blob",
+   "git_blob": "d9cd279dc36a248c1d57407f2f2ddd6fb8b62614",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/completion_evidence/release_contract_2026-09-24.json",
+   "sha256": "91712b472911282d42eaae5d6c84123e5e240bec06cfadc72ebc7379d96ed412",
+   "size": 9761,
+   "kind": "unchanged_git_blob",
+   "git_blob": "b96c5e08b3b6f8692229099537a307071ed9d07a",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/completion_evidence/scenario_bindings.json",
+   "sha256": "87d33f2f12013bdd00a47edf1bbf458e2646b8c0ad460a43b91724a67c5a3104",
+   "size": 289703,
+   "kind": "generated_evidence",
+   "generator": "anaxi-reference-distribution/a2_public_bindings.py",
+   "input_sha256": "8a3660466559e34b47a702265859e3a472829613a04b76e1e2c2133962617aec",
+   "source_path": "anaxi_final/completion_evidence/scenario_bindings.json",
+   "source_git_blob": "c182ce316284775f5db712b2023fc6ad84d27b4a",
+   "rule_applications": {
+    "name_map": 4
+   }
+  },
+  {
+   "path": "anaxi_final/completion_evidence/synthetic_public_resource_delivery.json",
+   "sha256": "d6bbcb384e95008cd28d99fde02578acf976d7c5e367b302f0c1499dd7b868bd",
+   "size": 7582,
+   "kind": "generated_evidence",
+   "generator": "anaxi-reference-distribution/a2_resource_evidence.py",
+   "input_sha256": "29fd8e8a81ec0637a71b7aac4bfbabc5e8c922c347ff65eea3e7c6ba63387f25",
+   "produced_by": [
+    "public_resource_ingest.py",
+    "public_resource_completion_assay.py",
+    "public_resource_delivery_assay.py"
+   ]
+  },
+  {
+   "path": "anaxi_final/completion_evidence/synthetic_public_resources.json",
+   "sha256": "ba6231aa27a6d997f75c9b8351d4a077a9a89c94839af48cda0025cf818d2611",
+   "size": 6792,
+   "kind": "generated_evidence",
+   "generator": "anaxi-reference-distribution/a2_resource_evidence.py",
+   "input_sha256": "29fd8e8a81ec0637a71b7aac4bfbabc5e8c922c347ff65eea3e7c6ba63387f25",
+   "produced_by": [
+    "public_resource_ingest.py",
+    "public_resource_completion_assay.py",
+    "public_resource_delivery_assay.py"
+   ]
+  },
+  {
+   "path": "anaxi_final/conftest.py",
+   "sha256": "4bfd95270c5cd2c2e3b4fae7751dbe84667046cb503de6e8feaeb6becd43f8fc",
+   "size": 3751,
+   "kind": "unchanged_git_blob",
+   "git_blob": "9b5a03ca92176e8fca6cd271d6c0a43dce0bd1a6",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/constitutional_fingerprint.py",
+   "sha256": "2f138a0c908ecc54fc5b59bc54e9c205a2aba89bbf4734cc90cafcae63d7d126",
+   "size": 1708,
+   "kind": "unchanged_git_blob",
+   "git_blob": "236e62d1d74d11396e71f3c6ed352623131d1a94",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/context_budget.py",
+   "sha256": "b88cbdc353ef81ff707e873dd32a35257a391e8a641b7d609900ef7a7b1bbd18",
+   "size": 58202,
+   "kind": "unchanged_git_blob",
+   "git_blob": "7fc63fb793ea0a621eb7580a28f33b089c1e788b",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/conversation_direction.py",
+   "sha256": "134338761e7519bf1839afe73159d1af83ff4da3e2241fa11c5c6bfe4d95279d",
+   "size": 108470,
+   "kind": "transformed_git_blob",
+   "source_path": "anaxi_final/conversation_direction.py",
+   "source_git_blob": "42af193ab12729f67016051b459c98302a716afc",
+   "git_mode": "100644",
+   "rule_set": "a2_rules.json",
+   "rule_set_version": "a2.1",
+   "rule_set_sha256": "44810b374055e1aa65ec25ad59998106b86e24466ea4edd9638a6029ade4f6f2",
+   "rule_applications": {
+    "line_01": 1,
+    "line_02": 1,
+    "name_map": 9
+   },
+   "change_kind": "behavior_bearing"
+  },
+  {
+   "path": "anaxi_final/conversation_direction_trace.py",
+   "sha256": "766e585e9dc05a929ecc33488ae750ca227bb09f3ec825e69fb6997804933b93",
+   "size": 5959,
+   "kind": "unchanged_git_blob",
+   "git_blob": "273d47fd63923dc68edfd786b14cf3dcc7ad9004",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/conversation_display.py",
+   "sha256": "6ebbef75cdb3f82da25eabb6a4fc8535272ae69d4e1a865bc3f3ae9f5830bb3c",
+   "size": 2926,
+   "kind": "unchanged_git_blob",
+   "git_blob": "a98e10579d229e6bbd7825d47b07f026f9cb0dc4",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/conversation_projection.py",
+   "sha256": "61c5bd30a26d097e74c83fd0e3fd89fafff1c1fb21f430f616883f7e486b71f0",
+   "size": 18818,
+   "kind": "unchanged_git_blob",
+   "git_blob": "0624cf336e0931403d4fb061a203793bb06c8631",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/correspondence_admin.py",
+   "sha256": "1b8c258072f3ee33a35a8f3a38361cb9623c55b69fb13f8579fe6ab2a3157832",
+   "size": 9535,
+   "kind": "unchanged_git_blob",
+   "git_blob": "20d4202d1a81adec40a1134d0215d7eded56e799",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/correspondence_surfaces.py",
+   "sha256": "bd43b9c86990cf544a4bb0ee5d27a14d8a119d5f14f8ea3b1d3036c891a27268",
+   "size": 20079,
+   "kind": "unchanged_git_blob",
+   "git_blob": "7da3cc072f5760af955cbc13ef971848d5f5b305",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/cpi_schema_migration.py",
+   "sha256": "e5172017ec58950fdff32d51f36fdcf31a8411b9d95358d44ed9a791001238da",
+   "size": 6841,
+   "kind": "unchanged_git_blob",
+   "git_blob": "aa6a81a6ac7280241fb5f05c8697c914604da6ba",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/cs1_schema_migration.py",
+   "sha256": "d8b2be0b79d8428a7232b49332a0b944defde4ce0e4da49db7f35f944e40e53a",
+   "size": 7353,
+   "kind": "unchanged_git_blob",
+   "git_blob": "6a89cf26b27ea48acf77c6c59ee91af4b930b65f",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/dc0_schema_migration.py",
+   "sha256": "0f59c7947092e7d1d5489e52d77d6e6f21f243ff5d15ceb9f3c1c9c307697bb8",
+   "size": 11163,
+   "kind": "unchanged_git_blob",
+   "git_blob": "f24e703009e4b4524f41017349056c6abcb8cd30",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/decision_path_core.py",
+   "sha256": "c8ecbb58fd4db63cee0110389ed49a9f9eb8003865e75a488986f4db3fb1358b",
+   "size": 5368,
+   "kind": "unchanged_git_blob",
+   "git_blob": "90475606bb4f3e8e9d32833bc6789bd9d1c758e6",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/direction_control.py",
+   "sha256": "262b57cefc6a04c3f9f0dfefa067249dd6ca6498a4e73f9a02caf527ceb3f7a9",
+   "size": 5439,
+   "kind": "unchanged_git_blob",
+   "git_blob": "14353cb2a18aaa9c7cc32d270f5b27e136c96097",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/discord_author_mapping.py",
+   "sha256": "3659989eef4faf107433e45f2e1af0969d026045050b2ef4bc3d41f39d895601",
+   "size": 18335,
+   "kind": "unchanged_git_blob",
+   "git_blob": "c8824af17abdae7921f9e1a6aee91c1fe07a33a1",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/discord_correspondence.py",
+   "sha256": "3f26f98536ab1409199c7dd2c47e1ea184fbd6c156fa84298cd8a83757ccf611",
+   "size": 120168,
+   "kind": "unchanged_git_blob",
+   "git_blob": "8161ce422cc59a75ca07a89d10223ea7fdd017ac",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/discord_correspondence_net.py",
+   "sha256": "f8fd798187668c37397e8baf3ffdbb3b8fe1089617348e45de634db83a9e3d41",
+   "size": 12543,
+   "kind": "unchanged_git_blob",
+   "git_blob": "3ae9d56d0aa46cb407801c2cbce1ca0cdae5a909",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/discord_correspondence_registry.py",
+   "sha256": "578403164035dadc7e2f8bc0601aea6c7d4a14a1af1c2f310e5e940bbcc50552",
+   "size": 6332,
+   "kind": "unchanged_git_blob",
+   "git_blob": "cbc2a914659f7b562b43d22bd5e8f9a25bea4a7a",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/discord_transport_split.py",
+   "sha256": "4bd451cd726f8d6872c0c8a09a1c439eec89e2aac7d4ae530431c13e7d009bc9",
+   "size": 2843,
+   "kind": "unchanged_git_blob",
+   "git_blob": "02cec5c12749b14d0c66be4dcd3fe5efc61a82a3",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/embedding_model.py",
+   "sha256": "90018a13e8144a554aee4c64233fbf84468ed6bde449af0a2f04060fd1aa5d11",
+   "size": 1491,
+   "kind": "unchanged_git_blob",
+   "git_blob": "3b09ccffbed746373bfa4e2f14faa7693ec341ef",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/external_info_registry.py",
+   "sha256": "e1b983e5b28b5caa05abb3b183013b97dd54957ff4ffc48e4477314c90b2e180",
+   "size": 2965,
+   "kind": "unchanged_git_blob",
+   "git_blob": "18c6218905143f4219b9b839a0a380cb80699d7d",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/external_information.py",
+   "sha256": "3050b27b08d743f16b3b231618fca12f8593ef872bcea02745857129b07127ca",
+   "size": 69944,
+   "kind": "unchanged_git_blob",
+   "git_blob": "53ca04a6bee42f3bd3ff5b45ef13f70e27ad4035",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/external_information_net.py",
+   "sha256": "07d534196dd98370d8efef5a0cc8e9327fb10df5faeeae608f86d79dc44a3eee",
+   "size": 36493,
+   "kind": "unchanged_git_blob",
+   "git_blob": "7278386df7efa71ddbe425a20e4f994f3f2a0e93",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/family_membership.py",
+   "sha256": "ebe2d10f39d15b532e379a097eb7aebf9747931bfa3a9f4e084f5b2ad9a8f7a4",
+   "size": 49761,
+   "kind": "unchanged_git_blob",
+   "git_blob": "05b77dbdb4f44d6e1c94e318af5ae514a1fc0815",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/free_prose_screen.py",
+   "sha256": "7a740ce91a1f6d7b2ec66e8f4a93fe555be807639669ebd9684bb77d9b360873",
+   "size": 8589,
+   "kind": "unchanged_git_blob",
+   "git_blob": "c7254af45a2a5319c45fe2992ffbacb5f40cd911",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/fs1_schema_migration.py",
+   "sha256": "9c9959945e46bafefbe5deda706a475234dd0daafb66b0ea5cb3912ba5ac7cee",
+   "size": 11961,
+   "kind": "unchanged_git_blob",
+   "git_blob": "bea8dd4e7e0daf47ad8c79b8fc6b8ffc6b01bc03",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/generate_current_completion_ledger.py",
+   "sha256": "baa3d53bb13ee97bb24e3c7850c60c27496b1030fe6959124144fd87240d9f10",
+   "size": 11392,
+   "kind": "unchanged_git_blob",
+   "git_blob": "f6d2199021c65260bcb7472dcafabbedbeba9131",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/hippocampus_retrieval.py",
+   "sha256": "232b84022301b338abc2416eca17d1b772bdaff199599ca947104d0e879efef7",
+   "size": 20311,
+   "kind": "unchanged_git_blob",
+   "git_blob": "7114687203b28679949dc970dfa03daf7ffcd86a",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/hippocampus_store.py",
+   "sha256": "3da0a2d5dd90d2d2680d43b77d9d4fa572e418920892cc856961e98bbb7a4f43",
+   "size": 45377,
+   "kind": "unchanged_git_blob",
+   "git_blob": "3a167a15cef34ba31681c8b87e5f4dbb8cfbf132",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/hir1_registration.py",
+   "sha256": "63d2b144da6b402114c9e53a2b0ded9286b87503242a990c70d0e4fb609f9c71",
+   "size": 9175,
+   "kind": "unchanged_git_blob",
+   "git_blob": "fccd562a781961d36c2dbcb370b51535b53ab3ec",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/hir1_schema_migration.py",
+   "sha256": "8c3c7a1a922a0e7b54884daa694084bce0a2a41e91941f9924b28432ba772552",
+   "size": 2481,
+   "kind": "unchanged_git_blob",
+   "git_blob": "4cdf0504f7599019cb75f710bc30c0abf1ec9e26",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/human_session_binding.py",
+   "sha256": "b839105154082ed8da05b38a4f85c059be74c32abd0038b05a4b155748d90450",
+   "size": 29559,
+   "kind": "unchanged_git_blob",
+   "git_blob": "14eced49872cf677c285c7e2a1c0e62b118814b8",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/inference_provider.py",
+   "sha256": "254c7f0699b1453e9c421db9a8558b90a50c9e56e8ef74a40703cdecc7cc16c1",
+   "size": 16380,
+   "kind": "unchanged_git_blob",
+   "git_blob": "951346ae3779d56484642004890203cf9444dfdc",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/interaction_mode.py",
+   "sha256": "5ebe4c38ed631960a9b7b2275ac1168fcc4e6e2c6ab21ab11facb97c7e98c920",
+   "size": 6163,
+   "kind": "unchanged_git_blob",
+   "git_blob": "16df1127b41b1395e0d22df82d7bddfe2851533d",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/judge_rubric.py",
+   "sha256": "8f47acc6057d9f28e4f3c6ff28409f33c34cc2fe0db2a50434de876207d6419e",
+   "size": 9289,
+   "kind": "unchanged_git_blob",
+   "git_blob": "c51bde4c47f88d97c6054b5d6e4c6ad19bc52894",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/linguistic_pipeline.py",
+   "sha256": "706755cfd9cbe72a1e13d33c071ce2475a38085bdf20305d335f22590d5e1532",
+   "size": 8370,
+   "kind": "unchanged_git_blob",
+   "git_blob": "fd2248084c03c96ecc5f85e1f85e5a3a5456170e",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/llama_anaxi.py",
+   "sha256": "3e3c6cf5609aeb608d1b1d739aba97b1971185d3d13a0ea2ff8b19e05fb3712d",
+   "size": 300589,
+   "kind": "transformed_git_blob",
+   "source_path": "anaxi_final/llama_anaxi.py",
+   "source_git_blob": "7191925481e63d360a4e97582bad0987b40d94af",
+   "git_mode": "100644",
+   "rule_set": "a2_rules.json",
+   "rule_set_version": "a2.1",
+   "rule_set_sha256": "44810b374055e1aa65ec25ad59998106b86e24466ea4edd9638a6029ade4f6f2",
+   "rule_applications": {
+    "name_map": 28
+   },
+   "change_kind": "behavior_bearing"
+  },
+  {
+   "path": "anaxi_final/llama_desktop.py",
+   "sha256": "4f553f6622340e2f49ec8e646f36434a685fe3413228787f71474d45bb1e255d",
+   "size": 3578,
+   "kind": "unchanged_git_blob",
+   "git_blob": "07bd5e20db93800b02ff8dfa97fb7ab3889ab11a",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/llama_gui.py",
+   "sha256": "6c419370c6963087e67d791af4643649d35ff493cfb06c26c3598c7e22abb247",
+   "size": 84083,
+   "kind": "transformed_git_blob",
+   "source_path": "anaxi_final/llama_gui.py",
+   "source_git_blob": "4c091863fac5d65b353cd8d798c80ae16530dade",
+   "git_mode": "100644",
+   "rule_set": "a2_rules.json",
+   "rule_set_version": "a2.1",
+   "rule_set_sha256": "44810b374055e1aa65ec25ad59998106b86e24466ea4edd9638a6029ade4f6f2",
+   "rule_applications": {
+    "name_map": 1
+   },
+   "change_kind": "comments_or_docstrings_only"
+  },
+  {
+   "path": "anaxi_final/llama_launch.py",
+   "sha256": "ed7810916762b66c0dd8194147033104ce39b784424ea2278687f7fe878ff118",
+   "size": 7164,
+   "kind": "unchanged_git_blob",
+   "git_blob": "625b6ff3f73d652b336304f8face876e3b9c7eb9",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/llama_sleep.py",
+   "sha256": "c332c5ab86748a2726c26c5f59084364912cad56306058daee68ed257fa60d05",
+   "size": 18031,
+   "kind": "unchanged_git_blob",
+   "git_blob": "6b2ad7919da0d4fdd9c071f8a23ccbc554e7529c",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/migrate_historical_data.py",
+   "sha256": "9b56adb85af6ca9c1c946fa06045538308cdaf411c48378eca26341045e5a513",
+   "size": 52365,
+   "kind": "unchanged_git_blob",
+   "git_blob": "347bb3de9a01764568fb651353560a97cbdf3cad",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/native_provenance_writer.py",
+   "sha256": "129d38d41305e43e1520f340e68cbb21c96f9eef2554daa5a31d96400dd02911",
+   "size": 116858,
+   "kind": "unchanged_git_blob",
+   "git_blob": "a4115f320b6e5097d8edc700f20fc63719a4293d",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/native_turn_staging.py",
+   "sha256": "6ec8907f1e0f81d1695a16c0fe81cc963c06e237ead5dd5db6b3d0c7c5042eca",
+   "size": 21024,
+   "kind": "unchanged_git_blob",
+   "git_blob": "44a14586d2ac82d73ce0da1d9dcc3bad521c8348",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/network_guard.py",
+   "sha256": "5921437f3bd41690b595d48a5139b3a33e39f94136642756bc4bd94698d9cff6",
+   "size": 2339,
+   "kind": "unchanged_git_blob",
+   "git_blob": "63c02f923ed7bebe1c2f0106ee632e804f6e62a0",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/network_guard_site/sitecustomize.py",
+   "sha256": "a1b9ec145ad36a52761f82de63d14fbabbdc7356d14892c9511d0375179b4171",
+   "size": 437,
+   "kind": "unchanged_git_blob",
+   "git_blob": "66c4d142b3bbce60c3168c1de4f2dd05975ff5f3",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/obsidian_workspace.py",
+   "sha256": "93b19db7afae7b89f033c65fb52f1d754f1212a9299659300ddd37da815e2fb9",
+   "size": 38471,
+   "kind": "transformed_git_blob",
+   "source_path": "anaxi_final/obsidian_workspace.py",
+   "source_git_blob": "1b3af10ef5b60e1ed9f69cea2ea8e51a8720be7f",
+   "git_mode": "100644",
+   "rule_set": "a2_rules.json",
+   "rule_set_version": "a2.1",
+   "rule_set_sha256": "44810b374055e1aa65ec25ad59998106b86e24466ea4edd9638a6029ade4f6f2",
+   "rule_applications": {
+    "name_map": 1
+   },
+   "change_kind": "comments_or_docstrings_only"
+  },
+  {
+   "path": "anaxi_final/oc0_schema_migration.py",
+   "sha256": "a219c31f661abea28e34507bd2dc50b08bcd63e4f564e80bf4f38e9162c80291",
+   "size": 9338,
+   "kind": "unchanged_git_blob",
+   "git_blob": "7c8a52b9373789c8a82160e25e218ee5ff6eb7a6",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/od1_schema_migration.py",
+   "sha256": "6e5129340fa3f45d5814ffbd231f7da1e8fca3425a864e502562246a76c67694",
+   "size": 13231,
+   "kind": "unchanged_git_blob",
+   "git_blob": "8346b719fd2e943d7bd3aa4404d8d07f91848c67",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/operative_directive.py",
+   "sha256": "53351006c8a16d8d556faf3b7f71427ccec52b515d4c27789c957b2958b25c72",
+   "size": 42798,
+   "kind": "unchanged_git_blob",
+   "git_blob": "86e292ec979ef0973ab6b93155363b3844027b63",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/orchestration.py",
+   "sha256": "be1a43fc36f05e7f6c5c79fa7b0d5c5e628cad29a1121fd66962291b29e69820",
+   "size": 16277,
+   "kind": "unchanged_git_blob",
+   "git_blob": "1a2c71131df851e069fb31e84f62b677844a2d39",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/outward_communication.py",
+   "sha256": "30e6085f4456addfb57871545d23d61e74120ae9bae93d9608e8d5dbd49d1826",
+   "size": 28390,
+   "kind": "unchanged_git_blob",
+   "git_blob": "622a4daab17849f2d763ed3abf2942af4ff1372e",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/outward_expression.py",
+   "sha256": "98f3744ae5f37062ed71120e3268cceb81cf9848d6546f4f77ce4fbe69ef538d",
+   "size": 1533,
+   "kind": "unchanged_git_blob",
+   "git_blob": "5a99d554d22b3ea08674915a7c4f57cfd6d510c8",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/owner_completion_inventory.json",
+   "sha256": "f13d3fe3f33f8eafe56692a2f5c55612ab58181fecd563bad170a9f0d863af2f",
+   "size": 21190,
+   "kind": "transformed_git_blob",
+   "source_path": "anaxi_final/owner_completion_inventory.json",
+   "source_git_blob": "8ecbd7df8f82486aca0fc416f305daf7bbc7280c",
+   "git_mode": "100644",
+   "rule_set": "a2_rules.json",
+   "rule_set_version": "a2.1",
+   "rule_set_sha256": "44810b374055e1aa65ec25ad59998106b86e24466ea4edd9638a6029ade4f6f2",
+   "rule_applications": {
+    "name_map": 5
+   },
+   "change_kind": "behavior_bearing"
+  },
+  {
+   "path": "anaxi_final/pdf_page_renderer.swift",
+   "sha256": "f3cd4f0d48959b975a52a8464f19d34f5de1fae259c74cb1b329658b699de201",
+   "size": 1629,
+   "kind": "unchanged_git_blob",
+   "git_blob": "94a80339ee67486a70222dbbdc1c31bbbfd16475",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/prepare_embedding_model.py",
+   "sha256": "be402534dcefae958d3b44ab36f9c906772cebc8c16634ee9fc06cc5b5e6a66b",
+   "size": 1273,
+   "kind": "unchanged_git_blob",
+   "git_blob": "a8001b04b2184bb5c75bb59208407b2a7a8a511e",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/provenance_schema.py",
+   "sha256": "c65a9abd8f86c2883421a85ce3d0b494bb8887b7d3a89d9a71266c9e30d2abd0",
+   "size": 49588,
+   "kind": "unchanged_git_blob",
+   "git_blob": "253b102f951ba20b4b6c92814e8a39320dbc1b7a",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/public_resource_completion_assay.py",
+   "sha256": "5642ce29fd895eecd6f8824d3d07b85cb07334fb81ee4820622b3411cfea6463",
+   "size": 12410,
+   "kind": "unchanged_git_blob",
+   "git_blob": "5b9041bee45a8ff996a9b3a536d09f873d7cd0be",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/public_resource_delivery_assay.py",
+   "sha256": "8f8b34f9d2d4e511c2972b547602e411861a2a1278650eabf9ef66b076e0eaa3",
+   "size": 15478,
+   "kind": "unchanged_git_blob",
+   "git_blob": "55a57fa10d004856b651b651d6fdf83cd53d87dd",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/public_resource_ingest.py",
+   "sha256": "920c478cf4db2ffe7bb58009495033dd095b1280f14576bc81f55d1a4f14e36a",
+   "size": 15152,
+   "kind": "unchanged_git_blob",
+   "git_blob": "52a42fb0571d38ac57d0037e19ac90e91bd64f0f",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/readonly_db.py",
+   "sha256": "c4ee2accf89661ce56285ee1bdc9e2d8b59c6976d177ef2e096a032767192b51",
+   "size": 1161,
+   "kind": "unchanged_git_blob",
+   "git_blob": "679d7c84e363a7dac468ebcb8968a4f245c8d0a5",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/reference_harness_v0.py",
+   "sha256": "61b70be436f941333cadbca844e9a49a85a9ad15d6fd3a1e2b852c9b21948dad",
+   "size": 70753,
+   "kind": "unchanged_git_blob",
+   "git_blob": "74e5485747f69d595069bfbf4052411caff0dd9a",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/relational_history.py",
+   "sha256": "94b56c57b32aa180625f4ad459b5ecedcb6fa09594a85b7a428ff010487ac415",
+   "size": 7948,
+   "kind": "unchanged_git_blob",
+   "git_blob": "e005dd0e19d00c32bcd6dcc98c41cd946909148f",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/rem_prompts.py",
+   "sha256": "f8021711e6c8a95d9f8a77220631b65745ef232860cb678f9ca27c21e948741c",
+   "size": 5488,
+   "kind": "unchanged_git_blob",
+   "git_blob": "37ffebaa5d45326ae801bd31b3160ce47b65b0ff",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/requirements-macos.txt",
+   "sha256": "f45d79e03228ab46e6598d962008bdfb1bba34c4529cab760a654282b273a261",
+   "size": 2505,
+   "kind": "unchanged_git_blob",
+   "git_blob": "a40deb274867740167997dec794eb63b3cc8d38f",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/resume_human_input.py",
+   "sha256": "2de6bfdab7aa5bd8d48b14c6113dfd47b756814c82f0dbc9b215d440385f6f77",
+   "size": 8279,
+   "kind": "unchanged_git_blob",
+   "git_blob": "05ac4b906b5244f9326355c609b80ba650aa6df9",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/run_compatibility_harness.py",
+   "sha256": "b7ccec46e5c606ccede376e9fec74217c94bd47006ad9fdd242aa0c4e037031f",
+   "size": 4402,
+   "kind": "unchanged_git_blob",
+   "git_blob": "58353dbfed48c89f21b07ca52fe85754c0c322a0",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/run_substrate_evaluation.py",
+   "sha256": "f6fd007d8e8ff5d62c4906ae23018b6290eef549db7556693f009558d171429a",
+   "size": 16082,
+   "kind": "unchanged_git_blob",
+   "git_blob": "4b8065da3cab534283546c800bd2f3c380d30ae0",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/runtime_isolation.py",
+   "sha256": "90b3e524b01843cb1e12259f67ab81bae84a542518b6d65997f5f5e7edf2e6f0",
+   "size": 1798,
+   "kind": "unchanged_git_blob",
+   "git_blob": "7e9ae130e79cb9bdf93c5dd52775a661c017cd7a",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/runtime_roots.py",
+   "sha256": "bc8a990c978dda34997ec9973ef852b995c9f1536b723a0293b9615e613a0800",
+   "size": 2308,
+   "kind": "unchanged_git_blob",
+   "git_blob": "62376b175509379c5bb7945f0cc65e7a42d8a208",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/scenario_evidence.py",
+   "sha256": "e8687ddd967b0a9f2da6d4e6fa2f007cce52b60b64484313348c30fef96154b0",
+   "size": 14323,
+   "kind": "unchanged_git_blob",
+   "git_blob": "32a3c3472b573396938934011f54037ec0b27941",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/session_dialogue_window.py",
+   "sha256": "d2b19e94ea95aa7ae653551fbf1a1c4b31d7789a5a08acea168fdb638538394f",
+   "size": 19828,
+   "kind": "unchanged_git_blob",
+   "git_blob": "74225895761e1fe34717e3a4c55852b0368a3a4f",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/signal_matcher.py",
+   "sha256": "c329f3ddfe6bc48516d59aa4bdd3b5af7319767611091a6888c8e3584e7a6cc2",
+   "size": 22318,
+   "kind": "unchanged_git_blob",
+   "git_blob": "abd200a67c93f9d5d6a58affa8dd47ac4422617f",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/signal_observation_log.py",
+   "sha256": "20e55c3e5103f218caf1f1b0e28b7961196c55654b8c26fd149e0dd341a1db02",
+   "size": 5898,
+   "kind": "unchanged_git_blob",
+   "git_blob": "a5a4f7300f4ee6ad0e63fa9d43afa108daeebd75",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/sleep_c_schema.py",
+   "sha256": "3a50e3e158b027f1c29c32724ef8ed433798d8cb496258b15e98652b4b3079a7",
+   "size": 5802,
+   "kind": "unchanged_git_blob",
+   "git_blob": "0ed1f5316a6f465ff368d9f725c0208cf19eebde",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/sleep_cycle.py",
+   "sha256": "d6a2ce71b45f637158c982022bfc5413a4688bda3dd54503c6df623e2ba128a4",
+   "size": 18616,
+   "kind": "unchanged_git_blob",
+   "git_blob": "4469fb061ab5e6353a510cd34acd126a553d6d27",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/sleep_decision_test_support.py",
+   "sha256": "9fadfee9d6092cb503735119a26adfbcb4e2090917a017c9c219ef95a6837094",
+   "size": 898,
+   "kind": "transformed_git_blob",
+   "source_path": "anaxi_final/sleep_decision_test_support.py",
+   "source_git_blob": "46a51ef301976d36db3d4e56d6c4dc77acada207",
+   "git_mode": "100644",
+   "rule_set": "a2_rules.json",
+   "rule_set_version": "a2.1",
+   "rule_set_sha256": "44810b374055e1aa65ec25ad59998106b86e24466ea4edd9638a6029ade4f6f2",
+   "rule_applications": {
+    "name_map": 2
+   },
+   "change_kind": "behavior_bearing"
+  },
+  {
+   "path": "anaxi_final/sleep_evidence.py",
+   "sha256": "40e8dad07fb29ec22f374e4738cc5731fb086ae913171c0bbb0caefa287d13e2",
+   "size": 36454,
+   "kind": "unchanged_git_blob",
+   "git_blob": "5ee45a5a577551cb3e11fac6223fbe1e6c056a72",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/sleep_lease.py",
+   "sha256": "0d4a933d7d581c5aebb762a03bcf03a8d36e6aa7966a98b1dc6f72add1ddb09d",
+   "size": 6255,
+   "kind": "unchanged_git_blob",
+   "git_blob": "6cde52f2a06fa47f356d16362a39dacde57dcce6",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/sleep_owner_control.py",
+   "sha256": "591d07657505316f1a9fbee7d1d39f88dccfc5d3f619704d8226660a66f9bf83",
+   "size": 1775,
+   "kind": "unchanged_git_blob",
+   "git_blob": "7fa1f35441aeee14b47227fbe3369f6d704ba8e8",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/sleep_receipts.py",
+   "sha256": "fefc5a02482ea176ea63d297a5e6251460a8d88adcf2ca8c649eb46c90c89816",
+   "size": 4546,
+   "kind": "unchanged_git_blob",
+   "git_blob": "ce2464836a5f9ee2bd06fc0d8b9099cd27f640a7",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/sleep_selection.py",
+   "sha256": "a85a0cff4dc30b638159bc655edfbeb3d7996e068c52328cb23761a9efd35736",
+   "size": 12413,
+   "kind": "unchanged_git_blob",
+   "git_blob": "ea0421fb3c90cc1b5786649c6e67b251d2852cdf",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/sleep_timing_knock.py",
+   "sha256": "05e2068505eeb26546847583b4db970ffe42113c51f47c2584050bd0ba7ec2eb",
+   "size": 39595,
+   "kind": "unchanged_git_blob",
+   "git_blob": "8ecaa327dcf703beda34ff5ea0a3205a59b87d73",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/sleep_transformation.py",
+   "sha256": "3899d9670877860d664e23a9a382a715155a44ecaad336e97bc78be385d4350f",
+   "size": 14611,
+   "kind": "unchanged_git_blob",
+   "git_blob": "dcc5ac72a0b718db312cc2bea7f69aa6428828bc",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/sleep_watermark.py",
+   "sha256": "434d4b254f5ddf6266f8a96aed9656a407e47dc260d15a00935fa270353c6781",
+   "size": 8356,
+   "kind": "unchanged_git_blob",
+   "git_blob": "5be08b92b09eecf9c1fd72e237213d1988ed47fd",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/slp2_cli.py",
+   "sha256": "2ddfe162377a1086217a348b5be0829534be2b5ab07ee0de67925661aeafc6ad",
+   "size": 9023,
+   "kind": "unchanged_git_blob",
+   "git_blob": "3bb01e3e2803ead07307d4f8367350b8d6306ed9",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/slp2_schema_migration.py",
+   "sha256": "b90311fe7620bf525ee8c11c260847c26f431d4ef5a63b3668b7a68b4aebb978",
+   "size": 17607,
+   "kind": "unchanged_git_blob",
+   "git_blob": "05748b905e005b0df2e439782b6f7ec4f51f011b",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/standing_hippocampus_audit.py",
+   "sha256": "31d9d510f023da03ffbff7efd200f1d7479c1395385a827aacaf462e24c2f8b6",
+   "size": 26798,
+   "kind": "unchanged_git_blob",
+   "git_blob": "8c4a5feae1a40216115c350bbd821182d8ff1439",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/standing_provenance_audit.py",
+   "sha256": "c0a3ac2ee82e04788514037685e0804f5f8f4c45ac087094f2177338165205a7",
+   "size": 10982,
+   "kind": "unchanged_git_blob",
+   "git_blob": "150683bf6f620559dbef7eb2fbd818880cd9f075",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/temporal_grounding.py",
+   "sha256": "c103d67da3e04873eb9801b6e2a05d9287c65da1179aa26917ddb22f6d548b7d",
+   "size": 11203,
+   "kind": "unchanged_git_blob",
+   "git_blob": "afc0a6d09a912ed1c17aad5582e6c2028c0f1fff",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_a1_claude_fail_closed.py",
+   "sha256": "79f06b0b1996e7a65f064534ad57649555b8e8ca78090332f4bb575eea1f7f67",
+   "size": 6485,
+   "kind": "unchanged_git_blob",
+   "git_blob": "fe7bc977f12b23333750491ab3168806b473970f",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_anaxi_dev.py",
+   "sha256": "3c4cd426254dccf59c930b7de48b9f86917404cf527e2edc8bfdaa7f9852cb92",
+   "size": 31304,
+   "kind": "unchanged_git_blob",
+   "git_blob": "5d93466b569f879689ddd4a6fc2cf9d311cfd003",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_anaxi_protocol.py",
+   "sha256": "3fc95dc469defb59be59add6f66999ecfa2929d2ae1e4977d76cc4614cb6b9a5",
+   "size": 17299,
+   "kind": "unchanged_git_blob",
+   "git_blob": "d180254388bdd637c44e1f939e7c15277038c05b",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_anaxi_sleep_disabled.py",
+   "sha256": "2b69b511b17f639583fd71ad260a63f1a54eb49b9d1e562474d8d6e4d404a19b",
+   "size": 5213,
+   "kind": "unchanged_git_blob",
+   "git_blob": "c21034130ab5220169fdf5918ea16f6340cb39b1",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_api1_control_plane.py",
+   "sha256": "e89427a57def5e97f840f850735f67067738418cab0c8bd573a9001dd460a10e",
+   "size": 26652,
+   "kind": "unchanged_git_blob",
+   "git_blob": "935a4a27ea6f7b0b63b62f37bb2ec5de360b773d",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_api2_control_plane.py",
+   "sha256": "d0a8cabb3a78db383e2ffef32f29a9c6ad1b33d39899c1a09f776be986e83112",
+   "size": 45210,
+   "kind": "unchanged_git_blob",
+   "git_blob": "3bb57c35991b3cadc14634f3f6327efc3980f9ba",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_api2_lr1_s1.py",
+   "sha256": "0472e5fd980c4d19831c3f6537f21c78bd87af923edb08149d236e6b02c2cae8",
+   "size": 28563,
+   "kind": "unchanged_git_blob",
+   "git_blob": "ef7f80b8fe6c90943530039851180e8ed510d3e1",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_architecture_invariants.py",
+   "sha256": "98bcb7bc1cfb251fcae66050cca36a28bd882f9ac17bec2653100826a6d63ae7",
+   "size": 6686,
+   "kind": "unchanged_git_blob",
+   "git_blob": "1f5bc042f71b2ef79e5f562f026749d5734dde24",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_artifact_decision_record.py",
+   "sha256": "d1c901279b82735d63f9c83a5e9b867c7e5fc8f4741b1291af8041fa98338099",
+   "size": 3897,
+   "kind": "unchanged_git_blob",
+   "git_blob": "6115b0a6052b51b0efc756418f9787d1343562cb",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_artifact_judgment_role.py",
+   "sha256": "98fa9c2e94f77e4b036fd3f4c0768265bf1c3bd603d34477dd248444e1862436",
+   "size": 4933,
+   "kind": "unchanged_git_blob",
+   "git_blob": "5bd1e980ed2edad149a86f2a8bd6e9f4fe6aea5e",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_boundary_inspect_cli.py",
+   "sha256": "581d06b0a5f14d910517142796a813df06c9c9b32fa5d7781cf686051ccc242f",
+   "size": 7054,
+   "kind": "unchanged_git_blob",
+   "git_blob": "a527f53c5702b2a2a718afa7ffcf9d6faf0d0191",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_boundary_inspector.py",
+   "sha256": "46bb59c2edd3e1b5a174a6459245fa61db0f9bbea27b8ce928930f896d301f58",
+   "size": 70818,
+   "kind": "unchanged_git_blob",
+   "git_blob": "f6a09d9bbf602b8780840616c09643019f6c437a",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_boundary_rationale_registry.py",
+   "sha256": "e322eae06cc237746e6dc772998cae89a873cdf88d7500d834ef9049ba868c2b",
+   "size": 8506,
+   "kind": "unchanged_git_blob",
+   "git_blob": "cbdd5a7cae8be29327efedf559f85e448952e0c2",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_bounded_clause_integration.py",
+   "sha256": "92e38bc10b9f323e330c24a89a173763249984f5b96718aec77e2a113a58b8c2",
+   "size": 23693,
+   "kind": "unchanged_git_blob",
+   "git_blob": "f204dea7ffaaa7a18e7ba1f0df75a5e26dc3ea6f",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_bounded_hippocampus_integration.py",
+   "sha256": "175313ec3babcc9d1355b2207d73a30ea7fbd5c76e54fe1dfe51e589ace898ae",
+   "size": 30755,
+   "kind": "transformed_git_blob",
+   "source_path": "anaxi_final/test_bounded_hippocampus_integration.py",
+   "source_git_blob": "7013727d8107a8a52510cd15270aa2d5d4e52a2b",
+   "git_mode": "100644",
+   "rule_set": "a2_rules.json",
+   "rule_set_version": "a2.1",
+   "rule_set_sha256": "44810b374055e1aa65ec25ad59998106b86e24466ea4edd9638a6029ade4f6f2",
+   "rule_applications": {
+    "name_map": 1
+   },
+   "change_kind": "behavior_bearing"
+  },
+  {
+   "path": "anaxi_final/test_canonical_person_identity.py",
+   "sha256": "9657b148a6bcc7bbf49068aacc0289d3691ab516b271794a31ba94b7d3005274",
+   "size": 41965,
+   "kind": "transformed_git_blob",
+   "source_path": "anaxi_final/test_canonical_person_identity.py",
+   "source_git_blob": "3928e93e310515e59d95699a584dd09bd5cc9e19",
+   "git_mode": "100644",
+   "rule_set": "a2_rules.json",
+   "rule_set_version": "a2.1",
+   "rule_set_sha256": "44810b374055e1aa65ec25ad59998106b86e24466ea4edd9638a6029ade4f6f2",
+   "rule_applications": {
+    "name_map": 156
+   },
+   "change_kind": "behavior_bearing"
+  },
+  {
+   "path": "anaxi_final/test_capability_completion_v0.py",
+   "sha256": "00e2645797683046859e0e9bb57aba4a5cdbc48b3291d85687c2531f7469bb99",
+   "size": 10627,
+   "kind": "transformed_git_blob",
+   "source_path": "anaxi_final/test_capability_completion_v0.py",
+   "source_git_blob": "380ae35708c5cac9c84e6a66c1491b2676128109",
+   "git_mode": "100644",
+   "rule_set": "a2_rules.json",
+   "rule_set_version": "a2.1",
+   "rule_set_sha256": "44810b374055e1aa65ec25ad59998106b86e24466ea4edd9638a6029ade4f6f2",
+   "rule_applications": {
+    "evidence_path_resources": 1,
+    "name_map": 3
+   },
+   "change_kind": "behavior_bearing"
+  },
+  {
+   "path": "anaxi_final/test_caret_correspondent_binding.py",
+   "sha256": "d0ac14b2723e125a1e20569227fae60242970c63427a016c2a3006e1005fe528",
+   "size": 60554,
+   "kind": "transformed_git_blob",
+   "source_path": "anaxi_final/test_caret_correspondent_binding.py",
+   "source_git_blob": "750f4c0439cd80d81f5d69130236021cc98f6d1a",
+   "git_mode": "100644",
+   "rule_set": "a2_rules.json",
+   "rule_set_version": "a2.1",
+   "rule_set_sha256": "44810b374055e1aa65ec25ad59998106b86e24466ea4edd9638a6029ade4f6f2",
+   "rule_applications": {
+    "id_map": 1,
+    "name_map": 29
+   },
+   "change_kind": "behavior_bearing"
+  },
+  {
+   "path": "anaxi_final/test_caret_expression_boundary.py",
+   "sha256": "fa149cd25ca16e42f1dd6a20d451391bed95661d7da6597fc33265415896bd4f",
+   "size": 12435,
+   "kind": "unchanged_git_blob",
+   "git_blob": "903651fa137c2112984ad248c43a4b5aa055493f",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_caret_family_live_completion.py",
+   "sha256": "701ee243e3e6eb4878b9939b2d563862b980049548e195f4438e4700fb7a8571",
+   "size": 4420,
+   "kind": "transformed_git_blob",
+   "source_path": "anaxi_final/test_caret_family_live_completion.py",
+   "source_git_blob": "143f6291a38632dd5e801dc7feffdd3c99febc0f",
+   "git_mode": "100644",
+   "rule_set": "a2_rules.json",
+   "rule_set_version": "a2.1",
+   "rule_set_sha256": "44810b374055e1aa65ec25ad59998106b86e24466ea4edd9638a6029ade4f6f2",
+   "rule_applications": {
+    "id_map": 2,
+    "name_map": 3
+   },
+   "change_kind": "behavior_bearing"
+  },
+  {
+   "path": "anaxi_final/test_caret_inbound_seam.py",
+   "sha256": "3f24e590036b8ce5905c8e9fd4c6f4479e7e835d69abc2ef64dd8abc452edbce",
+   "size": 7837,
+   "kind": "transformed_git_blob",
+   "source_path": "anaxi_final/test_caret_inbound_seam.py",
+   "source_git_blob": "0b00d004439b1781ce27ded210f8fe00ce9d8ef4",
+   "git_mode": "100644",
+   "rule_set": "a2_rules.json",
+   "rule_set_version": "a2.1",
+   "rule_set_sha256": "44810b374055e1aa65ec25ad59998106b86e24466ea4edd9638a6029ade4f6f2",
+   "rule_applications": {
+    "line_06": 1,
+    "line_07": 1,
+    "id_map": 1,
+    "name_map": 4
+   },
+   "change_kind": "behavior_bearing"
+  },
+  {
+   "path": "anaxi_final/test_caret_multipart_transport.py",
+   "sha256": "f96eb54b841f80c36d4ab0673f54e223fed8f9554df30d30217e722d07f6fd5b",
+   "size": 24810,
+   "kind": "unchanged_git_blob",
+   "git_blob": "3152ed33fcd518b9988bb876410632b5e0eda9d8",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_caret_outbound_seam.py",
+   "sha256": "5dc4944e1111e6f5ea59cad16563645066144dc43e95d5e0dc23c5b95cf93825",
+   "size": 7540,
+   "kind": "transformed_git_blob",
+   "source_path": "anaxi_final/test_caret_outbound_seam.py",
+   "source_git_blob": "77bda08831f6c625f37c25aa9828e48c70527fa7",
+   "git_mode": "100644",
+   "rule_set": "a2_rules.json",
+   "rule_set_version": "a2.1",
+   "rule_set_sha256": "44810b374055e1aa65ec25ad59998106b86e24466ea4edd9638a6029ade4f6f2",
+   "rule_applications": {
+    "id_map": 1,
+    "name_map": 3
+   },
+   "change_kind": "behavior_bearing"
+  },
+  {
+   "path": "anaxi_final/test_caret_wake_service.py",
+   "sha256": "0a6b596ea151dbc646873c231a895ae59a93914dc77a877c516c6d57fb56b1d5",
+   "size": 40959,
+   "kind": "transformed_git_blob",
+   "source_path": "anaxi_final/test_caret_wake_service.py",
+   "source_git_blob": "1c5db7ea186e04fd71c6f895957c5e6c47b5fc8c",
+   "git_mode": "100644",
+   "rule_set": "a2_rules.json",
+   "rule_set_version": "a2.1",
+   "rule_set_sha256": "44810b374055e1aa65ec25ad59998106b86e24466ea4edd9638a6029ade4f6f2",
+   "rule_applications": {
+    "id_map": 2,
+    "name_map": 3
+   },
+   "change_kind": "behavior_bearing"
+  },
+  {
+   "path": "anaxi_final/test_clark_journal.py",
+   "sha256": "e98a73ae5c1fa680ff32057beb004179ac89c96984cf2d106064a69a501fe8aa",
+   "size": 8698,
+   "kind": "unchanged_git_blob",
+   "git_blob": "d33e3ede3b92f8c5e900f0c8b7c6c5fbfcf8d5cc",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_clark_sleep_request_from_reply.py",
+   "sha256": "e3a40d29aba8d237085b3465d0a21ba017e2f58d6d6785f1c1c3dd97022d9060",
+   "size": 19862,
+   "kind": "transformed_git_blob",
+   "source_path": "anaxi_final/test_clark_sleep_request_from_reply.py",
+   "source_git_blob": "68d437ef5cd90c70216e0b2ec019376c5a21f6af",
+   "git_mode": "100644",
+   "rule_set": "a2_rules.json",
+   "rule_set_version": "a2.1",
+   "rule_set_sha256": "44810b374055e1aa65ec25ad59998106b86e24466ea4edd9638a6029ade4f6f2",
+   "rule_applications": {
+    "name_map": 23
+   },
+   "change_kind": "behavior_bearing"
+  },
+  {
+   "path": "anaxi_final/test_collaborative_obsidian_workspace.py",
+   "sha256": "50a81f4cdacd159bf59fbd3fe95612e901654249ceab81eb0a3b2e376d2f3704",
+   "size": 26035,
+   "kind": "transformed_git_blob",
+   "source_path": "anaxi_final/test_collaborative_obsidian_workspace.py",
+   "source_git_blob": "e266d75aa4cc85420800d5d7e28b1e8dab81e017",
+   "git_mode": "100644",
+   "rule_set": "a2_rules.json",
+   "rule_set_version": "a2.1",
+   "rule_set_sha256": "44810b374055e1aa65ec25ad59998106b86e24466ea4edd9638a6029ade4f6f2",
+   "rule_applications": {
+    "path_example_vault": 1,
+    "name_map": 13
+   },
+   "change_kind": "behavior_bearing"
+  },
+  {
+   "path": "anaxi_final/test_compatibility_harness.py",
+   "sha256": "1ffd0e5623d2768df9396aba2baabb70058de8dcd9ebc69db9aa94500c337e5e",
+   "size": 12438,
+   "kind": "unchanged_git_blob",
+   "git_blob": "fa01918bad5a28bbf016d00c6f33f4f0c59fab1c",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_completion_evidence.py",
+   "sha256": "cdedbc220f0b410acb1934ab413d9c096a544ec3884f1324c5bb9f96b3231dff",
+   "size": 3736,
+   "kind": "unchanged_git_blob",
+   "git_blob": "dcea4d68842ebd00cb88d18523885b139da94269",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_context_budget.py",
+   "sha256": "2d2ede15ab72718997ff6bdd63b078d46ee6e7af3fc22d411dd6435f51819e2b",
+   "size": 19292,
+   "kind": "unchanged_git_blob",
+   "git_blob": "e09f034bb80b2c3de15e50c6b1eaf4046c4903c5",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_conversation_aesthetic.py",
+   "sha256": "945edbed5a2edc59ba2b611d328d0ff70712d4663b1d524e60c255b089ae9141",
+   "size": 11339,
+   "kind": "unchanged_git_blob",
+   "git_blob": "4b777ad468303351b5905a5bb044624ba4291f8f",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_conversation_direction.py",
+   "sha256": "c3b9248ad2530baafe8b62726b6beb6984f5108c992ca056e71b966c39b60f1b",
+   "size": 53669,
+   "kind": "transformed_git_blob",
+   "source_path": "anaxi_final/test_conversation_direction.py",
+   "source_git_blob": "2346842ceaab3e2324608dc6e65ee28a6899f3ad",
+   "git_mode": "100644",
+   "rule_set": "a2_rules.json",
+   "rule_set_version": "a2.1",
+   "rule_set_sha256": "44810b374055e1aa65ec25ad59998106b86e24466ea4edd9638a6029ade4f6f2",
+   "rule_applications": {
+    "name_map": 1
+   },
+   "change_kind": "comments_or_docstrings_only"
+  },
+  {
+   "path": "anaxi_final/test_conversation_direction_trace.py",
+   "sha256": "08bc062512fc744b53aacb57ea0a0fd0128c2cb463ef3bbdd2ce432732e1e51a",
+   "size": 25639,
+   "kind": "unchanged_git_blob",
+   "git_blob": "ba74b96626cd7aff11a5d451f3518e599117e740",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_conversation_ui_integrity.py",
+   "sha256": "8a41d54ae73457eb843667e2330d966a9b04e2761a286f375b7874900d5b6536",
+   "size": 8873,
+   "kind": "unchanged_git_blob",
+   "git_blob": "26185b930e703fb99f6075486cd81ab00990c680",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_custom_runner_suites.py",
+   "sha256": "ef7aa4f28e0fd8ac7d4fea9ce481a4db4ed74e6dbd99a78bd686bf6360e96d53",
+   "size": 2850,
+   "kind": "unchanged_git_blob",
+   "git_blob": "812fd9ac335cda57f4d4f5b7d984c4a8e6b8aa8b",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_decision_path_core_parity.py",
+   "sha256": "177e55897bd20b61a94b943bb2b58acca78dd84e570304dfcfad7f36f526b7cd",
+   "size": 3846,
+   "kind": "unchanged_git_blob",
+   "git_blob": "9d2fcd3cb63a2db10729bd7a7fd8f4ab32aa3031",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_desktop_launch_paths.py",
+   "sha256": "9864c9f8db9a42da9f0f4476af291ae14cbc7ee8e8e0c7e1a53bfed3edbdc5b8",
+   "size": 2523,
+   "kind": "unchanged_git_blob",
+   "git_blob": "317a9dc5eef79343042bb71b8cc1f5df8d191f27",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_direction_integrity_repair.py",
+   "sha256": "2c34aeecb0abceea9b9fc5ecaaca2d951d89022e7172e09145d05522518de74e",
+   "size": 26079,
+   "kind": "unchanged_git_blob",
+   "git_blob": "cceb0ae14dd6bd68f46da1da798c52273a85746d",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_directive_completion.py",
+   "sha256": "3f111ddeb199c6bdb3444c602c27a4b256639cd997491c7711d9072d47d97c56",
+   "size": 3456,
+   "kind": "unchanged_git_blob",
+   "git_blob": "87ba34523ebeb8ea59ea990cd34aad50a03f27c7",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_directive_set_idempotence.py",
+   "sha256": "f6a3ecbb437f6defa90e5569407afd0a8f0a9337720a236b60fdd3e98339f4dd",
+   "size": 2771,
+   "kind": "unchanged_git_blob",
+   "git_blob": "d234c2b5f5b953ea146dd718d5d3fcaa84aa8831",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_discord_correspondence_v0.py",
+   "sha256": "c2c813e2e74ab76f811472d7d10836150e9f63da99be07324c1ad4274df2b77d",
+   "size": 55438,
+   "kind": "transformed_git_blob",
+   "source_path": "anaxi_final/test_discord_correspondence_v0.py",
+   "source_git_blob": "4232981a773a3350527d37f98ec234ccbb3e9675",
+   "git_mode": "100644",
+   "rule_set": "a2_rules.json",
+   "rule_set_version": "a2.1",
+   "rule_set_sha256": "44810b374055e1aa65ec25ad59998106b86e24466ea4edd9638a6029ade4f6f2",
+   "rule_applications": {
+    "line_05": 1,
+    "name_map": 1
+   },
+   "change_kind": "behavior_bearing"
+  },
+  {
+   "path": "anaxi_final/test_embedding_model.py",
+   "sha256": "64b93d9cfad6b2f1c87affdd3e662ce0909b43cf26e9a375cd4c26e436a035b3",
+   "size": 2273,
+   "kind": "unchanged_git_blob",
+   "git_blob": "738227607a930d295ac4e2461032a8d067d99e2c",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_evidence_boundary.py",
+   "sha256": "060e764f17b7b11f1d6bc560b8df8907dfbd2238a61007b31147d1bc7f775213",
+   "size": 3346,
+   "kind": "unchanged_git_blob",
+   "git_blob": "74c3432cd0d53c3c7b45be30dbb20b4ea6db995c",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_external_information.py",
+   "sha256": "5d29e0a5f70616df4bb9b5466e3f706a34de1f29fa2ecbf862d676aa77d70d26",
+   "size": 56898,
+   "kind": "unchanged_git_blob",
+   "git_blob": "364c4c37b62e54da1e8e36806bfd45bd5e02c70d",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_external_information_net.py",
+   "sha256": "18f4d5ca327d8a9ea9a6a66a10c578cfbdd879ab139f61139bfe53d424dedf50",
+   "size": 22572,
+   "kind": "unchanged_git_blob",
+   "git_blob": "00ef01b9e1587c6f7b87f31ceb309a14354a893a",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_free_prose_matcher.py",
+   "sha256": "d86008c0f5528313f7f56ec2a9bfb969edcd3c64eb50fd4a8cdf161c29606fbc",
+   "size": 10388,
+   "kind": "unchanged_git_blob",
+   "git_blob": "a6b641387cc9bcce39d09e73595d2affbdf9328c",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_fs1_family_shared_expansion_v0.py",
+   "sha256": "b7c4df66729b9d45240149dd1e8cec0bb97a9c538117af54a08fa9f395459999",
+   "size": 46185,
+   "kind": "unchanged_git_blob",
+   "git_blob": "e26bcfbba2cd69ac8ec9805804978a8a6a196a43",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_gemma_substrate_switch.py",
+   "sha256": "6f796779dfe07a05c0aebf3b6b5782e452dc70aa9da833c79f4612e711de0755",
+   "size": 21352,
+   "kind": "unchanged_git_blob",
+   "git_blob": "0d683d3600e11db49617d26ddbcd30b025b888b4",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_general_correspondence.py",
+   "sha256": "eefad0e00688463a3dea7110132ad8ab3f8ef35680ca21c59498c23201dfc598",
+   "size": 34551,
+   "kind": "transformed_git_blob",
+   "source_path": "anaxi_final/test_general_correspondence.py",
+   "source_git_blob": "e24e9f98e9d883c1d7785c8c30cc5a0821e7ae51",
+   "git_mode": "100644",
+   "rule_set": "a2_rules.json",
+   "rule_set_version": "a2.1",
+   "rule_set_sha256": "44810b374055e1aa65ec25ad59998106b86e24466ea4edd9638a6029ade4f6f2",
+   "rule_applications": {
+    "name_map": 119
+   },
+   "change_kind": "behavior_bearing"
+  },
+  {
+   "path": "anaxi_final/test_hippocampus_retrieval.py",
+   "sha256": "2f8f561fdcb85c5219863779eb36b91d39f1b27c03da3204cb23264c299c67cd",
+   "size": 31000,
+   "kind": "transformed_git_blob",
+   "source_path": "anaxi_final/test_hippocampus_retrieval.py",
+   "source_git_blob": "cc09b6f0b38b3933de1d9bcd98ec1f96253df348",
+   "git_mode": "100644",
+   "rule_set": "a2_rules.json",
+   "rule_set_version": "a2.1",
+   "rule_set_sha256": "44810b374055e1aa65ec25ad59998106b86e24466ea4edd9638a6029ade4f6f2",
+   "rule_applications": {
+    "name_map": 1
+   },
+   "change_kind": "behavior_bearing"
+  },
+  {
+   "path": "anaxi_final/test_hippocampus_store.py",
+   "sha256": "8bb4b1d8d2f37fb302151ed3df2e690d408d5bc01c4af856a6a94ffc59dc2cf8",
+   "size": 41894,
+   "kind": "transformed_git_blob",
+   "source_path": "anaxi_final/test_hippocampus_store.py",
+   "source_git_blob": "dfc24ba87dbf67e6c952c3d580cd22d46950347e",
+   "git_mode": "100644",
+   "rule_set": "a2_rules.json",
+   "rule_set_version": "a2.1",
+   "rule_set_sha256": "44810b374055e1aa65ec25ad59998106b86e24466ea4edd9638a6029ade4f6f2",
+   "rule_applications": {
+    "name_map": 9
+   },
+   "change_kind": "behavior_bearing"
+  },
+  {
+   "path": "anaxi_final/test_hir1_registration.py",
+   "sha256": "806004ebccb0ca454e926aee5915ae4ffe28d7df64585342e4dc88ed55c6c202",
+   "size": 28477,
+   "kind": "unchanged_git_blob",
+   "git_blob": "6b123d6aa5000c2446efa167c5168ad5f379d2ea",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_human_session_binding.py",
+   "sha256": "ce58dd094e80b5a18c38d22600c6ab3448058df77de909c4f2826eebe4134013",
+   "size": 17216,
+   "kind": "unchanged_git_blob",
+   "git_blob": "b5f74e9825b31ae380f2509d8f51ebcf63b87ba7",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_human_waking_authority_end_to_end.py",
+   "sha256": "f4daaf2449a6ebcf64ca2d49b36b4e640eea274fc9a1346487e0d0ca2704e889",
+   "size": 23897,
+   "kind": "unchanged_git_blob",
+   "git_blob": "0a63435b5831182c50ba09888926a7ee49fe5a11",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_inference_provider.py",
+   "sha256": "42d31721a0382fd37e07488be022e68b49fdb13286b876cb027304bd0b20c092",
+   "size": 15606,
+   "kind": "unchanged_git_blob",
+   "git_blob": "372856955eeb4aa51262b65c996576f968e06c1b",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_inference_provider_integration.py",
+   "sha256": "30d664ffd38f29e64967132451dd0915c3b8c6826ad4ffc21c479805f2da2ff8",
+   "size": 4330,
+   "kind": "unchanged_git_blob",
+   "git_blob": "c980b310f6fc801385175017f9f2ec6429c9e846",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_interaction_mode.py",
+   "sha256": "cc9e1561d20671ebb816735cf42c486ebee995364c6ddbc5545d0d121f194fef",
+   "size": 12890,
+   "kind": "unchanged_git_blob",
+   "git_blob": "e94f5be91d9402349a33674f344cd96d8742af05",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_journal_completion.py",
+   "sha256": "b6060f14d2d9b1980167681937300624f47d84e7d83a850d803fa482db62090b",
+   "size": 3828,
+   "kind": "transformed_git_blob",
+   "source_path": "anaxi_final/test_journal_completion.py",
+   "source_git_blob": "91f49dde70fad95273428d894a07ae8c439f03f5",
+   "git_mode": "100644",
+   "rule_set": "a2_rules.json",
+   "rule_set_version": "a2.1",
+   "rule_set_sha256": "44810b374055e1aa65ec25ad59998106b86e24466ea4edd9638a6029ade4f6f2",
+   "rule_applications": {
+    "name_map": 1
+   },
+   "change_kind": "behavior_bearing"
+  },
+  {
+   "path": "anaxi_final/test_judge_rubric.py",
+   "sha256": "c9047ac6c5fd0cbc085767042905aa1ccd854f45f5be7658e76a4c0961b6835a",
+   "size": 11025,
+   "kind": "unchanged_git_blob",
+   "git_blob": "45ad7f02c5bb6e3eef6b0d2604170a00d72ead66",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_kardia_completion.py",
+   "sha256": "4eee75c3b342fdb3a6cda5097f072e13dc38b3372ed9f80b1810b9c089d2f470",
+   "size": 7648,
+   "kind": "unchanged_git_blob",
+   "git_blob": "6d0c8930922142335a7ba98d605ddb7ca2849197",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_launcher_script_execution.py",
+   "sha256": "3d9e69abb1a5b235baf46822a64199f870f737ce772d37452c544b76489b6d00",
+   "size": 5794,
+   "kind": "unchanged_git_blob",
+   "git_blob": "86a7fb57363758066ee254d81e20193d4fa8792e",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_lawful_null_reply_choice.py",
+   "sha256": "0e0c14715c449e927a91f1cbfdf885c486c841b13377e673f239852aa582c5fd",
+   "size": 17563,
+   "kind": "transformed_git_blob",
+   "source_path": "anaxi_final/test_lawful_null_reply_choice.py",
+   "source_git_blob": "fa0d41173fa4b1cc7e0187bacac696af49f66ed7",
+   "git_mode": "100644",
+   "rule_set": "a2_rules.json",
+   "rule_set_version": "a2.1",
+   "rule_set_sha256": "44810b374055e1aa65ec25ad59998106b86e24466ea4edd9638a6029ade4f6f2",
+   "rule_applications": {
+    "name_map": 3
+   },
+   "change_kind": "behavior_bearing"
+  },
+  {
+   "path": "anaxi_final/test_legacy_dispositions.py",
+   "sha256": "553996a199abfbdbdaf49967d0f23bba71bc3125af7d9b96ba53d04cc097f8b3",
+   "size": 3050,
+   "kind": "unchanged_git_blob",
+   "git_blob": "aa351a056ecd1ee0ffdc0370a8613fda4d261ffc",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_legacy_owner_private_compat.py",
+   "sha256": "82f467212fc6694c105524cfac337014a692f32447668b1c0d7d281ca3e12275",
+   "size": 27805,
+   "kind": "transformed_git_blob",
+   "source_path": "anaxi_final/test_legacy_owner_private_compat.py",
+   "source_git_blob": "b2cedba8f0b5646d65518ce7ee4375d3e17e57f6",
+   "git_mode": "100644",
+   "rule_set": "a2_rules.json",
+   "rule_set_version": "a2.1",
+   "rule_set_sha256": "44810b374055e1aa65ec25ad59998106b86e24466ea4edd9638a6029ade4f6f2",
+   "rule_applications": {
+    "name_map": 3
+   },
+   "change_kind": "comments_or_docstrings_only"
+  },
+  {
+   "path": "anaxi_final/test_live_acceptance_evidence.py",
+   "sha256": "5e03938d29fbb1d117f605f6ec8ed1f431e69afe18cd90f62138049e999192ec",
+   "size": 5115,
+   "kind": "unchanged_git_blob",
+   "git_blob": "903fc7c0e3fac1ccd592adb6942fab44f3a7e786",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_llama_gui_conversation_mode.py",
+   "sha256": "c40a0e999ad05455fc0b6d69a5588435958f820791bb2413adc1b227ed811134",
+   "size": 82082,
+   "kind": "unchanged_git_blob",
+   "git_blob": "4f17c38ed3f804c48e86e9db09f70226611e7216",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_llama_interface.py",
+   "sha256": "8c3e3643fcc0925264ba8d18b7d086c19d52e347d3bfa824d055535020901a62",
+   "size": 5368,
+   "kind": "unchanged_git_blob",
+   "git_blob": "7b9e41aa42aba2beae043d32f059e03357a9e92a",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_llama_launch.py",
+   "sha256": "704ee40e56b378e2f9b5119de64863afa72f6a03c02b843cad1a0fe754dbfaca",
+   "size": 16034,
+   "kind": "unchanged_git_blob",
+   "git_blob": "8e9d0c88fdc7ef96012252e25a12bce0ffa0472a",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_music_epistemic_status.py",
+   "sha256": "15875a946d8ac1a1c50ec8513ab20ff73709e785d9a9a2c6dc24c3d8935c916b",
+   "size": 4656,
+   "kind": "unchanged_git_blob",
+   "git_blob": "e4f8e28ff181110eee05b3f037a7cc00c438b477",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_native_provenance_integration.py",
+   "sha256": "c986319273b629b24eea6b46f2603d30cd0120b741963721cdfed0ae858a91d6",
+   "size": 66450,
+   "kind": "unchanged_git_blob",
+   "git_blob": "964632969cd26b55fd564073cc39fb4006c74909",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_native_turn_staging_hardening.py",
+   "sha256": "d9104bdc33ab6fb4c7710e13883de4772f634f8a5d8b16c48134cb822d3ccd18",
+   "size": 17428,
+   "kind": "unchanged_git_blob",
+   "git_blob": "3ee61910af7352b70bbf5392d23137c053f3393e",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_native_waking_turn_end_to_end.py",
+   "sha256": "92e6d965edbb24aaa3293b7d73006ec0422c4cd13cb9078bf80f0dc56ee9b652",
+   "size": 12806,
+   "kind": "unchanged_git_blob",
+   "git_blob": "4a43f8ea0842030e749e7202a2fae42492572d06",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_network_guard.py",
+   "sha256": "09a3e5eba31067429be89d86fcd7aa4bb19a6f0611695b09d40a4b921c4924b7",
+   "size": 3185,
+   "kind": "unchanged_git_blob",
+   "git_blob": "ce01dd62dbb0f48bddf967de42b20ab402ea4982",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_null_refusal_completion.py",
+   "sha256": "470a1a5e509f9d6e8ba058d9297afff71aaa26fa1e73d9a0e79cc3893ef31295",
+   "size": 2850,
+   "kind": "unchanged_git_blob",
+   "git_blob": "dc46b621afe60f895178eb2d39dba2e2847901f8",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_obsidian_workspace.py",
+   "sha256": "d1e22520f8808d6122cb70c88792efa4b70c8c4637ddec692ec4b1c5b44e22f9",
+   "size": 15418,
+   "kind": "transformed_git_blob",
+   "source_path": "anaxi_final/test_obsidian_workspace.py",
+   "source_git_blob": "7ad245c2db37a722c038aa599c28d696c324a021",
+   "git_mode": "100644",
+   "rule_set": "a2_rules.json",
+   "rule_set_version": "a2.1",
+   "rule_set_sha256": "44810b374055e1aa65ec25ad59998106b86e24466ea4edd9638a6029ade4f6f2",
+   "rule_applications": {
+    "name_map": 9
+   },
+   "change_kind": "behavior_bearing"
+  },
+  {
+   "path": "anaxi_final/test_operative_directive.py",
+   "sha256": "acece1932161d29e33c65c0af760219caaf86af9dacfae661f350581f91a7d8f",
+   "size": 53040,
+   "kind": "unchanged_git_blob",
+   "git_blob": "c3f557ec55f575a40b32aa0826db8676971990d0",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_orchestration_legacy_quarantine.py",
+   "sha256": "1b44c8623a9308e50fefcc5e58765147fdfccb2e7028da58a1de5d3705121aa5",
+   "size": 6822,
+   "kind": "unchanged_git_blob",
+   "git_blob": "6da72ecf0bad4da27b80460b566de589a0a30df6",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_outward_communication.py",
+   "sha256": "c6e1acad4134b91488c77510fdbccca92b2c6172ec477481c024048fd784396b",
+   "size": 76520,
+   "kind": "unchanged_git_blob",
+   "git_blob": "8997cd3d9a087a519ca83896676bd0235b110f8a",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_outward_requests_disclosed_to_pass2.py",
+   "sha256": "555663684a090e317991885ae3021dc3778467551b1f70ab7319badc6b69156a",
+   "size": 7271,
+   "kind": "unchanged_git_blob",
+   "git_blob": "2e35ae7f9fbea559d0006b660577aa055555f065",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_owc5_s2_integration.py",
+   "sha256": "f8769d505b3da1c1c7c5fc37bea927f4c31b5b91e1d50cecae9dd28ea584afc1",
+   "size": 132521,
+   "kind": "transformed_git_blob",
+   "source_path": "anaxi_final/test_owc5_s2_integration.py",
+   "source_git_blob": "472e084b313901fd57ed52f47f4deb3349f939c6",
+   "git_mode": "100644",
+   "rule_set": "a2_rules.json",
+   "rule_set_version": "a2.1",
+   "rule_set_sha256": "44810b374055e1aa65ec25ad59998106b86e24466ea4edd9638a6029ade4f6f2",
+   "rule_applications": {
+    "name_map": 5
+   },
+   "change_kind": "behavior_bearing"
+  },
+  {
+   "path": "anaxi_final/test_owc9p4_bypass_guard.py",
+   "sha256": "c7b4f7fb4dee8bb5decf160a5d6a367a152c60ac00e84ffab7338a2c1509e255",
+   "size": 17591,
+   "kind": "unchanged_git_blob",
+   "git_blob": "dfd62aba8a9d5963aea82f8a0726eb9f91ef951d",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_owner_caret_status.py",
+   "sha256": "fa48e86c4111b3e26f6445b56fb24f49ac5c9273b823ae33f9ce8166af09c3b8",
+   "size": 8452,
+   "kind": "unchanged_git_blob",
+   "git_blob": "0501ee57cb118ebca85452abb6b7307aed115079",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_owner_completion_inventory.py",
+   "sha256": "19f6485a07b4302c73121d174ba7bce0933eb0cc542b2e3ec7eb6ff7ddd07539",
+   "size": 1810,
+   "kind": "unchanged_git_blob",
+   "git_blob": "5a2a7ac8ae0be1fd915960dabc5dddd3c9d2d9f8",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_owner_recovery_ui.py",
+   "sha256": "3b192bcb32eca6109ee6765ea28c4f760844ca9ad509a307f2f4e5d841de8d49",
+   "size": 5461,
+   "kind": "unchanged_git_blob",
+   "git_blob": "2b379a7ab9d46efb248c279b7ac0ccc6ec72d330",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_owner_shared_note.py",
+   "sha256": "2c028ac1a28a402d3f77b384dde988ce82859bc8dcac669b56f5c8feb2f3f803",
+   "size": 6479,
+   "kind": "transformed_git_blob",
+   "source_path": "anaxi_final/test_owner_shared_note.py",
+   "source_git_blob": "760e96a24d88df389d85de4b66dfd50a36fcc904",
+   "git_mode": "100644",
+   "rule_set": "a2_rules.json",
+   "rule_set_version": "a2.1",
+   "rule_set_sha256": "44810b374055e1aa65ec25ad59998106b86e24466ea4edd9638a6029ade4f6f2",
+   "rule_applications": {
+    "name_map": 3
+   },
+   "change_kind": "behavior_bearing"
+  },
+  {
+   "path": "anaxi_final/test_pass1_budget_bugfix_v0.py",
+   "sha256": "7dee100f1859888aa3e1be0a7ac43ce1c63f881e37f6a306c51d9cba284a6264",
+   "size": 30229,
+   "kind": "transformed_git_blob",
+   "source_path": "anaxi_final/test_pass1_budget_bugfix_v0.py",
+   "source_git_blob": "ff1478be7c25ab40e6d85667cbc1ca44048d78e2",
+   "git_mode": "100644",
+   "rule_set": "a2_rules.json",
+   "rule_set_version": "a2.1",
+   "rule_set_sha256": "44810b374055e1aa65ec25ad59998106b86e24466ea4edd9638a6029ade4f6f2",
+   "rule_applications": {
+    "name_map": 3
+   },
+   "change_kind": "behavior_bearing"
+  },
+  {
+   "path": "anaxi_final/test_post_sleep_schema_upgrade.py",
+   "sha256": "b3d5401bf36bd170733b7731cc50a6ef67b22602f261a73f8fd570e90d13b8a4",
+   "size": 5425,
+   "kind": "unchanged_git_blob",
+   "git_blob": "15a65d72cd81455d3b0e48d3f816ddb58c73a312",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_post_sleep_wake_continuation.py",
+   "sha256": "0bde0fea13b61fedd1630e60e6e5b9f8dfebd534d1d16cc2ec5f588f7581374f",
+   "size": 6623,
+   "kind": "unchanged_git_blob",
+   "git_blob": "887173062fe340cb811b67966c041635d96c8d51",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_production_delivery_floor.py",
+   "sha256": "a31d2720cbd80199cf27fa11e7f85e9bc89001bdcf64eacbc0350e326b917903",
+   "size": 27235,
+   "kind": "transformed_git_blob",
+   "source_path": "anaxi_final/test_production_delivery_floor.py",
+   "source_git_blob": "1907419d87429823016908f1efb110af20caf7f9",
+   "git_mode": "100644",
+   "rule_set": "a2_rules.json",
+   "rule_set_version": "a2.1",
+   "rule_set_sha256": "44810b374055e1aa65ec25ad59998106b86e24466ea4edd9638a6029ade4f6f2",
+   "rule_applications": {
+    "name_map": 5
+   },
+   "change_kind": "behavior_bearing"
+  },
+  {
+   "path": "anaxi_final/test_projection_same_second_exchanges.py",
+   "sha256": "022d0848d5a54e4e3ce57b8c1307a387b8908992fb798ef82bbda71eb55b19a4",
+   "size": 2104,
+   "kind": "unchanged_git_blob",
+   "git_blob": "b4295aa6293c8c1091225a6218ca21ca733b7f2b",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_provenance_schema.py",
+   "sha256": "a42c41a98d67fdbcf80e65d07c14f68066cd1d4c97fd0eb2a5e73df0755f32ca",
+   "size": 68474,
+   "kind": "unchanged_git_blob",
+   "git_blob": "67744d2542672d8df108c560fdd4dc7733eaf08e",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_public_resource_delivery_assay.py",
+   "sha256": "5b6f7bd0be48fa38f3cdb3ee5e98311f755e9c2d76a108308ad172dbb52701bd",
+   "size": 3985,
+   "kind": "unchanged_git_blob",
+   "git_blob": "1f6f1f248771728d2ae3165cab6f53b64ba693a5",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_public_resource_ingest.py",
+   "sha256": "d70fa867802f5d7921518cb6b1cdf33c7236730f9c803a443a91e9c12870ebdd",
+   "size": 5389,
+   "kind": "unchanged_git_blob",
+   "git_blob": "ee4760fc50194022ae92f4437873815ec3538b94",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_q05_canonical_before_artifact_ordering.py",
+   "sha256": "35efb292c56ad1c9b1b358d805b11b3b53666d23247e046130863b41fc8a7579",
+   "size": 14286,
+   "kind": "unchanged_git_blob",
+   "git_blob": "335050c1502103cf9ce823f48fb5ab7dd7e527bf",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_real_model_audio_observation.py",
+   "sha256": "d61c619949b6ad15c1f155cc06169c0a03fff3b2edc87c4eb61c2f829fcd619d",
+   "size": 3454,
+   "kind": "unchanged_git_blob",
+   "git_blob": "6bdc5ccf64dbee69d9a39846401ba22e667c535e",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_real_model_capability_affordances.py",
+   "sha256": "b55bd683440bddc4a4359c5618b5c0a259c7197068f2df3e262c7b94eadcad15",
+   "size": 16519,
+   "kind": "unchanged_git_blob",
+   "git_blob": "bcd12c606ef5d48ab31ca0558eec4884fd0da8ef",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_real_model_caret_expression.py",
+   "sha256": "b42239ccf43c8a85b0567279b7fa172f22f6a5053fee4f1bb1b56c5d1dd469f5",
+   "size": 6179,
+   "kind": "transformed_git_blob",
+   "source_path": "anaxi_final/test_real_model_caret_expression.py",
+   "source_git_blob": "5992533aff55ebfae568c71b6e0a55b58d9eac15",
+   "git_mode": "100644",
+   "rule_set": "a2_rules.json",
+   "rule_set_version": "a2.1",
+   "rule_set_sha256": "44810b374055e1aa65ec25ad59998106b86e24466ea4edd9638a6029ade4f6f2",
+   "rule_applications": {
+    "name_map": 4
+   },
+   "change_kind": "behavior_bearing"
+  },
+  {
+   "path": "anaxi_final/test_real_model_caret_inbound.py",
+   "sha256": "00843fe3344f2f8345a669155e701af1716cb24b9f5f06854958e62dd4f5ea0f",
+   "size": 10348,
+   "kind": "transformed_git_blob",
+   "source_path": "anaxi_final/test_real_model_caret_inbound.py",
+   "source_git_blob": "5167a589fc144c30e4ddacf8620962be889212e3",
+   "git_mode": "100644",
+   "rule_set": "a2_rules.json",
+   "rule_set_version": "a2.1",
+   "rule_set_sha256": "44810b374055e1aa65ec25ad59998106b86e24466ea4edd9638a6029ade4f6f2",
+   "rule_applications": {
+    "id_map": 1,
+    "name_map": 5
+   },
+   "change_kind": "behavior_bearing"
+  },
+  {
+   "path": "anaxi_final/test_real_model_ordinary_resource_use.py",
+   "sha256": "5ea516801948ca76b6c6e5198ea37ac3d6be40964d628d38f94f6f5c3046a0b6",
+   "size": 15882,
+   "kind": "transformed_git_blob",
+   "source_path": "anaxi_final/test_real_model_ordinary_resource_use.py",
+   "source_git_blob": "77670a9c686bab9d63593daaad2d496196b61018",
+   "git_mode": "100644",
+   "rule_set": "a2_rules.json",
+   "rule_set_version": "a2.1",
+   "rule_set_sha256": "44810b374055e1aa65ec25ad59998106b86e24466ea4edd9638a6029ade4f6f2",
+   "rule_applications": {
+    "name_map": 1
+   },
+   "change_kind": "behavior_bearing"
+  },
+  {
+   "path": "anaxi_final/test_real_model_recovery_replay.py",
+   "sha256": "36699d7856a1bb539cbf04b760ca037473ce0126c52fdd690997841584c4d1ab",
+   "size": 5345,
+   "kind": "unchanged_git_blob",
+   "git_blob": "f852a763c3f42d3fc9e76b55d0a8292e72d927dc",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_real_model_shared_notes.py",
+   "sha256": "0f64ecd732c99a61420ef74442e8371f2e0d88032a9dcde063daa1e488d2c686",
+   "size": 4735,
+   "kind": "transformed_git_blob",
+   "source_path": "anaxi_final/test_real_model_shared_notes.py",
+   "source_git_blob": "fb561dd7b46362ec60be8ca72b383ca553276007",
+   "git_mode": "100644",
+   "rule_set": "a2_rules.json",
+   "rule_set_version": "a2.1",
+   "rule_set_sha256": "44810b374055e1aa65ec25ad59998106b86e24466ea4edd9638a6029ade4f6f2",
+   "rule_applications": {
+    "name_map": 3
+   },
+   "change_kind": "behavior_bearing"
+  },
+  {
+   "path": "anaxi_final/test_real_model_sleep_request.py",
+   "sha256": "1ee11ff1815c66ce6c0e619b149de97007d2d34ca3f93d344e92ae631f9745a9",
+   "size": 8467,
+   "kind": "transformed_git_blob",
+   "source_path": "anaxi_final/test_real_model_sleep_request.py",
+   "source_git_blob": "62f9924ef6eb13f49b37d0a968baf760d9ffae72",
+   "git_mode": "100644",
+   "rule_set": "a2_rules.json",
+   "rule_set_version": "a2.1",
+   "rule_set_sha256": "44810b374055e1aa65ec25ad59998106b86e24466ea4edd9638a6029ade4f6f2",
+   "rule_applications": {
+    "name_map": 6
+   },
+   "change_kind": "behavior_bearing"
+  },
+  {
+   "path": "anaxi_final/test_real_model_sleep_stages.py",
+   "sha256": "8cc8e07f0e7fa57dfbfa540ae4064fbe0ddf737c1c51d8d2be961b92acc735f0",
+   "size": 4902,
+   "kind": "unchanged_git_blob",
+   "git_blob": "4d5e92184577baff557248b8898c43c0d5a6355e",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_real_model_web_search_fetch.py",
+   "sha256": "e62eaee7827822237af3fb9e31e7afd0f5f7cb1e2a6d4bcd4c4abdc7aafe0077",
+   "size": 8075,
+   "kind": "unchanged_git_blob",
+   "git_blob": "915c5ae965bcec0cd2e435705cae322f05c7a0e9",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_real_model_workspace_thread.py",
+   "sha256": "15dc5bc7e0d81bc6c6d9181074eff65b5ff9bb21778e15d271929e0d2b875409",
+   "size": 4387,
+   "kind": "unchanged_git_blob",
+   "git_blob": "85cb5d65ef8fb3036e410fad1361c502b449fef2",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_reference_harness_green.py",
+   "sha256": "c9d7d0d3e1fc309a31be073fc10c433cc35656d4c59b9f70918d9670064cb61b",
+   "size": 985,
+   "kind": "unchanged_git_blob",
+   "git_blob": "1952271025dc19e5aa3c92f30198122921438307",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_relational_history.py",
+   "sha256": "74edfd567aba751cdf7fba84890ebbfcd3bf6665dda9da92751d415af84eebb5",
+   "size": 6797,
+   "kind": "unchanged_git_blob",
+   "git_blob": "f442f00ba9834baf7c58422aeb76003d08d8fb49",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_relationship_normalization.py",
+   "sha256": "46064c42590d2fd6d2284aa5935f50ad400bb4c3c1395ffc476937ccaad70b6c",
+   "size": 2727,
+   "kind": "transformed_git_blob",
+   "source_path": "anaxi_final/test_relationship_normalization.py",
+   "source_git_blob": "4f3db55e8ccda3f0aadb386ab3ba5f5ce92e6675",
+   "git_mode": "100644",
+   "rule_set": "a2_rules.json",
+   "rule_set_version": "a2.1",
+   "rule_set_sha256": "44810b374055e1aa65ec25ad59998106b86e24466ea4edd9638a6029ade4f6f2",
+   "rule_applications": {
+    "name_map": 6
+   },
+   "change_kind": "behavior_bearing"
+  },
+  {
+   "path": "anaxi_final/test_represented_surface_accounting.py",
+   "sha256": "5a2055570f7e876b6144cd1ede706127951d778e80c093a16d66d183c98737bd",
+   "size": 7039,
+   "kind": "unchanged_git_blob",
+   "git_blob": "cd0b863622c48ea842acff0b7f5813a1582d151b",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_roaming_waking_capacity.py",
+   "sha256": "324cdcc6cdde68686be2f3a07debb9d8d8025a7ad305c9c58daf6be1ff339821",
+   "size": 6453,
+   "kind": "transformed_git_blob",
+   "source_path": "anaxi_final/test_roaming_waking_capacity.py",
+   "source_git_blob": "2167dbc711342d863247268470b455844860a6eb",
+   "git_mode": "100644",
+   "rule_set": "a2_rules.json",
+   "rule_set_version": "a2.1",
+   "rule_set_sha256": "44810b374055e1aa65ec25ad59998106b86e24466ea4edd9638a6029ade4f6f2",
+   "rule_applications": {
+    "name_map": 1
+   },
+   "change_kind": "behavior_bearing"
+  },
+  {
+   "path": "anaxi_final/test_runtime_dependencies.py",
+   "sha256": "8e67237e634670d1cd1801a387100daef0a5a084d83609713aea9808c262a8ec",
+   "size": 3886,
+   "kind": "unchanged_git_blob",
+   "git_blob": "dd2a87da06ea938dcc89a4547c130992338a486e",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_runtime_root_isolation.py",
+   "sha256": "f6a1dc30148815a6da30d6ad2bfe6fd10fef498c2358ad8479a0c40143e120d2",
+   "size": 2193,
+   "kind": "unchanged_git_blob",
+   "git_blob": "1a90b811a958dbbd886cb07fca13e116eff813b5",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_scenario_evidence.py",
+   "sha256": "77a4112293b57b75aea2df4efbd7761302c070c17cea80e750c5efeb19cade78",
+   "size": 6865,
+   "kind": "transformed_git_blob",
+   "source_path": "anaxi_final/test_scenario_evidence.py",
+   "source_git_blob": "3e8be0cd26b43b162cdda6a6fd34bbb8d381731c",
+   "git_mode": "100644",
+   "rule_set": "a2_rules.json",
+   "rule_set_version": "a2.1",
+   "rule_set_sha256": "44810b374055e1aa65ec25ad59998106b86e24466ea4edd9638a6029ade4f6f2",
+   "rule_applications": {
+    "evidence_path_resources": 2,
+    "name_map": 1
+   },
+   "change_kind": "behavior_bearing"
+  },
+  {
+   "path": "anaxi_final/test_session_attribution_s1.py",
+   "sha256": "f3fa01c714fa1cee37512ade097c7e7a3fe24a7b4ae04af0f523375ad119a695",
+   "size": 24047,
+   "kind": "unchanged_git_blob",
+   "git_blob": "a4aacfaa83b4a442fc3d1f752a8cab7f4a45b69e",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_session_dialogue_window.py",
+   "sha256": "6e6197ad7608ea8fcd9d6ff99e9a9c5a427513e007c396b7b27a285992d78f1b",
+   "size": 26327,
+   "kind": "unchanged_git_blob",
+   "git_blob": "8c0335dcaee42c038d8892268076b3aac045b9e6",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_shared_ordinary_expression_seam.py",
+   "sha256": "8da465b4812a667bd535b7fd1cb872c3932297766d85b1235cb39b573ff6c899",
+   "size": 8311,
+   "kind": "transformed_git_blob",
+   "source_path": "anaxi_final/test_shared_ordinary_expression_seam.py",
+   "source_git_blob": "e0916d7c3281ed28d54eb9d747c3c8cf01878368",
+   "git_mode": "100644",
+   "rule_set": "a2_rules.json",
+   "rule_set_version": "a2.1",
+   "rule_set_sha256": "44810b374055e1aa65ec25ad59998106b86e24466ea4edd9638a6029ade4f6f2",
+   "rule_applications": {
+    "name_map": 1
+   },
+   "change_kind": "behavior_bearing"
+  },
+  {
+   "path": "anaxi_final/test_signal_gate_integration.py",
+   "sha256": "1215a37321c854c946a8bd3e2d22323b74545280b409b4730308532c4a0ee289",
+   "size": 13977,
+   "kind": "unchanged_git_blob",
+   "git_blob": "df647d9fc29ae9085450c939fd4bfced70559af9",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_sleep_absence_completion.py",
+   "sha256": "2893da138e93b484a3453546d52714f286875251d9b0c646bc90f9c7064e18d5",
+   "size": 3541,
+   "kind": "transformed_git_blob",
+   "source_path": "anaxi_final/test_sleep_absence_completion.py",
+   "source_git_blob": "42a0b77906644f3f1b2c8df74604a32cb80ae12d",
+   "git_mode": "100644",
+   "rule_set": "a2_rules.json",
+   "rule_set_version": "a2.1",
+   "rule_set_sha256": "44810b374055e1aa65ec25ad59998106b86e24466ea4edd9638a6029ade4f6f2",
+   "rule_applications": {
+    "name_map": 1
+   },
+   "change_kind": "comments_or_docstrings_only"
+  },
+  {
+   "path": "anaxi_final/test_sleep_cycle.py",
+   "sha256": "d8fb262defc7cb86cf0b5b4113b5505ab10eeb0c24b6ce7f58c3764099b6c1bc",
+   "size": 21305,
+   "kind": "unchanged_git_blob",
+   "git_blob": "a8b57c56466df90410dcaf46ed1cfb03a32a2ae6",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_sleep_evidence.py",
+   "sha256": "8eec033f33a47f8c4b34c63127bf8bde9f6d51df5c21029832a5b87ce4b86156",
+   "size": 51670,
+   "kind": "transformed_git_blob",
+   "source_path": "anaxi_final/test_sleep_evidence.py",
+   "source_git_blob": "47347cc757db0ef18942ea23749a5d16575e7c4b",
+   "git_mode": "100644",
+   "rule_set": "a2_rules.json",
+   "rule_set_version": "a2.1",
+   "rule_set_sha256": "44810b374055e1aa65ec25ad59998106b86e24466ea4edd9638a6029ade4f6f2",
+   "rule_applications": {
+    "name_map": 8
+   },
+   "change_kind": "behavior_bearing"
+  },
+  {
+   "path": "anaxi_final/test_sleep_landing.py",
+   "sha256": "f66b7e84cdfc3a4d249fe6e06ec89896ecaf410295db4c1dcd504522126581f4",
+   "size": 14634,
+   "kind": "unchanged_git_blob",
+   "git_blob": "642b8be73db0ac7747171ae09012eb0af1380cb5",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_sleep_owner_control.py",
+   "sha256": "ddb3078c3b4fd0faa093521f1139ee914e6371fc563d430ad1a266f02ec1b90d",
+   "size": 3260,
+   "kind": "unchanged_git_blob",
+   "git_blob": "77eee9b8e86271bd4e757bb5fdd25121fa51ec9a",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_sleep_owner_surface_discovers_clark_request.py",
+   "sha256": "f27970ef8286f7847ba2a97048b34ed43073b537628d1eeec19d899f31a262f7",
+   "size": 4245,
+   "kind": "unchanged_git_blob",
+   "git_blob": "e296266ae365fb3b30bd59e74cf2f3557fe31e54",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_sleep_production_budget.py",
+   "sha256": "d982d44a1abaf2884da7de7b00ceddc9c3c257764cbad5fcf2a0a1c507067150",
+   "size": 11946,
+   "kind": "transformed_git_blob",
+   "source_path": "anaxi_final/test_sleep_production_budget.py",
+   "source_git_blob": "ecb546aa691346b735ff65516dd92548d788aeec",
+   "git_mode": "100644",
+   "rule_set": "a2_rules.json",
+   "rule_set_version": "a2.1",
+   "rule_set_sha256": "44810b374055e1aa65ec25ad59998106b86e24466ea4edd9638a6029ade4f6f2",
+   "rule_applications": {
+    "name_map": 1
+   },
+   "change_kind": "behavior_bearing"
+  },
+  {
+   "path": "anaxi_final/test_sleep_read_time_provenance.py",
+   "sha256": "53e16fd17a876b65b28b5f302c66841198a920d4ee9aa5c41b79d8eab5f20ca1",
+   "size": 12747,
+   "kind": "unchanged_git_blob",
+   "git_blob": "33babb42d90194b884f0ce56e08f4b1a2d91b15a",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_sleep_readiness_seams.py",
+   "sha256": "460652f347963bbd5c36f3d4186ad3f5e12b01d6df52f0d9ba7fb44b787e14b9",
+   "size": 6744,
+   "kind": "unchanged_git_blob",
+   "git_blob": "b6abd134a8c281480755d454c9a041e4a24ddf03",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_sleep_receipts.py",
+   "sha256": "e067c57cbf15d285008799768c945b9e7162fed71d29e28acf890dd031db8f39",
+   "size": 11317,
+   "kind": "unchanged_git_blob",
+   "git_blob": "476ba197f3ee368c8595616f2ed2c90e4b328da0",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_sleep_receipts_module_isolation.py",
+   "sha256": "90f2aa072e15a009f52d6b593d0a252d1a14478034ee6b4f920c57eaf9f146a9",
+   "size": 4277,
+   "kind": "unchanged_git_blob",
+   "git_blob": "ee093a58e9f6b2e4bc4ae13d145bdf50325d59fa",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_sleep_selection.py",
+   "sha256": "1ad9b49a0f6450db9588d95222f77efeec009142a9e4ea8701acce0f0cb1bb84",
+   "size": 19073,
+   "kind": "unchanged_git_blob",
+   "git_blob": "2cba08d582cae36942f51e2289e76dccb1ddf762",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_sleep_timing_knock.py",
+   "sha256": "c1c7b5a05a482ca8b46c5710dbaff964d8a41055cb1a6a9bc65fc4c7cab63092",
+   "size": 77299,
+   "kind": "unchanged_git_blob",
+   "git_blob": "c4f31d9afcebafa498485a8c57695297baadf7de",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_sleep_transformation.py",
+   "sha256": "65ff5dfb46871c5ef33f5c7874858f2e8d2a037c7b3f52f66acf0e6bffd82fdc",
+   "size": 11464,
+   "kind": "unchanged_git_blob",
+   "git_blob": "24b3df0c5a38a5ba9c90d0213f2a14bb575e428b",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_sleep_transformation_prompt_ids.py",
+   "sha256": "1446d65ef2fc6f52c1fa011a8d4a8756403b2c7e4c94d721d488ec95414063cc",
+   "size": 857,
+   "kind": "unchanged_git_blob",
+   "git_blob": "2dd9f54e01db9960f4fc27e75c85e0c54f2fa448",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_sleep_v1_acceptance.py",
+   "sha256": "3c937b695d4adaa4e36dd6d0ec5bda7eab82eac994570bc33e520c5d68fbf2de",
+   "size": 26226,
+   "kind": "unchanged_git_blob",
+   "git_blob": "4613baa67323142151b399785258ad8aa5cdb5b3",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_sleep_watermark.py",
+   "sha256": "c72b8f4a9c25e7b8f79cdb0f007e13ca9a2791962e07249a0dcfb7c2a741449f",
+   "size": 8074,
+   "kind": "unchanged_git_blob",
+   "git_blob": "745d8917497926c8ea78debb477030336b24b52e",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_sleep_wmu_window_integrity.py",
+   "sha256": "177e4b5cc47f5977dd86a1de3c7d648f1da9668a0111e98e1519aacc3bbe2feb",
+   "size": 9310,
+   "kind": "transformed_git_blob",
+   "source_path": "anaxi_final/test_sleep_wmu_window_integrity.py",
+   "source_git_blob": "0595e4fec15f1dd88eccd2f84f33f59d5032930e",
+   "git_mode": "100644",
+   "rule_set": "a2_rules.json",
+   "rule_set_version": "a2.1",
+   "rule_set_sha256": "44810b374055e1aa65ec25ad59998106b86e24466ea4edd9638a6029ade4f6f2",
+   "rule_applications": {
+    "name_map": 6
+   },
+   "change_kind": "behavior_bearing"
+  },
+  {
+   "path": "anaxi_final/test_standing_hippocampus_audit.py",
+   "sha256": "c2cd5f86b6939887b31f435f01ca4a06ed439bf20f03592939d5d634aa1bbf6c",
+   "size": 25601,
+   "kind": "transformed_git_blob",
+   "source_path": "anaxi_final/test_standing_hippocampus_audit.py",
+   "source_git_blob": "c1f8efe33006ea28466aaa68345db5240a06bda8",
+   "git_mode": "100644",
+   "rule_set": "a2_rules.json",
+   "rule_set_version": "a2.1",
+   "rule_set_sha256": "44810b374055e1aa65ec25ad59998106b86e24466ea4edd9638a6029ade4f6f2",
+   "rule_applications": {
+    "name_map": 5
+   },
+   "change_kind": "behavior_bearing"
+  },
+  {
+   "path": "anaxi_final/test_standing_provenance_audit.py",
+   "sha256": "e7690ea25c62b82992fc6d3ba03fb945c4879047f1c8ecd77d4bc02e7b4fce3b",
+   "size": 19652,
+   "kind": "unchanged_git_blob",
+   "git_blob": "7a7aa5f517cb9b903b7970f247d176aa435495b5",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_substrate_evaluation.py",
+   "sha256": "9706a6c0717d22181ee0717c2176c4109a42819b215225ec9d9eb3eccf565498",
+   "size": 12766,
+   "kind": "unchanged_git_blob",
+   "git_blob": "2f2ae8e822c4ca3fbc2d71ed1d2e4957b8ca795d",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_temporal_grounding.py",
+   "sha256": "1db2eaa6ca6c690777d4e08130f99b91cb6c54365535a74a42dd186069a23ec0",
+   "size": 9139,
+   "kind": "unchanged_git_blob",
+   "git_blob": "b06b4d28b3b540c763fdf76c68404b4465f4632e",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_ui_turn_diagnostics.py",
+   "sha256": "b12b8d8751590885cf62d87dc1713b80a2ba78d3891c6bb7880622e3a9a3f1ad",
+   "size": 35451,
+   "kind": "transformed_git_blob",
+   "source_path": "anaxi_final/test_ui_turn_diagnostics.py",
+   "source_git_blob": "e3a6e378626fddc5812a6c2f8a6622e61077c20d",
+   "git_mode": "100644",
+   "rule_set": "a2_rules.json",
+   "rule_set_version": "a2.1",
+   "rule_set_sha256": "44810b374055e1aa65ec25ad59998106b86e24466ea4edd9638a6029ade4f6f2",
+   "rule_applications": {
+    "name_map": 3
+   },
+   "change_kind": "behavior_bearing"
+  },
+  {
+   "path": "anaxi_final/test_vision_pass2_runtime_window.py",
+   "sha256": "e22b9d1e7627574f6b90146b3391674698fff3ff42f77269707367181e8453de",
+   "size": 9127,
+   "kind": "unchanged_git_blob",
+   "git_blob": "f86e8dda7f79a52f9956263818f9277f372c9e22",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_waking_completion_boundary.py",
+   "sha256": "1e736b57c92dc68736bb58c4b9cde6d43c0760ecf300b21e4ad880e50e63876a",
+   "size": 10617,
+   "kind": "unchanged_git_blob",
+   "git_blob": "6b9797b7d9bbb5e69fefe59adcffceb385f163db",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_waking_context_integrity.py",
+   "sha256": "12bd817edb52b4ddc43ca70262844b3edee59387321289959e06fc96c3b62aea",
+   "size": 7291,
+   "kind": "unchanged_git_blob",
+   "git_blob": "1cb10d080f583b7899d3dedc95bdeffcc7b7e63f",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_waking_material_unit.py",
+   "sha256": "66d3257ddef0a96f5dba6b0c71a03e037d613d72c7f55b4462c60f1ab0b4605c",
+   "size": 31611,
+   "kind": "unchanged_git_blob",
+   "git_blob": "3064480b964a96189e58cf1c56b77c98889ded94",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_waking_recovery_control.py",
+   "sha256": "f0911d6d364c8409d71785a7031aab694385d93a661d927590781389c04148eb",
+   "size": 4201,
+   "kind": "unchanged_git_blob",
+   "git_blob": "778c1c94ddaa5861aa170d2bd79d0a2be890cde3",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_waking_recovery_selection_binding.py",
+   "sha256": "520fbb1ab992ea868e1e2ac1f89d95b83d06aa3dd4abd5299f8daf1da8354d43",
+   "size": 12781,
+   "kind": "unchanged_git_blob",
+   "git_blob": "228fdb001794bab7ea503ae6ddf6cd471e02feb2",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_waking_turn_recovery.py",
+   "sha256": "013fe422f2beff687d2f4bad765ffdd9437babbebf5a8c0db4d5e7ce0490b77e",
+   "size": 118323,
+   "kind": "unchanged_git_blob",
+   "git_blob": "78480b4d0d01d76c1e3efcb64d1ab88c4de348c1",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_web_source_selection.py",
+   "sha256": "deb8979a2fd7034680dff970872919a4443e2e4b529ebc8dff3c240e50f9b716",
+   "size": 22160,
+   "kind": "unchanged_git_blob",
+   "git_blob": "6c7af7de6c76fcc0d0931f801623b612ebe71d9c",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_web_waking_seam.py",
+   "sha256": "b047582eae6f2c892dd31ee9fc7081ccf9d3444613a909076d1426b910663ff8",
+   "size": 32777,
+   "kind": "transformed_git_blob",
+   "source_path": "anaxi_final/test_web_waking_seam.py",
+   "source_git_blob": "f710c2307f1df6babd36a23534817de0507bacc5",
+   "git_mode": "100644",
+   "rule_set": "a2_rules.json",
+   "rule_set_version": "a2.1",
+   "rule_set_sha256": "44810b374055e1aa65ec25ad59998106b86e24466ea4edd9638a6029ade4f6f2",
+   "rule_applications": {
+    "line_03": 1,
+    "line_04": 1,
+    "name_map": 1
+   },
+   "change_kind": "behavior_bearing"
+  },
+  {
+   "path": "anaxi_final/test_workspace_actor_resolution.py",
+   "sha256": "f1a2c231b63c305b7265ba9ad87e218cf645af71e6686686e307c47137f8277d",
+   "size": 7769,
+   "kind": "unchanged_git_blob",
+   "git_blob": "05239ac9f76235aafc35c27ab18f6c9fe68051c2",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_workspace_attribution.py",
+   "sha256": "b7ab617a5bfac6b9d28eae95f85c2a237676c1cb2ad355b522fb1f88ad255bc3",
+   "size": 8842,
+   "kind": "unchanged_git_blob",
+   "git_blob": "2a604a7dd581cc548677592f9e5036d473714d5c",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_workspace_audio.py",
+   "sha256": "6e3df79f16ea5bc80d98669785609b51ef1d431d27cb4d65230bb68a7b1abc44",
+   "size": 22337,
+   "kind": "transformed_git_blob",
+   "source_path": "anaxi_final/test_workspace_audio.py",
+   "source_git_blob": "9cf5cbf76ea7bf3810ba8acae697bb088efc5f6d",
+   "git_mode": "100644",
+   "rule_set": "a2_rules.json",
+   "rule_set_version": "a2.1",
+   "rule_set_sha256": "44810b374055e1aa65ec25ad59998106b86e24466ea4edd9638a6029ade4f6f2",
+   "rule_applications": {
+    "name_map": 1
+   },
+   "change_kind": "comments_or_docstrings_only"
+  },
+  {
+   "path": "anaxi_final/test_workspace_audio_observation.py",
+   "sha256": "5728d185dd7a6ad65c3de9bf53bc2dc84556fdb7b45f7f1b77747b2411e226d0",
+   "size": 16684,
+   "kind": "unchanged_git_blob",
+   "git_blob": "1772ec1e89bd1ac86f92eb47cc20a0da8a712687",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_workspace_capability.py",
+   "sha256": "427ae6ec4a5cc843478d3cf02f163cbfd99ce141586a3077b4aa695975578b2d",
+   "size": 49281,
+   "kind": "unchanged_git_blob",
+   "git_blob": "b4b1fba69fd6213d39d248d5d743a329b86c38d3",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_workspace_direction.py",
+   "sha256": "e5a891cb38656fa5ebc877c9bc12c3991d3076ad6b6186459221c7b8f5f83cbc",
+   "size": 72874,
+   "kind": "unchanged_git_blob",
+   "git_blob": "c39693da2a5f0d1de7475c5457cf2e2bc21f0640",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_workspace_episode_context.py",
+   "sha256": "b7435f27c0b147ef74a477f1768557da722287e605124ad7c148e8e9f0e8dec0",
+   "size": 8321,
+   "kind": "unchanged_git_blob",
+   "git_blob": "4227f978ad3d8f7a307ea5303d5c52cc528f0468",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_workspace_episode_delivery.py",
+   "sha256": "bf472dd92af65665157246ec3fcde75a776358c15f6ca11de53f1eca93d77195",
+   "size": 7849,
+   "kind": "unchanged_git_blob",
+   "git_blob": "92a8e1f4a098ad82b0b85e41d9e2be7a144dd1c2",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_workspace_episode_provenance.py",
+   "sha256": "c9e513d6b96b67cac078006dde97fc9c3af60b891c7d9ce89162950674b4c10c",
+   "size": 49556,
+   "kind": "unchanged_git_blob",
+   "git_blob": "4c4e328b2d6a075a41f416d34398dae879186279",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_workspace_historical_continuity.py",
+   "sha256": "55cfcb1850b91c446960dba67dd3e76793ad97706f50acd3561c6d23eea52d22",
+   "size": 14322,
+   "kind": "unchanged_git_blob",
+   "git_blob": "fd0ea2b17a07eec00ed2931dd9f0657acc2239f8",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_workspace_narration_plain_reply.py",
+   "sha256": "196e6f98462e69cb16ca627b625f3a74b0b9511dddd16fe86ff6902d6dbd9786",
+   "size": 3767,
+   "kind": "unchanged_git_blob",
+   "git_blob": "f654f44a59ba7a3d2928b83e9a174ca818684df0",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_workspace_organization.py",
+   "sha256": "4949bbf049a08f9c77498183512896f5cfc63838a019d2b5ad3248a92fc6fcdc",
+   "size": 9666,
+   "kind": "unchanged_git_blob",
+   "git_blob": "ea0718c02f07c2af8afa730922d2c3825dc3bdda",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_workspace_private.py",
+   "sha256": "24f51837251bd7e68915c69baa3a6912a1086cb55d0a7eb3b876921fb9f85af4",
+   "size": 27451,
+   "kind": "transformed_git_blob",
+   "source_path": "anaxi_final/test_workspace_private.py",
+   "source_git_blob": "1f582698c7d0d963c7b797363dbcbc1b959846c3",
+   "git_mode": "100644",
+   "rule_set": "a2_rules.json",
+   "rule_set_version": "a2.1",
+   "rule_set_sha256": "44810b374055e1aa65ec25ad59998106b86e24466ea4edd9638a6029ade4f6f2",
+   "rule_applications": {
+    "name_map": 1
+   },
+   "change_kind": "behavior_bearing"
+  },
+  {
+   "path": "anaxi_final/test_workspace_public_continuity.py",
+   "sha256": "58a82ba13c2b38eb27a23e118647221b889208ee844ec12dcce222ffe9d81f45",
+   "size": 52691,
+   "kind": "unchanged_git_blob",
+   "git_blob": "e7f5e76a3c2ce5afae1c80ed95002ed5c9e2d647",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_workspace_resource_provenance.py",
+   "sha256": "df24a30a5baf1a54b7ea04095ad4458880a4d3d649155f7733eaa5bf170c06f5",
+   "size": 9130,
+   "kind": "transformed_git_blob",
+   "source_path": "anaxi_final/test_workspace_resource_provenance.py",
+   "source_git_blob": "6f2b4d1c90b7ec7b860025db9f1f935591c47cea",
+   "git_mode": "100644",
+   "rule_set": "a2_rules.json",
+   "rule_set_version": "a2.1",
+   "rule_set_sha256": "44810b374055e1aa65ec25ad59998106b86e24466ea4edd9638a6029ade4f6f2",
+   "rule_applications": {
+    "name_map": 25
+   },
+   "change_kind": "behavior_bearing"
+  },
+  {
+   "path": "anaxi_final/test_workspace_roaming.py",
+   "sha256": "585441856763b6c424adb84e69b9018337bd700bd5867e9fee6fe67f207d61be",
+   "size": 216626,
+   "kind": "transformed_git_blob",
+   "source_path": "anaxi_final/test_workspace_roaming.py",
+   "source_git_blob": "59ed8ebdcc6a5f4f3da0a57212e0ca0203c86086",
+   "git_mode": "100644",
+   "rule_set": "a2_rules.json",
+   "rule_set_version": "a2.1",
+   "rule_set_sha256": "44810b374055e1aa65ec25ad59998106b86e24466ea4edd9638a6029ade4f6f2",
+   "rule_applications": {
+    "name_map": 5
+   },
+   "change_kind": "behavior_bearing"
+  },
+  {
+   "path": "anaxi_final/test_workspace_source_text_role_binding.py",
+   "sha256": "ee79aafc48795a8e07ee735b3b276abed62a63d59ddd73e9d8bdb10c59d0ef4b",
+   "size": 2396,
+   "kind": "transformed_git_blob",
+   "source_path": "anaxi_final/test_workspace_source_text_role_binding.py",
+   "source_git_blob": "f329732dd17f167804e8b01b99359efd97160235",
+   "git_mode": "100644",
+   "rule_set": "a2_rules.json",
+   "rule_set_version": "a2.1",
+   "rule_set_sha256": "44810b374055e1aa65ec25ad59998106b86e24466ea4edd9638a6029ade4f6f2",
+   "rule_applications": {
+    "name_map": 1
+   },
+   "change_kind": "behavior_bearing"
+  },
+  {
+   "path": "anaxi_final/test_workspace_target_discovery.py",
+   "sha256": "d725f55c3c2e7fdccea911d902ca00efeb1b7bbcbfcdf3d0b0927682b46daba8",
+   "size": 35581,
+   "kind": "transformed_git_blob",
+   "source_path": "anaxi_final/test_workspace_target_discovery.py",
+   "source_git_blob": "fdbf75c057d18e820a23748ff919523dc606dd75",
+   "git_mode": "100644",
+   "rule_set": "a2_rules.json",
+   "rule_set_version": "a2.1",
+   "rule_set_sha256": "44810b374055e1aa65ec25ad59998106b86e24466ea4edd9638a6029ade4f6f2",
+   "rule_applications": {
+    "name_map": 7
+   },
+   "change_kind": "behavior_bearing"
+  },
+  {
+   "path": "anaxi_final/test_workspace_thread_continuity.py",
+   "sha256": "94f626612402c7524711daaee0cde00c213d4601dc3c47876818be3a542c9537",
+   "size": 27440,
+   "kind": "unchanged_git_blob",
+   "git_blob": "0df433883fcea9bbd0b60a9ab52ad61b7d65e866",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_workspace_waking_affordance.py",
+   "sha256": "5dab16268e3b49509fba08eba838e043241b7f9a5f936b756e742d5f5824f557",
+   "size": 17183,
+   "kind": "unchanged_git_blob",
+   "git_blob": "7cc75e0bcb60a6ff773a63ddf7f3777101e0bd4b",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/test_wsp1_production_hard_floor.py",
+   "sha256": "7646f0cc52ca3e10763c164c233963691441bd8633594bf42a261825d3d1f31b",
+   "size": 21622,
+   "kind": "transformed_git_blob",
+   "source_path": "anaxi_final/test_wsp1_production_hard_floor.py",
+   "source_git_blob": "1c2881b465bc5af7b9b563eb7a55dd271175d29e",
+   "git_mode": "100644",
+   "rule_set": "a2_rules.json",
+   "rule_set_version": "a2.1",
+   "rule_set_sha256": "44810b374055e1aa65ec25ad59998106b86e24466ea4edd9638a6029ade4f6f2",
+   "rule_applications": {
+    "name_map": 2
+   },
+   "change_kind": "behavior_bearing"
+  },
+  {
+   "path": "anaxi_final/test_wtr0_workspace_conflict_reassessment.py",
+   "sha256": "ffc84c02d2049c4e9c35613bbc12e1c2cf3523c38258299ac4c265b151d5063a",
+   "size": 12654,
+   "kind": "unchanged_git_blob",
+   "git_blob": "ad581035739c17ab7197457cc5f3faa82b10a301",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/ui_turn_diagnostics.py",
+   "sha256": "fbc65b9dfe9ae067597129f9d782419a46fcbfef300d07a2630e7981fb00c8ea",
+   "size": 27376,
+   "kind": "transformed_git_blob",
+   "source_path": "anaxi_final/ui_turn_diagnostics.py",
+   "source_git_blob": "a1b0a98af7c04515d25db8475b9a74bec139c8d9",
+   "git_mode": "100644",
+   "rule_set": "a2_rules.json",
+   "rule_set_version": "a2.1",
+   "rule_set_sha256": "44810b374055e1aa65ec25ad59998106b86e24466ea4edd9638a6029ade4f6f2",
+   "rule_applications": {
+    "name_map": 1
+   },
+   "change_kind": "comments_or_docstrings_only"
+  },
+  {
+   "path": "anaxi_final/verify_evidence_boundary.py",
+   "sha256": "19ceee7c6e15d26e66d757d983b4d58919bc7a594c1bcd28e1d512a03dc2a232",
+   "size": 3988,
+   "kind": "unchanged_git_blob",
+   "git_blob": "05980b62d61adfd1a49dc04769d707728f8a6c77",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/waking_failure_evidence.py",
+   "sha256": "66414c2319b180a6b0c4b8449a5d41864f75fed069bae3ac1ef4380a38e2ab57",
+   "size": 10547,
+   "kind": "unchanged_git_blob",
+   "git_blob": "5854f5cfe8f93635c245a8895328e54d8818e22e",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/waking_material_unit.py",
+   "sha256": "11696bb7345483073a230aa53329a0992e43a1ecc7f13ee93b349f186b6e5cdc",
+   "size": 23765,
+   "kind": "unchanged_git_blob",
+   "git_blob": "648de1de215f6eae20b006b90dc99203167754d6",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/waking_pipeline_lock.py",
+   "sha256": "0ecaf6fb35a7aa339eb69571ef4bf2d2d496e3680eb15bd152929e04b9eab79f",
+   "size": 563,
+   "kind": "unchanged_git_blob",
+   "git_blob": "2ceaa8880516e2d6658f4c230f0573f41f6bc84d",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/waking_recovery_control.py",
+   "sha256": "7d0d595dd3a8ed4f63f1cc46acd4936f5fb327b198a55d409c86625beade85ec",
+   "size": 1725,
+   "kind": "unchanged_git_blob",
+   "git_blob": "94ecd1504f24ebf491cfb658f1326a44b3c84015",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/waking_turn_failure_capture.py",
+   "sha256": "bf86b6e2425c3813fb55f9a1d9f3802262fdb1a64c07ff0319f4269743b4d306",
+   "size": 23921,
+   "kind": "unchanged_git_blob",
+   "git_blob": "d95329b8d39fd22a5e88f9b95fa7325327d40d54",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/workspace_audio.py",
+   "sha256": "88e9165cffb74ebbc9c34aff746561d6aef25b9c8c3d8c49bbf02751f2f36235",
+   "size": 35880,
+   "kind": "transformed_git_blob",
+   "source_path": "anaxi_final/workspace_audio.py",
+   "source_git_blob": "47f45762b175c8542bf047640dbe20b1d1fd9204",
+   "git_mode": "100644",
+   "rule_set": "a2_rules.json",
+   "rule_set_version": "a2.1",
+   "rule_set_sha256": "44810b374055e1aa65ec25ad59998106b86e24466ea4edd9638a6029ade4f6f2",
+   "rule_applications": {
+    "name_map": 1
+   },
+   "change_kind": "comments_or_docstrings_only"
+  },
+  {
+   "path": "anaxi_final/workspace_audio_observation.py",
+   "sha256": "737ec660379841e7e6ea187b171227f3ee8598b6aa0ee81cf7a591c297e0b265",
+   "size": 23730,
+   "kind": "unchanged_git_blob",
+   "git_blob": "301d87d7e004bb60327ee3b82b4d241c3567ea3b",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/workspace_capability.py",
+   "sha256": "4ac27c8ab568aa12ebb1d53bb5fb303af9c1f2cd6493886ace2dce276bd88b89",
+   "size": 86416,
+   "kind": "unchanged_git_blob",
+   "git_blob": "3dba6501d25ebf7a8b73a6b91862d672658072c0",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/workspace_delivery.py",
+   "sha256": "c702f508ddd37756ff44c27d8f4dae367cbe40f211e252d86c8b30b4ebb7ae65",
+   "size": 12743,
+   "kind": "unchanged_git_blob",
+   "git_blob": "75601cb652087f799d75a2c215c8bffcd0935180",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/workspace_direction.py",
+   "sha256": "baa461927844d0c207eb39a47f8a451d1b9aa7db6b735210087f952f3583a06a",
+   "size": 45815,
+   "kind": "unchanged_git_blob",
+   "git_blob": "a256ccd9b1e87bc4af6ce249706b1149b75b6ea4",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/workspace_discovery.py",
+   "sha256": "b7a620c6a426e7d5b9312beb0799d0e450f5f6bb5ded4a73c0af9f158abf4be1",
+   "size": 24612,
+   "kind": "transformed_git_blob",
+   "source_path": "anaxi_final/workspace_discovery.py",
+   "source_git_blob": "b0bb25363c0633bfc733523ebe84e4a5d0d2b6b3",
+   "git_mode": "100644",
+   "rule_set": "a2_rules.json",
+   "rule_set_version": "a2.1",
+   "rule_set_sha256": "44810b374055e1aa65ec25ad59998106b86e24466ea4edd9638a6029ade4f6f2",
+   "rule_applications": {
+    "name_map": 2
+   },
+   "change_kind": "comments_or_docstrings_only"
+  },
+  {
+   "path": "anaxi_final/workspace_episode_context.py",
+   "sha256": "4558358170c76d98b590cb54bae7c5b8dcae0bf463666bdf64351139fd513abd",
+   "size": 7076,
+   "kind": "unchanged_git_blob",
+   "git_blob": "460483ac32d515d5aa61f821d62b6922e7a240a9",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/workspace_episode_provenance.py",
+   "sha256": "8eb2beec170fb1833cc55c2c57ac9d5cfc98c469cb046eb01267ff5c84c2f86a",
+   "size": 50541,
+   "kind": "transformed_git_blob",
+   "source_path": "anaxi_final/workspace_episode_provenance.py",
+   "source_git_blob": "5a1b9fe17a471c667cacbafbe9348d53f6e6007f",
+   "git_mode": "100644",
+   "rule_set": "a2_rules.json",
+   "rule_set_version": "a2.1",
+   "rule_set_sha256": "44810b374055e1aa65ec25ad59998106b86e24466ea4edd9638a6029ade4f6f2",
+   "rule_applications": {
+    "name_map": 1
+   },
+   "change_kind": "comments_or_docstrings_only"
+  },
+  {
+   "path": "anaxi_final/workspace_organization.py",
+   "sha256": "1d257cf6ff6602d78ccecd637e5ab10ba9a37f58c5d5319c02df40b9406dfb05",
+   "size": 13631,
+   "kind": "unchanged_git_blob",
+   "git_blob": "6b222107377103295311e7f1fd1b23747e9d5c7d",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/workspace_private.py",
+   "sha256": "e28f26f8df6e3c0cb2fe876845bd2ba645e44057a45e93427b0cda78a1aa43bd",
+   "size": 21224,
+   "kind": "transformed_git_blob",
+   "source_path": "anaxi_final/workspace_private.py",
+   "source_git_blob": "81b234317ee81bfe6525217a3961a5eb0d1c3dbc",
+   "git_mode": "100644",
+   "rule_set": "a2_rules.json",
+   "rule_set_version": "a2.1",
+   "rule_set_sha256": "44810b374055e1aa65ec25ad59998106b86e24466ea4edd9638a6029ade4f6f2",
+   "rule_applications": {
+    "name_map": 4
+   },
+   "change_kind": "behavior_bearing"
+  },
+  {
+   "path": "anaxi_final/workspace_provenance.py",
+   "sha256": "19430a4e80ae292a968b8bebf1845a71e8e1224ab5f5ebe0605a3386ad16b922",
+   "size": 6129,
+   "kind": "transformed_git_blob",
+   "source_path": "anaxi_final/workspace_provenance.py",
+   "source_git_blob": "3fffda1031433350bdcd7556fbc5488560ec0a91",
+   "git_mode": "100644",
+   "rule_set": "a2_rules.json",
+   "rule_set_version": "a2.1",
+   "rule_set_sha256": "44810b374055e1aa65ec25ad59998106b86e24466ea4edd9638a6029ade4f6f2",
+   "rule_applications": {
+    "name_map": 2
+   },
+   "change_kind": "comments_or_docstrings_only"
+  },
+  {
+   "path": "anaxi_final/workspace_public_continuity.py",
+   "sha256": "a566467485ea6254d46887b9cb8a4e797b5684db8a4a2cc74aaf207dcb93b520",
+   "size": 20161,
+   "kind": "transformed_git_blob",
+   "source_path": "anaxi_final/workspace_public_continuity.py",
+   "source_git_blob": "f118a694d887255753613df674a33f761a31a187",
+   "git_mode": "100644",
+   "rule_set": "a2_rules.json",
+   "rule_set_version": "a2.1",
+   "rule_set_sha256": "44810b374055e1aa65ec25ad59998106b86e24466ea4edd9638a6029ade4f6f2",
+   "rule_applications": {
+    "name_map": 1
+   },
+   "change_kind": "behavior_bearing"
+  },
+  {
+   "path": "anaxi_final/workspace_roaming.py",
+   "sha256": "d93ac1d2fec869332755bba821e7ebb1420005d7f88fbca57792a234a2b6ceb5",
+   "size": 113023,
+   "kind": "transformed_git_blob",
+   "source_path": "anaxi_final/workspace_roaming.py",
+   "source_git_blob": "dc652c6888cc3f56908234b6f50627e734dc5de3",
+   "git_mode": "100644",
+   "rule_set": "a2_rules.json",
+   "rule_set_version": "a2.1",
+   "rule_set_sha256": "44810b374055e1aa65ec25ad59998106b86e24466ea4edd9638a6029ade4f6f2",
+   "rule_applications": {
+    "name_map": 7
+   },
+   "change_kind": "behavior_bearing"
+  },
+  {
+   "path": "anaxi_final/workspace_supervisor.py",
+   "sha256": "f01660a3474cc4bc16d92d03c103428650a3fba64a4ce9368646a6cb0e1d5544",
+   "size": 78324,
+   "kind": "unchanged_git_blob",
+   "git_blob": "b008039984f1226fa1482dfc1cca063071314658",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/wtr0_cli.py",
+   "sha256": "28b31e9aba4416af31040e3824b912e118c7dbc2a621dd92abda67a12b8a8751",
+   "size": 8129,
+   "kind": "unchanged_git_blob",
+   "git_blob": "874bc19584bd3a10937dbd0328b00e9c7a601a16",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/wtr0_cold_reset.py",
+   "sha256": "de1bb4d7bf77d88a3cd7c4241ac9b7214bf24a9169711d9840b351a7a7b54d71",
+   "size": 9545,
+   "kind": "unchanged_git_blob",
+   "git_blob": "bb5c5aceb194a41c626f1091d2ea1be742d426ab",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/wtr0_schema_migration.py",
+   "sha256": "f3c46b51ddef848c74f3e66b5477d0ebdd987febbc5131ae67d311b23dc5714e",
+   "size": 7194,
+   "kind": "unchanged_git_blob",
+   "git_blob": "637a165fe460e862d1a90c97f9f0e5789e715a80",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/wtr0_waking_recovery.py",
+   "sha256": "eae9ba18d12a43634e20432972c02a7b71592c0f89ed550d76e39bf9acb9cc7f",
+   "size": 21062,
+   "kind": "unchanged_git_blob",
+   "git_blob": "3c597e8cc05205d05c2c5c49bcbadb0138de5dd7",
+   "git_mode": "100644"
+  },
+  {
+   "path": "anaxi_final/wtr0_workspace_conflict_reassessment.py",
+   "sha256": "f4dfa3170e9a9b2ab437a53fcaad53f28e1ee0151efea27dd26744bd6da223c4",
+   "size": 13093,
+   "kind": "unchanged_git_blob",
+   "git_blob": "4266b925fa6080d8c95133a877d50118ea2fb104",
+   "git_mode": "100644"
+  },
+  {
+   "path": "claude_agent.py",
+   "sha256": "de333f9f9bec07a67e6c29393c399a7cd370d06ccc164fd085786656be554da3",
+   "size": 3469,
+   "kind": "unchanged_git_blob",
+   "git_blob": "d4dab06eef270a225a591e44e76b76a87b0c9946",
+   "git_mode": "100644",
+   "included_because": "Imported by the pinned custom-runner suite test_bounded_hippocampus_integration.py, whose runner node is bound in two public scenarios (Claude fail-closed guard); A1 had classed it obsolete. Its tests use a poison key and never reach a network or credential."
+  },
+  {
+   "path": "reference/resource_evidence.py",
+   "sha256": "095d82045053c3934df5a419e867632f6745663c43c3bca9e0ce26a0a9379af3",
+   "size": 3152,
+   "kind": "packaging_authored",
+   "packaging_source": "packaging/reference_distribution/a2_resource_evidence.py"
+  },
+  {
+   "path": "reference/run_reference.py",
+   "sha256": "c82e9f24e0bd5e90a5b88004c5cd4ba79edfe830699775636b5d4509aba2c0ec",
+   "size": 13760,
+   "kind": "packaging_authored",
+   "packaging_source": "packaging/reference_distribution/distribution/reference/run_reference.py"
+  },
+  {
+   "path": "reference/synthetic_collection.py",
+   "sha256": "efe4c81b4c162fd08048326bfc72c81f807dd4d996e2d7b5b8f84b74b9541871",
+   "size": 9657,
+   "kind": "packaging_authored",
+   "packaging_source": "packaging/reference_distribution/a2_synthetic_collection.py"
+  },
+  {
+   "path": "reference_fixtures/public_resource_collection/ANAXI_CAPABILITIES_AND_PATHWAYS.md",
+   "sha256": "5b33ad76ea4ef929cfebaf5df36e83f1574fef0b4bcd8c4aabeac6209f493746",
+   "size": 3395,
+   "kind": "generated_fixture",
+   "generator": "anaxi-reference-distribution/a2_synthetic_collection.py",
+   "input_sha256": "f1f59b46a7f2f67bea7b48febe24406fba17fb0e82b5d89820a6079196c49981"
+  },
+  {
+   "path": "reference_fixtures/public_resource_collection/Books/long_reading_sample.txt",
+   "sha256": "8c07a2be3618644719e4a48f6507709bff5c86fb9c6b48fea43c3055fee6e9f7",
+   "size": 81306,
+   "kind": "generated_fixture",
+   "generator": "anaxi-reference-distribution/a2_synthetic_collection.py",
+   "input_sha256": "f1f59b46a7f2f67bea7b48febe24406fba17fb0e82b5d89820a6079196c49981"
+  },
+  {
+   "path": "reference_fixtures/public_resource_collection/Books/notes/nested_notes.md",
+   "sha256": "99d618d8e132763e7e7520cc431f875933826ab5163decb793e7ba9d93f2afb9",
+   "size": 1517,
+   "kind": "generated_fixture",
+   "generator": "anaxi-reference-distribution/a2_synthetic_collection.py",
+   "input_sha256": "f1f59b46a7f2f67bea7b48febe24406fba17fb0e82b5d89820a6079196c49981"
+  },
+  {
+   "path": "reference_fixtures/public_resource_collection/Books/scans/scanned_sample.pdf",
+   "sha256": "04d34018112ff86db2f1d6c054b350ed1544e31566ac55d05817c9a94ca3a0f1",
+   "size": 235837,
+   "kind": "generated_fixture",
+   "generator": "anaxi-reference-distribution/a2_synthetic_collection.py",
+   "input_sha256": "f1f59b46a7f2f67bea7b48febe24406fba17fb0e82b5d89820a6079196c49981"
+  },
+  {
+   "path": "reference_fixtures/public_resource_collection/Books/text_sample.pdf",
+   "sha256": "53f05e805fde88b7a95b8bd44d8594c8975434bb3de6fbbceacb57e3c172d618",
+   "size": 11753,
+   "kind": "generated_fixture",
+   "generator": "anaxi-reference-distribution/a2_synthetic_collection.py",
+   "input_sha256": "f1f59b46a7f2f67bea7b48febe24406fba17fb0e82b5d89820a6079196c49981"
+  },
+  {
+   "path": "reference_fixtures/public_resource_collection/Music/Album One/tone_a.wav",
+   "sha256": "a3122a5be786a3c9099f8623964307857eb29e6ed5495e0455c46ee4c8512900",
+   "size": 96044,
+   "kind": "generated_fixture",
+   "generator": "anaxi-reference-distribution/a2_synthetic_collection.py",
+   "input_sha256": "f1f59b46a7f2f67bea7b48febe24406fba17fb0e82b5d89820a6079196c49981"
+  },
+  {
+   "path": "reference_fixtures/public_resource_collection/Music/Album One/tone_b.flac",
+   "sha256": "5a63a3c6d99b64c3a6677958081ab6ce4aa7e83d09cd54d5cc3ae5344dcbab7f",
+   "size": 50124,
+   "kind": "generated_fixture",
+   "generator": "anaxi-reference-distribution/a2_synthetic_collection.py",
+   "input_sha256": "f1f59b46a7f2f67bea7b48febe24406fba17fb0e82b5d89820a6079196c49981"
+  },
+  {
+   "path": "reference_fixtures/public_resource_collection/Music/Album Two/tone_c.wma",
+   "sha256": "b5a3a9c22dfa7b30b889398ba18eb29fbc47d3d94e62d100420177c9bbfe93b1",
+   "size": 106044,
+   "kind": "generated_fixture",
+   "generator": "anaxi-reference-distribution/a2_synthetic_collection.py",
+   "input_sha256": "f1f59b46a7f2f67bea7b48febe24406fba17fb0e82b5d89820a6079196c49981"
+  },
+  {
+   "path": "reference_fixtures/public_resource_collection/Pictures/Landscapes/gradient_a.jpg",
+   "sha256": "ac6369aae0bb646fc5063a0f5dd303eae8fa23401c90e5ae011953770115739f",
+   "size": 52892,
+   "kind": "generated_fixture",
+   "generator": "anaxi-reference-distribution/a2_synthetic_collection.py",
+   "input_sha256": "f1f59b46a7f2f67bea7b48febe24406fba17fb0e82b5d89820a6079196c49981"
+  },
+  {
+   "path": "reference_fixtures/public_resource_collection/Pictures/Landscapes/gradient_b.jpeg",
+   "sha256": "9ddc68bcb3b929031b89c5526023e5e8794cb522b56f479069a8945598e69f12",
+   "size": 52989,
+   "kind": "generated_fixture",
+   "generator": "anaxi-reference-distribution/a2_synthetic_collection.py",
+   "input_sha256": "f1f59b46a7f2f67bea7b48febe24406fba17fb0e82b5d89820a6079196c49981"
+  },
+  {
+   "path": "reference_fixtures/public_resource_collection/Pictures/Patterns/nested/pattern_d.webp",
+   "sha256": "bdcd829443290ca1c2c240a00a308b7710f740f10a33c31e3d347b12261cae28",
+   "size": 12172,
+   "kind": "generated_fixture",
+   "generator": "anaxi-reference-distribution/a2_synthetic_collection.py",
+   "input_sha256": "f1f59b46a7f2f67bea7b48febe24406fba17fb0e82b5d89820a6079196c49981"
+  },
+  {
+   "path": "reference_fixtures/public_resource_collection/Pictures/Patterns/pattern_c.png",
+   "sha256": "c2ecac6b94bd542c7c1ce990c800809132840b09f43311687501db1cf1b7048d",
+   "size": 5735,
+   "kind": "generated_fixture",
+   "generator": "anaxi-reference-distribution/a2_synthetic_collection.py",
+   "input_sha256": "f1f59b46a7f2f67bea7b48febe24406fba17fb0e82b5d89820a6079196c49981"
+  },
+  {
+   "path": "reference_fixtures/public_resource_collection/Pictures/pattern_e.gif",
+   "sha256": "ad4f19408a600b97eac913a633cd59bce314f48558332406459a5c3d4ed3094b",
+   "size": 39249,
+   "kind": "generated_fixture",
+   "generator": "anaxi-reference-distribution/a2_synthetic_collection.py",
+   "input_sha256": "f1f59b46a7f2f67bea7b48febe24406fba17fb0e82b5d89820a6079196c49981"
+  },
+  {
+   "path": "requirements.txt",
+   "sha256": "f25c97375a12fa1d0f3faccebd2eb956b68392b10dfc5c5fa96f4ee9b0b3041f",
+   "size": 464,
+   "kind": "packaging_authored",
+   "packaging_source": "packaging/reference_distribution/distribution/requirements.txt"
+  }
+ ]
+}

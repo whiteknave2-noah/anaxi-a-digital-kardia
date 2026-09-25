@@ -1,0 +1,20 @@
+{
+  "schema": "claim-harness.inventory/v0",
+  "project": "toy-agent (deliberate failure)",
+  "claims": [
+    {
+      "id": "DIGEST-1",
+      "question": "delivery-vs-backend",
+      "statement": "The !digest summary reaches the subject who asked for it.",
+      "evidence": "executable",
+      "notes": "Two required bindings; the backend one passes, the delivery one fails. 1 of 2 is not PASS."
+    },
+    {
+      "id": "AMBIGUOUS-1",
+      "question": "ambiguous-side-effects",
+      "statement": "A send whose outcome is unknown is never resent automatically.",
+      "evidence": "executable",
+      "notes": "Its evidence exists but is not part of this run, so it is NOT_ATTEMPTED: missing evidence is not positive evidence."
+    }
+  ]
+}
