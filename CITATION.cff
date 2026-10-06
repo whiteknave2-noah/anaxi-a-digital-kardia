@@ -5,22 +5,39 @@ type: software
 authors:
   - family-names: "Brannum"
     given-names: "Noah DanGabriel"
-version: "2026-09-24 / 4e950d0"
+version: "2026-09-24"
 date-released: "2026-09-24"
 repository-code: "https://github.com/whiteknave2-noah/anaxi-a-digital-kardia"
 url: "https://github.com/whiteknave2-noah/anaxi-a-digital-kardia"
 abstract: >-
-  ANAXI: A DIGITAL KARDIA is a completed persistent-agent architecture and
-  public reference case focused on truthful provenance, bounded authority,
-  privacy, continuity, recovery, reversibility, and meaningful end-to-end
-  affordance. The repository also includes an ANAXI-specific reproducibility
-  distribution and a standalone portable claim harness.
+  ANAXI: A DIGITAL KARDIA is a persistent-agent architecture and public
+  reference case focused on truthful provenance, bounded authority, privacy,
+  continuity, recovery, reversibility, and meaningful end-to-end affordance.
+  The repository is organized in dated layers. The 24 September 2026 layer is a
+  frozen historical reference release and reproducibility package, versioned
+  here as 2026-09-24. A 2 October 2026 architecture update records a correction
+  to that release, and a 5 October 2026 architecture update records the current
+  production architecture, including relational history with mechanical
+  historical/current separation, subject-directed consolidation, and the
+  whole-package integration lesson. The currently adopted waking substrate is
+  stock Ministral 3 14B Instruct 2512 Q4_K_M, pinned to an exact artifact digest
+  and verified before waking; no personal history is trained into model weights.
+  Production adoption has occurred. A separate standalone claim-harness
+  directory, licensed Apache-2.0, provides a portable, mechanism-neutral claim,
+  evidence, and testing model reusable in other agent projects. Production
+  adoption and engineering acceptance do not establish consciousness,
+  personhood, or subjective experience, and several claims are deliberately
+  retained as NOT_ESTABLISHED. The complete current private production runtime is
+  not published.
 keywords:
   - artificial intelligence
   - persistent agents
   - provenance
   - authority
   - privacy
+  - continuity
   - recovery
+  - reversibility
   - reproducibility
   - agent evaluation
+  - not established
