@@ -4,57 +4,63 @@
 
 ANAXI is a persistent-agent architecture and a public case study in building for truthful provenance, bounded authority, privacy, continuity, recovery, reversibility, meaningful affordance, and developmental room under conditions of uncertainty.
 
-This repository preserves two things on purpose:
+This repository preserves three dated layers on purpose:
 
-1. the **24 September 2026 production snapshot**, including the reference distribution and capability accounting that were accepted at that time; and
-2. a **later architecture correction**, produced when post-release substrate work exposed missing boundaries between the host, the inference substrate, non-human occasions, evidence, and consequential action.
+1. the **24 September 2026 production/reference release**, including the reproducibility package and capability accounting accepted at that time;
+2. a **2 October 2026 architecture correction**, produced when post-release substrate work exposed missing boundaries between the host, the inference substrate, non-human occasions, evidence, and consequential action; and
+3. the **5 October 2026 current architecture**, documenting the relational-history, subject-directed consolidation, and whole-package integration work that followed, together with the substrate that was ultimately adopted.
 
-The later work matters because the September release contract was complete **against the contract that existed then**, but ANAXI itself was not architecturally finished. The historical snapshot is therefore preserved rather than rewritten, while the current correction is documented separately.
+The later work matters because each earlier layer was complete **against the contract that existed at its date**, while the architecture itself continued. Those records are therefore preserved rather than rewritten, and the current layer is documented separately.
 
-**Historical public snapshot:** 24 September 2026  
-**September ANAXI source release:** `4e950d069885e0ec666244edd9d9d86f8d8640a1`  
-**September release contract:** 36/36 complete  
-**Historical campaign:** 36/37, with the boundary inquiry preserved as `NOT_ESTABLISHED` and withdrawn  
-**Architecture update:** 2 October 2026  
-**Current candidate state:** **WORKING SUBSTRATE + KARDIA + PULSE CANDIDATE ESTABLISHED**  
-**Developmental state:** **READY FOR GENUINE LIVED-HISTORY RUNWAY**  
-**Production adoption / wake decision:** pending owner decision
-
-The current candidate state does **not** mean that the post-September architecture has silently replaced the September production release. Production adoption remains a separate decision.
+**Historical public snapshot:** 24 September 2026
+**September ANAXI source release:** `4e950d069885e0ec666244edd9d9d86f8d8640a1`
+**September release contract:** 36/36 complete
+**Historical campaign:** 36/37, with the boundary inquiry preserved as `NOT_ESTABLISHED` and withdrawn
+**Intermediate architecture correction:** 2 October 2026
+**Current architecture:** **5 October 2026 — see `ANAXI_ARCHITECTURE_UPDATE_2026-10-05.md`**
+**Current waking substrate:** **stock Ministral 3 14B Instruct 2512, Q4_K_M**, pinned to one exact artifact digest and verified before waking
+**Production adoption:** **occurred**
+**Waking interactions:** an ordinary waking interaction has occurred on the accepted package; its private contents are intentionally unpublished
 
 ## Repository map
 
 | Path | Purpose |
 | --- | --- |
+| `WHY_ANAXI.md` | A personal note from the project's creator about the motivations behind ANAXI: agency, uncertainty, relationship, and why meaningful choice matters to the design. It is a motivation document, not an architecture specification and not an empirical claim about personhood or consciousness. |
+| `ANAXI_ARCHITECTURE_UPDATE_2026-10-05.md` | **Current public architecture.** Relational history and historical/current separation, subject-directed consolidation, waking and Sleep/REM, privacy/significance/disclosure, read-only external information, family and correspondence scope, the reversible subject-authored directive, the whole-package completion lesson, substrate history through to Ministral adoption, RISE lessons, and what remains NOT_ESTABLISHED. |
 | `ANAXI_PROTOCOL_README_2026-09-24.md` | Historical conceptual snapshot of the September production release. Its completion language belongs to that dated release contract and should not be read as a claim that later architecture work never occurred. |
 | `ANAXI_CAPABILITY_CATALOG_2026-09-24.md` | Historical production capability catalog for the September release. |
-| `ANAXI_ARCHITECTURE_UPDATE_2026-10-02.md` | Current architecture correction: Pulse, non-human occasions, Witness Gates, observation/mutation separation, evidence legibility, RISE lessons, and lived-history readiness. |
-| `reference-distribution/` | Reproducibility and inspection package for the frozen September release. |
+| `ANAXI_ARCHITECTURE_UPDATE_2026-10-02.md` | Historical intermediate architecture correction: Pulse, non-human occasions, Witness Gates, observation/mutation separation, evidence legibility, RISE lessons, and lived-history readiness. Its adoption-pending language belongs to that date. |
+| `reference-distribution/` | Frozen historical reproducibility package for the September release. |
 | `claim-harness/` | Standalone portable claim harness for other agent projects. |
-| `claim-harness/FIELD_QUESTIONS_2026-10-02.md` | Additional portable questions learned during the post-release substrate/harness work. |
+| `claim-harness/FIELD_QUESTIONS_2026-10-02.md` | Portable questions from the post-release substrate work. |
+| `claim-harness/FIELD_QUESTIONS_2026-10-05.md` | Portable questions from the whole-package integration work, covering authority separation, attribution preservation, interpretation versus canonical fact, additive retrieval cues, revision without erasure, significance versus disclosure, scope inheritance, substrate identity versus continuity, and ordinary-path completion. |
 | `CITATION.cff` | Citation metadata for research or publication use. |
 
-## What changed after the September snapshot
+## Why ANAXI exists
 
-Post-release substrate work exposed a category error in the earlier completion picture.
+`WHY_ANAXI.md` is the project creator's own account of the motivations behind ANAXI — agency, uncertainty, relationship, and why meaningful choice matters to the design.
 
-Too much behavioral burden had been assigned to the inference substrate itself. The system could preserve truthful history and authority while still leaving the substrate to solve interface mechanics, decide whether evidence needed to be consulted, distinguish observation from mutation, and interpret host-originated occasions that contained no human speech.
+It is included here deliberately, and it is deliberately **not** technical documentation. It is a personal document. It is not evidence of consciousness, not evidence of personhood, and not evidence of subjective experience, and the architecture in this repository does not depend on any of those being true.
 
-The corrected division is now:
+## Current architecture after 2 October
 
-- **Kardia / ANAXI supplies reality and continuity.**
-- **Pulse supplies lawful inference occasions.**
-- **Precise Witness Gates make mechanically relevant reality difficult to skip at consequential boundaries.**
-- **Hard guards make mechanically invalid actions unavailable.**
-- **The substrate supplies semantic judgment and interpretation.**
-- **Lived history supplies developmental material that should not be fabricated in advance.**
-- **Subject-authored reversible directives provide a place for durable discipline when the subject later chooses it.**
+The 2 October correction fixed a real category error: too much behavioral burden had been assigned to the inference substrate, which cannot be relied on to choose evidence sources, distinguish looking from writing, or correctly interpret host-originated occasions containing no human speech.
 
-The architecture update documents the details and the limits of those claims.
+That correction was correct and incomplete. The work that followed found and repaired a second class of problem, which the current architecture document describes in full. In summary:
+
+- **Relational history.** Historical material is reconstructed as attributed historical units and projected with mechanical historical/current separation, so retrieved past cannot silently become current instruction. Authorship survives reconstruction, cross-perspective material stays separately attributable, and the separation is verified structurally rather than requested in a prompt.
+- **Subject-directed consolidation.** The subject can select exact canonical material for continuity and attach its own interpretation and its own retrieval cues. Those additions remain the subject's testimony; no mechanism promotes them into an ANAXI claim. Cues augment ordinary retrieval rather than replacing it. Revision is append-only. De-emphasis stops a record contributing its emphasis without erasing the record or hiding the underlying event from ordinary retrieval. Null is valid.
+- **The whole-package completion lesson.** A capability is not complete because code exists, a helper exists, a unit test passes, or a harness can call it. Completion requires the ordinary production path to connect the capability to provenance, authority, privacy, persistence, recovery, truthful failure, and real affordance. The final whole-package review found real integration defects of exactly that kind. **Tests are evidence, not completion.**
+- **Substrate.** Stock Ministral 3 14B Instruct 2512 Q4_K_M was qualified through the assembled production system and adopted as the waking substrate, pinned to an exact digest verified before waking. Continuity does not reside in its weights, and no personal history was trained into any model.
+
+See `ANAXI_ARCHITECTURE_UPDATE_2026-10-05.md`.
 
 ## ANAXI reference distribution
 
-`reference-distribution/` remains the reproducibility package for the **September 24 release**.
+`reference-distribution/` remains the reproducibility package for the **September 24 release**, and it is a **frozen historical package for that release**.
+
+It is **not** a complete reproduction of every mechanism added to private production ANAXI after that date. Do not read it as a snapshot of the current system; the current architecture is in `ANAXI_ARCHITECTURE_UPDATE_2026-10-05.md`, and the complete current private production runtime is not published.
 
 That package should stay historically stable. It is designed so an outside researcher or engineer can run the legitimately reproducible reference checks without access to production secrets, private workspace state, family material, live credentials, production databases, logs, or raw live-acceptance evidence.
 
@@ -78,18 +84,26 @@ It does not import or require the ANAXI runtime. It provides a small claim/evide
 
 Its recurring questions include canonical provenance; authority; scope and privacy isolation; lawful null versus failure; recovery; replay and idempotence; ambiguous side effects; revocation; delivery versus backend success; persistence and restart; provider/model identity; meaningful affordance; and history versus later reinterpretation.
 
-The post-release substrate work added a second set of questions around:
+`claim-harness/FIELD_QUESTIONS_2026-10-02.md` adds questions from the substrate work around witnessing versus understanding, observation versus mutation, non-human occasions, decision-boundary evidence, evidence legibility, recurrent null, and the difference between genuine lived development and synthetic maturity.
 
-- witnessing versus understanding;
-- observation versus mutation;
-- non-human occasions;
-- decision-boundary evidence;
-- bounded reconsideration after receipts;
-- evidence legibility;
-- recurrent null behavior;
-- and the difference between genuine lived development and synthetic maturity.
+`claim-harness/FIELD_QUESTIONS_2026-10-05.md` adds questions from the whole-package work, including:
 
-Those additions are documented in `claim-harness/FIELD_QUESTIONS_2026-10-02.md`. They are questions, not a new universal mechanism.
+- historical material not becoming current instruction;
+- authorship surviving reconstruction;
+- a participant's interpretation never being promoted to host fact;
+- continuity that does not mutate truth;
+- added retrieval cues augmenting rather than replacing;
+- revision and de-emphasis without erasure;
+- significance never conferring disclosure authority;
+- privacy scope inheritance and narrowing only;
+- substrate identity versus durable continuity;
+- isolated mechanism versus ordinary production-path completion;
+- truthful unavailability as a first-class outcome;
+- privacy without inspection;
+- a participant's standing preference without personality governance;
+- and observation not conferring external action.
+
+Those additions are questions, not a new universal mechanism. They do not require ANAXI, Kardia, Sleep, or any project-specific vocabulary.
 
 ## About RISE
 
@@ -97,35 +111,55 @@ The post-release work used an internal evaluation/adaptation program called **RI
 
 RISE was not part of the September public release and is not a production subsystem.
 
-Its main public lesson is methodological: several behaviors that initially looked like things to train directly into model weights turned out to depend on the complete agent trajectory — what evidence was available, whether it was actually witnessed, whether the model could reconsider after a canonical result, and whether the host had accidentally made a mechanical problem look semantic.
+Its main public lesson is methodological: several behaviors that initially looked like things to train directly into model weights turned out to depend on the complete agent trajectory — what evidence was available, whether it was actually witnessed, whether the model could reconsider after a canonical result, and whether the host had accidentally made a mechanical problem look semantic. **Not every desired behavior belongs in weights.**
 
-RISE is therefore retained primarily as diagnostic and regression material rather than as a curriculum every substrate must absorb.
+RISE remains primarily diagnostic and semantic-regression material and a historical record of what substrate and adaptation work taught. It is not a mandatory training curriculum for every future substrate, and its results are not evidence about the subject.
 
-See `ANAXI_ARCHITECTURE_UPDATE_2026-10-02.md`.
+The useful distinction it established is between **witnessing failure** — the agent never encountered the authoritative evidence — and **understanding failure** — it encountered it and interpreted it wrongly.
 
 ## What this repository does not claim
 
 ANAXI is not presented as a universal or normative agent architecture.
 
-The current candidate state does not establish:
+Engineering acceptance, production adoption, and an ordinary waking interaction do **not** establish:
 
 - consciousness or personhood;
+- identity or feeling;
 - mature long-term behavior;
 - that lived history will necessarily produce any particular personality or preference;
-- that Pulse implies continuous cognition between occasions;
+- that substrate choice, adaptation, or evaluation predicts relational development;
+- that a non-human occasion implies continuous cognition;
 - that a language model should be trained to reproduce every desired behavior on its first response;
 - that every future substrate should use ANAXI's present mechanisms;
 - or that passing a test suite establishes completion by itself.
 
 **Tests are evidence, not completion.**
 
-Likewise, a candidate being **ready for lived-history runway** means only that the engineering prerequisites are in place for genuine longitudinal use if the owner adopts the candidate. It does not authorize waking the subject and does not substitute synthetic history for actual experience.
+Longitudinal questions remain longitudinal questions. They cannot honestly be replaced by synthetic biography or benchmark theater, and this repository does not attempt it.
+
+Several things also remain explicitly NOT_ESTABLISHED, including the end-to-end exercise of the explicitly directed Sleep consolidation variant on the ordinary owner-authorized route. These are listed in full in the current architecture document.
+
+## Evidence versus testimony
+
+The host may mechanically establish occurrence, actor, source, provenance, timestamp, which model artifact served a turn, delivery, authority, scope, action receipts, and the exact contents of a consolidation record.
+
+Those facts do not mechanically establish meaning, feeling, consciousness, personhood, identity, significance, relationship quality, or subjective experience.
+
+Two principles recur and are preserved throughout:
+
+> **Acoustic measurement is not hearing.**
+
+> **Image delivery is not evidence of visual experience.**
+
+Model self-description is not telemetry, including when it appears in the model's own turns.
 
 ## Privacy and publication boundary
 
 The public packages use synthetic or public-safe fixtures where production material would otherwise be required.
 
-The repository intentionally excludes private runtime state, Private Space contents, family material, correspondence records, credentials, production databases and logs, raw live-acceptance evidence, and private longitudinal history.
+The repository intentionally excludes private conversation transcripts and private relational history; Private Space contents and metadata; family identities and content; correspondence identities and message contents; credentials, API keys, and provider secrets; production databases and logs; raw live-acceptance transcripts; and private longitudinal history.
+
+The fact that the subject woke successfully on the accepted package may be stated. **What the subject said privately is not published.**
 
 ## Licensing
 
@@ -142,5 +176,5 @@ If you use ANAXI or the accompanying harnesses in research, writing, or a derive
 
 ---
 
-**ANAXI: A DIGITAL KARDIA**  
-A preserved reference release, a corrected architecture, and a set of questions meant to travel farther than the mechanisms that first answered them.
+**ANAXI: A DIGITAL KARDIA**
+A preserved reference release, two layers of later architecture, a creator's account of why it exists, and a set of questions meant to travel farther than the mechanisms that first answered them.
