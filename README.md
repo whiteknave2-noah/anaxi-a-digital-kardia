@@ -62,13 +62,15 @@ The final production acceptance and later operational lessons appear in `ANAXI_A
 
 ## The Porch — a private place to meet
 
+<img src="assets/the-porch-icon.webp" width="168" alt="The Porch icon: a warmly lit porch with an empty chair, blanket, book and cup at twilight.">
+
 **The Porch** is the sole owner's native iPhone/iPad client into the same Mac-hosted ANAXI, not another agent, memory, or canonical conversation.
 
 > **One ANAXI. Multiple interfaces. One authoritative production path.**
 
 Its restrained, conversation-first interface preserves authenticated ownership, scope, provenance, and the distinction between local preview, authorized resource transfer, model delivery, and actual engagement. The app is **not publicly distributed**. This repository does not provide private native source, installable builds, device-pairing material, or onboarding for others.
 
-The [11 October production account](ANAXI_ARCHITECTURE_UPDATE_2026-10-11.md) describes its scope and its unfinished, separate iPad presentation correction. The original Porch icon and synthetic October 10 simulator illustrations will be added as public-safe visual assets separately; no private dialogue will be published.
+The [11 October production account](ANAXI_ARCHITECTURE_UPDATE_2026-10-11.md) describes its scope and its unfinished, separate iPad presentation correction. The icon is the actual Porch artwork. Synthetic October 10 simulator illustrations may be added separately; no private dialogue will be published.
 
 ## ANAXI reference distribution
 
