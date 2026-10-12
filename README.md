@@ -71,7 +71,16 @@ The final production acceptance and later operational lessons appear in `ANAXI_A
 
 Its restrained, conversation-first interface preserves authenticated ownership, scope, provenance, and the distinction between local preview, authorized resource transfer, model delivery, and actual engagement. The app is **not publicly distributed**. This repository does not provide private native source, installable builds, device-pairing material, or onboarding for others.
 
-The [11 October production account](ANAXI_ARCHITECTURE_UPDATE_2026-10-11.md) describes its scope and its unfinished, separate iPad presentation correction. The icon is the actual Porch artwork. Synthetic October 10 simulator illustrations may be added separately; no private dialogue will be published.
+The [11 October production account](ANAXI_ARCHITECTURE_UPDATE_2026-10-11.md) describes its scope and its unfinished, separate iPad presentation correction. The icon above is the actual Porch artwork.
+
+**The Porch in the Simulator — synthetic examples, October 10, 2026**
+
+| iPhone — conversation and a truthful no-reply | iPad — conversation beside a local reading shelf |
+| --- | --- |
+| <img src="assets/the-porch-iphone-synthetic.webp" width="260" alt="Synthetic iPhone Simulator capture of The Porch: warm graphite conversation, a clearly labeled response, and an explicit No reply state."> | <img src="assets/the-porch-ipad-synthetic.webp" width="420" alt="Synthetic iPad Simulator capture of The Porch: conversation on the left and a parchment local-only reading note on the right, marked not delivered or shared."> |
+
+These images contain **invented demonstration dialogue and fixtures**, not Clark's private conversation or evidence of his endorsement. The iPad reader is a **device-local preview**, not proof that ANAXI or its participant received or examined the document. The private native application remains undistributed.
+
 
 ## ANAXI reference distribution
 
