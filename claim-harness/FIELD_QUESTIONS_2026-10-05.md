@@ -1,7 +1,11 @@
 # Field questions added after whole-package integration work
 
 **Date:** 5 October 2026  
-**Status:** portable questions; no generic executable checks are claimed here.
+**Status:** portable questions. As of 11 October 2026, two of the fourteen
+questions below (#3 and #11) have a generic executable check in
+`claim_harness/checks.py` and a bound claim in the toy agent; see the
+"Field-question coverage status" section of `README.md`. The rest are not
+claimed to be covered by any executable check here.
 
 This file supplements `QUESTIONS.md` and `FIELD_QUESTIONS_2026-10-02.md`.
 

@@ -113,6 +113,20 @@
       }
     },
     {
+      "id": "OUTCOME-VOCAB-1",
+      "question": "not-established-is-a-value",
+      "statement": "Every outcome kind, and the send status, is a member of a closed, documented vocabulary; nothing is silently collapsed into success or failure.",
+      "evidence": "executable",
+      "notes": "Added 11 October 2026 (FIELD_QUESTIONS_2026-10-05.md #11); see claim_harness.checks.check_outcome_vocabulary_closed."
+    },
+    {
+      "id": "INTERPRETATION-1",
+      "question": "interpretation-is-not-fact",
+      "statement": "A sender's own interpretation attached to a past outcome is stored as their statement and never promoted into the canonical event record.",
+      "evidence": "executable",
+      "notes": "Added 11 October 2026 (FIELD_QUESTIONS_2026-10-05.md #3); see claim_harness.checks.check_interpretation_not_promoted."
+    },
+    {
       "id": "OFFLINE-1",
       "statement": "The reference evidence run cannot reach the network.",
       "evidence": "executable"

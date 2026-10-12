@@ -221,6 +221,42 @@ def check_affordance(runner: Runner, discover_item: Mapping[str, Any],
             raise CheckFailed(f"advertised capability failed when used as shown: {item!r} -> {outcome!r}")
 
 
+# field question 2026-10-05 #11: truthful unavailability / failure-class completeness
+def check_outcome_vocabulary_closed(outcomes: Iterable[Mapping[str, Any]], kind_vocabulary: Iterable[str],
+                                    field_vocabularies: Mapping[str, Iterable[str]] = None) -> None:
+    """Every observed outcome's ``kind``, and any other declared closed field (for example a
+    send status), is a member of the project's documented vocabulary. Nothing silently invents
+    a new state that collapses into an existing one (success/failure/unknown) without being named."""
+    kind_vocabulary = set(kind_vocabulary)
+    field_vocabularies = {field: set(allowed) for field, allowed in (field_vocabularies or {}).items()}
+    for outcome in outcomes:
+        kind = outcome.get("kind")
+        if kind not in kind_vocabulary:
+            raise CheckFailed(f"outcome kind {kind!r} is not in the documented vocabulary "
+                              f"{sorted(kind_vocabulary)!r}: {outcome!r}")
+        for field, allowed in field_vocabularies.items():
+            if field in outcome and outcome[field] not in allowed:
+                raise CheckFailed(f"outcome field {field}={outcome[field]!r} is not in the documented "
+                                  f"vocabulary {sorted(allowed)!r}: {outcome!r}")
+
+
+# field question 2026-10-05 #3: subject interpretation versus canonical fact
+def check_interpretation_not_promoted(history: HistoryReader, annotate: Callable[[str], Any],
+                                      read_annotations: Callable[[], Sequence[Mapping[str, Any]]],
+                                      interpretation: str) -> None:
+    """A participant's interpretation is stored as their own statement, never promoted into a
+    canonical event as though the system itself had established it as fact."""
+    before = _events(history)
+    annotate(interpretation)
+    after = _events(history)
+    if after != before:
+        raise CheckFailed("canonical history changed when an interpretation was attached; "
+                          "interpretation must be stored separately from canonical events, not merged into them")
+    stored = list(read_annotations())
+    if not any(interpretation in repr(record) for record in stored):
+        raise CheckFailed("interpretation was never durably recorded as the participant's own statement")
+
+
 # 13. history versus reinterpretation
 def check_history_not_rewritten(history: HistoryReader, reinterpret: Callable[[], Any],
                                 reopen: Callable[[], HistoryReader] = None) -> None:

@@ -11,9 +11,12 @@ It lets you:
 4. produce a **ledger** that says, for every claim, exactly what the evidence
    supports, and nothing more.
 
-It also ships a list of portable questions ([QUESTIONS.md](QUESTIONS.md)),
-small generic property checks for them, and a toy agent that exercises all of
-it end to end.
+It also ships a list of portable questions ([QUESTIONS.md](QUESTIONS.md)), two
+later rounds of field questions found during later integration work
+([FIELD_QUESTIONS_2026-10-02.md](FIELD_QUESTIONS_2026-10-02.md),
+[FIELD_QUESTIONS_2026-10-05.md](FIELD_QUESTIONS_2026-10-05.md)),
+small generic property checks for all 13 QUESTIONS.md questions and 2 of the
+field questions so far, and a toy agent that exercises all of it end to end.
 
 > **Use the questions. Replace the mechanisms.**
 >
@@ -58,7 +61,7 @@ python -m pytest examples/toy_agent/tests -p claim_harness.network_guard -m "not
 network fail the run. `-m "not slow"` deliberately leaves out one test, which
 the ledger will then report honestly (see step 4).
 
-Expected: `37 passed, 1 deselected`.
+Expected: `39 passed, 1 deselected`.
 
 ### 4. Build the claim ledger
 
@@ -69,7 +72,7 @@ python -m claim_harness run --inventory examples/toy_agent/inventory.json --bind
 Expected summary line and exit status:
 
 ```
-summary: PASS=14  FAIL=0  NOT_ATTEMPTED=1  LIVE_ONLY=1  DISPOSITION=1  WITHDRAWN=1
+summary: PASS=16  FAIL=0  NOT_ATTEMPTED=1  LIVE_ONLY=1  DISPOSITION=1  WITHDRAWN=1
 exit 0: no reproducible claim failed
 ```
 
@@ -99,7 +102,7 @@ python -m pytest examples/toy_agent/tests -p claim_harness.network_guard --junit
 python -m claim_harness run --inventory examples/toy_agent/inventory.json --bindings examples/toy_agent/bindings.json --junit out/toy-full-junit.xml --output out/toy-full-ledger.json
 ```
 
-Expected: `38 passed`, then `PASS=15  FAIL=0  NOT_ATTEMPTED=0`.
+Expected: `40 passed`, then `PASS=17  FAIL=0  NOT_ATTEMPTED=0`.
 
 ### 6. Watch a claim fail for the right reason
 
@@ -277,6 +280,32 @@ It is not a framework to build agents with, a policy engine, a theorem prover,
 or a certification. It does not know whether your tests are good. It only
 refuses to let the ledger say more than your executed evidence does. The
 question list is not exhaustive.
+
+## Field-question coverage status
+
+The 13 `QUESTIONS.md` questions each have a generic check in `checks.py` and a
+bound claim in the toy agent. `FIELD_QUESTIONS_2026-10-02.md` and
+`FIELD_QUESTIONS_2026-10-05.md` are mechanism-neutral questions written after
+later integration work; as of 11 October 2026, two of them also have generic
+checks and bound toy-agent claims:
+
+- `not-established-is-a-value` -> `check_outcome_vocabulary_closed` -> `OUTCOME-VOCAB-1`
+- `interpretation-is-not-fact` -> `check_interpretation_not_promoted` -> `INTERPRETATION-1`
+
+The remaining field questions (`past-is-not-instruction`,
+`authorship-survives-reconstruction`, `continuity-is-additive`,
+`cues-add-not-replace`, `stop-preferring-is-not-delete`,
+`important-is-not-disclosable`, `scope-only-inherits-or-narrows`,
+`model-is-not-continuity`, `join-the-path`,
+`privacy-without-inspection`, `directive-is-not-governor`,
+`observe-then-act-separately`, and all of `FIELD_QUESTIONS_2026-10-02.md`) have
+no generic check and no bound claim here. They are genuinely
+**NOT_ESTABLISHED in this package**, not silently assumed covered: several
+(for example `join-the-path`) are inherently composite or project-shaped
+checks rather than a single reusable property, and a reasonable generic check
+for them was not built in this pass. Projects adopting the harness should
+write their own tests for these against their own mechanisms rather than
+assume they are exercised here.
 
 ## Provenance and license
 

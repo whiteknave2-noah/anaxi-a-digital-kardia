@@ -56,11 +56,11 @@ def test_readme_quick_start_runs_as_documented(tmp_path):
             first_ledger = statuses(copy / "out" / "toy-ledger.json")
 
     toy_run = outputs[commands[1]][0]
-    assert "summary: PASS=14  FAIL=0  NOT_ATTEMPTED=1  LIVE_ONLY=1  DISPOSITION=1  WITHDRAWN=1" in toy_run
+    assert "summary: PASS=16  FAIL=0  NOT_ATTEMPTED=1  LIVE_ONLY=1  DISPOSITION=1  WITHDRAWN=1" in toy_run
     assert "network guard during evidence run: active" in toy_run
     assert first_ledger["PERSISTENCE-1"] == "NOT_ATTEMPTED"
     full = next(out for cmd, outs in outputs.items() if "toy-full-ledger" in cmd for out in outs)
-    assert "PASS=15  FAIL=0  NOT_ATTEMPTED=0" in full
+    assert "PASS=17  FAIL=0  NOT_ATTEMPTED=0" in full
     shown = next(out for cmd, outs in outputs.items() if cmd.endswith("show out/failing-ledger.json") for out in outs)
     assert "DIGEST-1  FAIL" in shown and "not delivered" in shown
     invalid = next(out for cmd, outs in outputs.items() if "bindings_invalid" in cmd for out in outs)

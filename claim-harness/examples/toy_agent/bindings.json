@@ -61,6 +61,12 @@
     "ORDER-1": [
       "examples/toy_agent/tests/test_history.py::test_recall_lists_notes_oldest_first"
     ],
+    "OUTCOME-VOCAB-1": [
+      "examples/toy_agent/tests/test_field_questions.py::test_outcomes_use_a_closed_vocabulary"
+    ],
+    "INTERPRETATION-1": [
+      "examples/toy_agent/tests/test_field_questions.py::test_annotation_is_never_promoted_into_a_canonical_fact"
+    ],
     "OFFLINE-1": [
       "examples/toy_agent/tests/test_offline.py::test_network_guard_is_active_for_this_run"
     ],
