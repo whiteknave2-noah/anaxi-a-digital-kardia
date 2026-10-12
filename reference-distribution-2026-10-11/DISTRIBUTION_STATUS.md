@@ -4,9 +4,10 @@
   "Reject superseded staged waking turn replay").
 - Predecessor: the September 24 edition in `../reference-distribution/`, preserved
   unchanged as a frozen historical artifact.
-- Stage: candidate public distribution, built by a reproducible transform of the
-  accepted October source. **Not published.** Independently verified on 2026-10-11;
-  the corrections that verification made are listed at the end of this file.
+- Stage: published public reference edition, built by a reproducible transform
+  of the accepted October source. Independently verified on 2026-10-11;
+  the corrections made during verification are listed at the end of this file.
+  This edition does not publish the private production runtime.
 - Files: 361 (see `DISTRIBUTION_PROVENANCE.json`); privacy/leakage scan: PASS.
 - Platform: macOS + Python 3.14 only.
 

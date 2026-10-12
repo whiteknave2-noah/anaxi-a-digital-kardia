@@ -36,7 +36,7 @@ The later work matters because each earlier layer was complete **against the con
 | `ANAXI_CAPABILITY_CATALOG_2026-09-24.md` | Historical production capability catalog for the September release. |
 | `ANAXI_ARCHITECTURE_UPDATE_2026-10-02.md` | Historical intermediate architecture correction: Pulse, non-human occasions, Witness Gates, observation/mutation separation, evidence legibility, RISE lessons, and lived-history readiness. Its adoption-pending language belongs to that date. |
 | `reference-distribution/` | Frozen historical reproducibility package for the September release. |
-| `reference-distribution-2026-10-11/` | Candidate reproducibility package for the October 11 production revision (not yet published). A sibling of the September package, not inside it, so the frozen September package still passes its own integrity check. |
+| `reference-distribution-2026-10-11/` | Published, independently verified reproducibility package for the October 11 production revision. A sibling of the September package, not inside it, so the frozen September package still passes its own integrity check. |
 | `claim-harness/` | Standalone portable claim harness for other agent projects. |
 | `claim-harness/FIELD_QUESTIONS_2026-10-02.md` | Portable questions from the post-release substrate work. |
 | `claim-harness/FIELD_QUESTIONS_2026-10-05.md` | Portable questions from the whole-package integration work, covering authority separation, attribution preservation, interpretation versus canonical fact, additive retrieval cues, revision without erasure, significance versus disclosure, scope inheritance, substrate identity versus continuity, and ordinary-path completion. |
@@ -87,7 +87,7 @@ These images contain **invented demonstration dialogue and fixtures**, not Clark
 There are two reference distributions, deliberately separate:
 
 - `reference-distribution/` is the reproducibility package for the **September 24 release**, and it is a **frozen historical package for that release**.
-- `reference-distribution-2026-10-11/` is the **October 11 edition**, built from the accepted October 11 production revision `c8615d10f8abc83202aaa27066fc679d34cc0834`. It is the September file set re-provenanced to the October commit, with the October versions of those files, plus the new October modules the public tests require. It is a **candidate**, not a published release.
+- `reference-distribution-2026-10-11/` is the **October 11 edition**, built from the accepted October 11 production revision `c8615d10f8abc83202aaa27066fc679d34cc0834`. It is the September file set re-provenanced to the October commit, with the October versions of those files, plus the new October modules the public tests require. It is a **published, independently verified public reference edition**, not a copy of the private production runtime.
 
 Neither is a complete reproduction of every mechanism added to private production ANAXI after its own date. Do not read either as a snapshot of the current system; the latest documented production account is in `ANAXI_ARCHITECTURE_UPDATE_2026-10-11.md`, and the complete current private production runtime is not published.
 
