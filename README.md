@@ -12,6 +12,16 @@ ANAXI is a persistent-agent architecture and a public case study in building for
 > historically unchanged. See [the dated erratum](ERRATA_2026-10-12.md) for the
 > defect, verification, and public-package limitation.
 
+> **Further post-release erratum (October 12, 2026):** Actual use exposed
+> separate defects in meaningful historical access and evidence grounding.
+> Authentic older records could reach the agent without substrate provenance;
+> the interface also obscured per-occasion history actions and, in The Porch,
+> the current authenticated speaker. Private production corrections were
+> deployed and mechanically verified, but reliable behavior and historical
+> search discoverability remain **NOT_ESTABLISHED / LIMITED** respectively.
+> See [historical-access erratum](ERRATA_HISTORICAL_ACCESS_2026-10-12.md). The tagged public reference
+> edition remains unchanged.
+
 This repository preserves four dated layers on purpose:
 
 1. the **24 September 2026 production/reference release**, including the reproducibility package and capability accounting accepted at that time;
@@ -40,6 +50,7 @@ The later work matters because each earlier layer was complete **against the con
 | `WHY_ANAXI.md` | A personal note from the project's creator about the motivations behind ANAXI: agency, uncertainty, relationship, and why meaningful choice matters to the design. It is a motivation document, not an architecture specification and not an empirical claim about personhood or consciousness. |
 | `ANAXI_ARCHITECTURE_UPDATE_2026-10-11.md` | **Latest public production and architecture account.** Acceptance, failure-class repairs, whole-occasion context, runtime qualification, and The Porch. |
 | `ERRATA_2026-10-12.md` | **October 12 post-release erratum.** Later-discovered hippocampal indexing defect in the frozen October reference, and its independently checked private production correction. |
+| `ERRATA_HISTORICAL_ACCESS_2026-10-12.md` | **October 12 historical-access erratum.** Incomplete substrate/source presentation, browsing and action-evidence legibility, missing Porch interlocutor context; deployed mechanical repairs and remaining unestablished behavioral efficacy. |
 | `ANAXI_ARCHITECTURE_UPDATE_2026-10-05.md` | **Historical preceding architecture.** Relational history and historical/current separation, subject-directed consolidation, waking and Sleep/REM, privacy/significance/disclosure, read-only external information, family and correspondence scope, the reversible subject-authored directive, the whole-package completion lesson, substrate history through to Ministral adoption, RISE lessons, and what remains NOT_ESTABLISHED. |
 | `ANAXI_PROTOCOL_README_2026-09-24.md` | Historical conceptual snapshot of the September production release. Its completion language belongs to that dated release contract and should not be read as a claim that later architecture work never occurred. |
 | `ANAXI_CAPABILITY_CATALOG_2026-09-24.md` | Historical production capability catalog for the September release. |
