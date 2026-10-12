@@ -10,10 +10,10 @@
   "note": "The September 24 edition is preserved unchanged as a frozen historical artifact."
  },
  "build_method": {
-  "transform": "The September edition's exact privacy transform (466 whole-line replacements across 63 files) was recovered by diffing the September source blobs against the published September files, and proven to reproduce the September edition byte-for-byte (63/63 files). The same transform is applied here to the October source blobs.",
-  "unchanged": "231 source files are byte-identical between the September and October commits and ship as their October git blobs.",
+  "transform": "The September edition's exact privacy transform (466 whole-line replacements across 63 files) was recovered by diffing the September source blobs against the published September files, and proven to reproduce the September edition byte-for-byte (63/63 files). The same transform is applied here to the October source blobs. In this edition it makes 465 whole-line replacements across 62 files (llama_gui.py, which carried the 466th, is not published), and every replaced line pair equals a September replacement in the same file.",
+  "unchanged": "Of the 358 provenance-listed files: 230 have the same source blob as in the September edition (192 ship verbatim, 37 carry the September transform, and the bindings are regenerated); 91 changed between the two commits (25 carry the September transform, 61 ship verbatim, 5 are adapted for this edition, kind adapted_git_blob, each with its adaptation recorded); 16 are added October modules shipped verbatim; 21 are generated fixtures, generated evidence or packaging. The September transform matches September's exact lines, so the October content of the 61 verbatim and 5 adapted changed files and the 16 added modules is covered by the privacy scan of the complete artifact, not by the transform.",
   "added_modules": "16 new October modules that the public bound tests transitively require and that carry no private material are included (see added_october_modules).",
-  "excluded": "The private Porch implementation and Porch-adjacent services are NOT published (see excluded_private_modules). Bound test nodes that require them are removed from the bindings; scenarios left with no bound test are reported NOT_ATTEMPTED."
+  "excluded": "The private Porch implementation and Porch-adjacent services are NOT published (see excluded_private_modules and excluded_private_porch_files). Bound test nodes that require them are removed from the bindings and listed node by node in scenario_bindings.json public_distribution.removed_nodes_for_private_porch; scenarios left with no bound test are reported NOT_ATTEMPTED."
  },
  "added_october_modules": [
   "anaxi_final/action_verification.py",
@@ -42,21 +42,23 @@
   "anaxi_final/pulse.py",
   "anaxi_final/owner_conversation_service.py"
  ],
- "excluded_private_module_reason": "These are the native Porch implementation and its pairing/credential surface, which the public-distribution brief forbids publishing. They are not needed by any published file: no included module imports them.",
+ "excluded_private_module_reason": "These are the native Porch implementation and its pairing/credential surface, which the public-distribution brief forbids publishing. No published non-test module imports them. Published test modules that import or read them as source text are unbound in this edition or have the affected nodes listed in removed_nodes_for_private_porch.",
  "kind_counts": {
   "packaging_authored": 6,
-  "unchanged_git_blob": 274,
+  "unchanged_git_blob": 269,
   "transformed_git_blob": 62,
+  "adapted_git_blob": 5,
   "generated_evidence": 3,
   "generated_fixture": 13
  },
  "public_accounting": {
-  "bound_test_nodes": 965,
+  "bound_test_nodes": 981,
   "inventory_scenarios": 404,
-  "publicly_bound_scenarios": 373,
-  "omitted_production_only": 31,
-  "removed_bound_test_nodes_for_private_porch": 78,
-  "errors": []
+  "publicly_bound_scenarios": 374,
+  "omitted_production_only": 30,
+  "removed_bound_test_nodes_for_private_porch": 63,
+  "errors": [],
+  "substituted_bound_test_nodes": 1
  },
  "metadata_files": [
   "DISTRIBUTION_PROVENANCE.json",
@@ -73,8 +75,8 @@
   },
   {
    "path": "README.md",
-   "sha256": "2f13f9978d122bcb041a60e6cd9f8d2af4438876c0dec9907233a599c436dfba",
-   "size": 9824,
+   "sha256": "bf229e332ef9f58968e7e62cfc93088d951c4cbd1b51826325ae3acdbda21e1d",
+   "size": 10191,
    "kind": "packaging_authored",
    "packaging_source": "edition README, adapted from the September edition README"
   },
@@ -375,17 +377,21 @@
   },
   {
    "path": "anaxi_final/completion_evidence/custom_runner_suites.json",
-   "kind": "unchanged_git_blob",
-   "git_blob": "69d71cd927ce7c12d6fa0ab7a88d715cd3c18661",
+   "kind": "adapted_git_blob",
+   "source_path": "anaxi_final/completion_evidence/custom_runner_suites.json",
+   "source_git_blob": "69d71cd927ce7c12d6fa0ab7a88d715cd3c18661",
    "git_mode": "100644",
+   "adaptation": "October 11 edition: Adds october_edition_removed_suites naming test_human_waking_authority_end_to_end.py (it imports llama_gui, which imports the unpublished pulse) and re-serializes the registry with one-space indentation; the 24 pinned suites and their expected_total values are unchanged.",
    "sha256": "5d7e421479c11cd3a04f777abcd279976e1781870e995fefb4b2982345207133",
    "size": 2390
   },
   {
    "path": "anaxi_final/completion_evidence/legacy_test_dispositions.json",
-   "kind": "unchanged_git_blob",
-   "git_blob": "5995cb0b2843285a9407b8dd405045d3f44d4cc1",
+   "kind": "adapted_git_blob",
+   "source_path": "anaxi_final/completion_evidence/legacy_test_dispositions.json",
+   "source_git_blob": "5995cb0b2843285a9407b8dd405045d3f44d4cc1",
    "git_mode": "100644",
+   "adaptation": "October 11 edition: Changes the test_llama_interface.py disposition from REPAIRED_COLLECTION_SAFE to UNRUNNABLE_PRIVATE_PORCH_IMPLEMENTATION_ABSENT (it reads llama_gui.py and owner_conversation_service.py as source text); adds UNRUNNABLE dispositions for test_anaxi_dev.py (tools/anaxi_dev.py is not published) and test_human_waking_authority_end_to_end.py (imports pulse via llama_gui); adds removed_modules for test_llama_launch.py; re-serializes with one-space indentation.",
    "sha256": "20e4aca51e63b083c06a4fa7b1747dbaa995d32fb7b2e5a4e1c8dbdd406c6501",
    "size": 6040
   },
@@ -415,8 +421,8 @@
    "rule_applications": {
     "name_map": 4
    },
-   "sha256": "ca8bf624d19d8421557bb1d919a3de65b303c16f0656288af75bfbf3dc9dc6d6",
-   "size": 274457,
+   "sha256": "d76bb7f428a4030c02f72cf69ec9ebce350c3be583ff989a1d64c06bbc8ca47e",
+   "size": 311965,
    "generated_for": "october-11-edition"
   },
   {
@@ -1637,9 +1643,11 @@
   },
   {
    "path": "anaxi_final/test_custom_runner_suites.py",
-   "kind": "unchanged_git_blob",
-   "git_blob": "812fd9ac335cda57f4d4f5b7d984c4a8e6b8aa8b",
+   "kind": "adapted_git_blob",
+   "source_path": "anaxi_final/test_custom_runner_suites.py",
+   "source_git_blob": "812fd9ac335cda57f4d4f5b7d984c4a8e6b8aa8b",
    "git_mode": "100644",
+   "adaptation": "October 11 edition: Parametrizes over the pinned suites minus october_edition_removed_suites, so the removed suite is named rather than run and failed.",
    "sha256": "0017a4cf46001bcf64d79d4f7c1b9827f69e948f63aa4053c8f695bb8317b9e3",
    "size": 3189
   },
@@ -2349,9 +2357,11 @@
   },
   {
    "path": "anaxi_final/test_represented_surface_accounting.py",
-   "kind": "unchanged_git_blob",
-   "git_blob": "d3083a5dd7ce497245203d3cb18f81a65341dcfc",
+   "kind": "adapted_git_blob",
+   "source_path": "anaxi_final/test_represented_surface_accounting.py",
+   "source_git_blob": "d3083a5dd7ce497245203d3cb18f81a65341dcfc",
    "git_mode": "100644",
+   "adaptation": "October 11 edition: test_every_owner_gui_control_is_dispositioned skips when llama_gui.py is absent; that node is unbound in this edition (scenario_bindings.json removed_nodes_for_private_porch).",
    "sha256": "facf62d3824a407de667a197746ebcffd40064d82dae807101f8cc7377c8fd89",
    "size": 10571
   },
@@ -2584,9 +2594,11 @@
   },
   {
    "path": "anaxi_final/test_sleep_v1_acceptance.py",
-   "kind": "unchanged_git_blob",
-   "git_blob": "4613baa67323142151b399785258ad8aa5cdb5b3",
+   "kind": "adapted_git_blob",
+   "source_path": "anaxi_final/test_sleep_v1_acceptance.py",
+   "source_git_blob": "4613baa67323142151b399785258ad8aa5cdb5b3",
    "git_mode": "100644",
+   "adaptation": "October 11 edition: The anti-bypass caller-set assertion expects {'slp2_cli.py'} instead of {'slp2_cli.py', 'llama_gui.py'}, because llama_gui.py is not published; the check that no other published module calls the Sleep entry point is unchanged.",
    "sha256": "8dbd2ea8d5345857d046e7017ca6bb75408c0678eb4a3f73ff6955b6b60256f7",
    "size": 26505
   },
@@ -3392,5 +3404,5 @@
   "anaxi_final/llama_launch.py",
   "anaxi_final/test_llama_launch.py"
  ],
- "excluded_private_porch_files_reason": "llama_gui.py contains the private Porch integration (pairing store, TLS certificate fingerprint, Porch listener, owner-conversation submission) and imports pulse/porch_api/porch_pairing/owner_conversation_service. llama_desktop.py and llama_launch.py import llama_gui; test_llama_launch.py tests llama_launch. None is on the public bound path: the only bound tests that reach llama_gui are the 7 removed for the same reason."
+ "excluded_private_porch_files_reason": "llama_gui.py contains the private Porch integration (pairing store, TLS certificate fingerprint, Porch listener, owner-conversation submission) and imports pulse/porch_api/porch_pairing/owner_conversation_service. llama_desktop.py and llama_launch.py import llama_gui; test_llama_launch.py tests llama_launch. No published non-test module imports them. Every bound test node that imports llama_gui or reads one of these files is removed from the public bindings and listed in scenario_bindings.json public_distribution.removed_nodes_for_private_porch."
 }

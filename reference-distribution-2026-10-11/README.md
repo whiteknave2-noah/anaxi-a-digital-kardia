@@ -105,8 +105,8 @@ The runner performs, in order:
 
 ```
 overall: REPRODUCED
-reproducible scenarios: 373/373 PASS, 0 FAIL (of 404 inventory scenarios)
-NOT_ATTEMPTED (production-only / private Porch): 31
+reproducible scenarios: 374/374 PASS, 0 FAIL (of 404 inventory scenarios)
+NOT_ATTEMPTED (production-only): 30
 live-only requirements not reproducible locally: <n>
 withdrawn from the release contract: 27_boundary_inspection
 ```
@@ -120,26 +120,31 @@ exit code is 0 only when the overall verdict is `REPRODUCED`.
 |---|---|
 | **PASS** | A publicly bound scenario whose every bound test node passed in this run, and whose every bound artifact record is exact-complete (expected = attempted = passed > 0). |
 | **FAIL** | A bound scenario with any failed, errored, skipped or missing node, or an artifact record that is not exact-complete. The node and the reason are recorded. |
-| **NOT_ATTEMPTED** | A scenario with no public binding. In this package that is exactly the two production-only scenarios below. They are never counted as PASS. |
+| **NOT_ATTEMPTED** | A scenario with no public binding. In this package that is exactly the 30 scenarios listed below. They are never counted as PASS. |
 | **Live-only requirements** | Requirements that only genuine live occasions can satisfy. No live evidence ships, so they are reported as not reproducible locally. For that reason `ledger.json` reports `whole_system` as `NOT_COMPLETE`. That is the truthful local result, not a failure of the reproducible claims. |
 | **Owner dispositions / withdrawals** | In production, the owner settled some live-only requirements by recorded decision. Those records are part of the unpublished live acceptance, so they are not reproduced here. One capability, `27_boundary_inspection`, was withdrawn from the release contract by owner decision. The ledger lists it under `release_contract.withdrawn_from_release`; its historical status is kept, never rewritten as passed. |
 
 ### The NOT_ATTEMPTED scenarios
 
-31 inventory scenarios have no public binding in this edition. They fall into
+30 inventory scenarios have no public binding in this edition. They fall into
 four groups:
 
 | Group | Count | Why it is not reproduced |
 |---|---|---|
 | `15_recovery_wtr0 / specific_h_..._assessed_without_fabrication` | 1 | A read-only recovery assessment of one specific production message against production history. The general recovery claims keep their offline tests. |
 | `30_delivery_to_subject_at_production_sizes / every_real_public_resource_reaches_subject` | 1 | Defined to pass only on the owner's real collection. The synthetic delivery evidence supports the other delivery scenarios. |
-| `02_conversation_direction / ui_reflection`, `13_sleep_rem / later_waking`, `23_ui_host_delivery / controls_reflect_authoritative_state` | 3 | Every bound test node requires the unpublished private Porch implementation. |
-| `35_waymarks / *` (12) and `36_porch_authenticated_ingress / *` (14) | 26 | Two capabilities the October source added to the inventory. `36_porch_authenticated_ingress` is the private Porch surface, which is not published. `35_waymarks` is a production surface whose scenarios were not bound offline for this edition. |
+| `02_conversation_direction / ui_reflection`, `23_ui_host_delivery / controls_reflect_authoritative_state` | 2 | Every bound test node imports `llama_gui`, which carries the unpublished private Porch integration. |
+| `35_waymarks / *` (12) and `36_porch_authenticated_ingress / *` (14) | 26 | Two capabilities the October source added to the inventory. `36_porch_authenticated_ingress` is the private Porch surface, which is not published. `35_waymarks` has no scenario bindings in the accepted source either, so there is nothing public to run. |
 
-All 31 are listed with reasons in `scenario_bindings.json` under
+All 30 are listed with reasons in `scenario_bindings.json` under
 `public_distribution.omitted_production_only`. One Windows-launcher test node is
 also removed from the bindings (`public_distribution.removed_nodes_for_excluded_surfaces`),
-because Windows is outside the supported platform.
+because Windows is outside the supported platform. The 63 bound test nodes removed
+because they need the unpublished Porch-integrated files are listed one by one,
+with the failure verified in this edition, under
+`public_distribution.removed_nodes_for_private_porch`; scenarios that keep other
+bound nodes stay bound and must pass on those. One stale source node is replaced
+by its renamed successor (`public_distribution.substituted_nodes`).
 
 ### Tests outside the public run
 

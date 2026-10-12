@@ -988,9 +988,16 @@
    "anaxi_final/pulse.py",
    "anaxi_final/owner_conversation_service.py"
   ],
-  "excluded_private_module_reason": "These are the native Porch implementation and its pairing/credential surface, which the public-distribution brief forbids publishing. They are not needed by any published file: no included module imports them.",
-  "transform_provenance": "The September edition's exact privacy transform (466 whole-line replacements across 63 files) was recovered by diffing the September source blobs against the published September files, and proven to reproduce the September edition byte-for-byte (63/63 files). The same transform is applied here to the October source blobs.",
-  "bindings_regeneration": "anaxi_final/completion_evidence/scenario_bindings.json was regenerated for this edition: the 77 bound test nodes that require the private Porch implementation were removed and the 3 scenarios left with no bound test were moved to public_distribution.omitted_production_only. The source scenario_bindings.json is byte-identical between the September and October commits, so every other binding is unchanged."
+  "excluded_private_module_reason": "These are the native Porch implementation and its pairing/credential surface, which the public-distribution brief forbids publishing. No published non-test module imports them. Published test modules that import or read them as source text are unbound in this edition or have the affected nodes listed in removed_nodes_for_private_porch.",
+  "transform_provenance": "The September edition's exact privacy transform (466 whole-line replacements across 63 files) was recovered by diffing the September source blobs against the published September files, and proven to reproduce the September edition byte-for-byte (63/63 files). The same transform is applied here to the October source blobs. In this edition it makes 465 whole-line replacements across 62 files (llama_gui.py, which carried the 466th, is not published), and every replaced line pair equals a September replacement in the same file.",
+  "bindings_regeneration": "anaxi_final/completion_evidence/scenario_bindings.json was regenerated for this edition: the 63 bound test nodes that require the unpublished Porch-integrated files were removed and are listed node by node, each with the failure verified in this edition, in public_distribution.removed_nodes_for_private_porch; the 2 scenarios left with no bound test were moved to public_distribution.omitted_production_only; one stale source node is replaced by its renamed successor (public_distribution.substituted_nodes). The source scenario_bindings.json is byte-identical between the September and October commits, so every other binding is unchanged.",
+  "adapted_files": {
+   "anaxi_final/completion_evidence/custom_runner_suites.json": "October 11 edition: Adds october_edition_removed_suites naming test_human_waking_authority_end_to_end.py (it imports llama_gui, which imports the unpublished pulse) and re-serializes the registry with one-space indentation; the 24 pinned suites and their expected_total values are unchanged.",
+   "anaxi_final/completion_evidence/legacy_test_dispositions.json": "October 11 edition: Changes the test_llama_interface.py disposition from REPAIRED_COLLECTION_SAFE to UNRUNNABLE_PRIVATE_PORCH_IMPLEMENTATION_ABSENT (it reads llama_gui.py and owner_conversation_service.py as source text); adds UNRUNNABLE dispositions for test_anaxi_dev.py (tools/anaxi_dev.py is not published) and test_human_waking_authority_end_to_end.py (imports pulse via llama_gui); adds removed_modules for test_llama_launch.py; re-serializes with one-space indentation.",
+   "anaxi_final/test_custom_runner_suites.py": "October 11 edition: Parametrizes over the pinned suites minus october_edition_removed_suites, so the removed suite is named rather than run and failed.",
+   "anaxi_final/test_represented_surface_accounting.py": "October 11 edition: test_every_owner_gui_control_is_dispositioned skips when llama_gui.py is absent; that node is unbound in this edition (scenario_bindings.json removed_nodes_for_private_porch).",
+   "anaxi_final/test_sleep_v1_acceptance.py": "October 11 edition: The anti-bypass caller-set assertion expects {'slp2_cli.py'} instead of {'slp2_cli.py', 'llama_gui.py'}, because llama_gui.py is not published; the check that no other published module calls the Sleep entry point is unchanged."
+  }
  },
  "public_execution_contract": {
   "platform": "macOS, Python 3.14 (virtual environment). No other platform is claimed.",
@@ -1005,7 +1012,7 @@
   "reproducible": "Every publicly bound owner-inventory scenario (offline bound tests plus synthetic public-resource artifacts, exact N==M), the offline reference harness, and byte-identical regeneration of the synthetic fixtures and their assay evidence.",
   "not_reproducible": [
    "live-only requirements (need genuine live occasions; no live evidence ships)",
-   "the two September production-only scenarios, plus three October scenarios whose every bound test requires the unpublished private Porch implementation (NOT_ATTEMPTED)",
+   "the two September production-only scenarios, two October scenarios whose every bound test requires the unpublished Porch-integrated files, and the 26 scenarios of the two capabilities the October source added to the inventory without any binding (NOT_ATTEMPTED)",
    "the Windows launcher node (outside the macOS-only contract)",
    "owner live dispositions recorded in production acceptance (not published raw)",
    "optional real-model harnesses (need a local Ollama model; probabilistic; skipped by default)"

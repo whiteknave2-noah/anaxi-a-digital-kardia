@@ -5,7 +5,8 @@
 - Predecessor: the September 24 edition in `../reference-distribution/`, preserved
   unchanged as a frozen historical artifact.
 - Stage: candidate public distribution, built by a reproducible transform of the
-  accepted October source. **Not published. Awaiting independent verification.**
+  accepted October source. **Not published.** Independently verified on 2026-10-11;
+  the corrections that verification made are listed at the end of this file.
 - Files: 361 (see `DISTRIBUTION_PROVENANCE.json`); privacy/leakage scan: PASS.
 - Platform: macOS + Python 3.14 only.
 
@@ -14,14 +15,22 @@
 The October edition is not an architectural reconstruction. It is the September
 edition's file set re-provenanced to the October commit:
 
-- 231 source files are byte-identical between the September and October commits
-  and ship as their October git blobs;
-- 63 files changed between the two commits and receive the **same** privacy
-  transform the September edition used. That transform (466 whole-line
-  replacements) was recovered by diffing the September source blobs against the
-  published September files, and it reproduces the September edition
-  byte-for-byte (63/63 files). The same transform applies cleanly to the October
-  source;
+- 230 files have the same source blob as in the September edition: 192 ship
+  verbatim, 37 carry the September privacy transform, and the bindings are
+  regenerated (below);
+- 91 files changed between the two commits: 25 carry the September transform,
+  61 ship verbatim as their October git blobs, and 5 are adapted for this
+  edition (kind `adapted_git_blob` in `DISTRIBUTION_PROVENANCE.json`, each with
+  its adaptation recorded) because they named the unpublished `llama_gui.py`;
+- the September transform (466 whole-line replacements across 63 files) was
+  recovered by diffing the September source blobs against the published
+  September files, and it reproduces the September edition byte-for-byte
+  (63/63 files). Here it makes 465 replacements across 62 files (the 466th was
+  in the unpublished `llama_gui.py`), and every replaced line pair equals a
+  September replacement in the same file. Because it matches September's exact
+  lines, it does not cover new October content: the 61 verbatim and 5 adapted
+  changed files and the added modules are covered by the privacy scan of the
+  complete artifact instead;
 - 16 new October modules that the public bound tests transitively require and
   that carry no private material are added (listed in
   `DISTRIBUTION_PROVENANCE.json` under `added_october_modules`);
@@ -43,22 +52,34 @@ implementation, so this edition **does not publish**:
   imports the modules above, together with `llama_desktop.py` and
   `llama_launch.py` (which import `llama_gui`) and `test_llama_launch.py`.
 
-No published file imports any of them (verified). The pure-schema module
+No published non-test module imports any of them (verified). Some published test
+modules import `llama_gui` or read these files as source text; their affected
+nodes are unbound here (see below). The pure-schema module
 `porch_submission_schema_migration.py` carries no credentials, pairing material
 or device identity, and is required for the tree to import, so it **is** included.
 
 Consequence, reported honestly rather than hidden:
 
-- 78 bound test nodes that require the excluded Porch modules or `llama_gui.py`
-  are removed from the public bindings;
-- the 3 scenarios left with no bound test are reported as NOT_ATTEMPTED in
+- 63 bound test nodes that import `llama_gui` (or the suite that does), read
+  `llama_gui.py`, `llama_desktop.py` or `llama_launch.py` as source text, or
+  belong to the unpublished `test_llama_launch.py` are removed from the public
+  bindings. Each is listed, with the scenario it was bound to and the failure
+  verified in this edition, in `scenario_bindings.json` under
+  `public_distribution.removed_nodes_for_private_porch`. Bound nodes that do not
+  need the excluded files are kept;
+- the 2 scenarios left with no bound test are reported as NOT_ATTEMPTED in
   `scenario_bindings.json` under `public_distribution.omitted_production_only`:
   `02_conversation_direction / ui_reflection`,
-  `13_sleep_rem / later_waking`,
   `23_ui_host_delivery / controls_reflect_authoritative_state`;
 - one node of `24_architecture_wide_invariants / represented_surface_fully_dispositioned`
-  (the owner-GUI-control element) is removed for the same reason, and the
+  (the owner-GUI-control element) is among the removed nodes, and the
   scenario's rationale says so;
+- one source binding is stale: it names
+  `test_previous_observation_only_boundary_accepts_length_limited_json`, which
+  the source replaced before the accepted revision with
+  `test_previous_observation_only_boundary_is_rejected_by_canonical_receipt`.
+  The public binding uses the replacement and records the substitution under
+  `public_distribution.substituted_nodes`;
 - `test_llama_launch.py` and `test_llama_interface.py` are recorded in
   `legacy_test_dispositions.json` as unrunnable for the named reason;
 - one pinned custom-runner suite (`test_human_waking_authority_end_to_end.py`)
@@ -67,19 +88,20 @@ Consequence, reported honestly rather than hidden:
 
 ## Reproducible here
 
-- 373/373 publicly bound scenarios PASS offline (of 404 inventory scenarios;
+- 374/374 publicly bound scenarios PASS offline (of 404 inventory scenarios;
   the October source added `35_waymarks` and `36_porch_authenticated_ingress`);
-  967 unique bound test nodes.
+  981 unique bound test nodes.
 - the offline reference harness;
 - synthetic fixtures and their assay evidence, regenerated byte-identically.
 
 ## Not reproducible here
 
 - live-only requirements (no live evidence ships);
-- 31 NOT_ATTEMPTED scenarios: the 2 September production-only scenarios, the 3
+- 30 NOT_ATTEMPTED scenarios: the 2 September production-only scenarios, the 2
   October private-Porch scenarios, and the 26 scenarios of the two capabilities
   the October source added to the inventory (`35_waymarks` 12,
-  `36_porch_authenticated_ingress` 14);
+  `36_porch_authenticated_ingress` 14), which have no binding in the accepted
+  source either;
 - the Windows launcher node;
 - optional real-model harnesses.
 
@@ -90,8 +112,8 @@ Consequence, reported honestly rather than hidden:
 
 ```
 overall: REPRODUCED
-reproducible scenarios: 373/373 PASS, 0 FAIL (of 404 inventory scenarios)
-NOT_ATTEMPTED (production-only / private Porch): 31
+reproducible scenarios: 374/374 PASS, 0 FAIL (of 404 inventory scenarios)
+NOT_ATTEMPTED (production-only): 30
 live-only requirements not reproducible locally: 39
 withdrawn from the release contract: 27_boundary_inspection
 ```
@@ -102,3 +124,20 @@ synthetic resources, reference harness, scenario accounting), exit code 0.
 ## Run it
 
 See `README.md`.
+
+## Corrections made by independent verification (2026-10-11)
+
+- **Location.** This edition was first committed inside `reference-distribution/`,
+  where the frozen September runner's integrity check failed on the nested files.
+  It is now a sibling directory, and the September edition passes its own run again.
+- **Bindings.** 16 bound nodes had been removed although they do not need any
+  excluded file; each passes in this edition. They are restored, which returns
+  `13_sleep_rem / later_waking` from NOT_ATTEMPTED to a bound scenario
+  (373/373 and 31 NOT_ATTEMPTED become 374/374 and 30). The 63 genuinely removed
+  nodes are now listed one by one; before, only one was.
+- **Provenance.** Five files were labelled `unchanged_git_blob` although they
+  differ from their October blobs. They are now `adapted_git_blob`, each with its
+  adaptation stated.
+- **Accounting text.** The file counts, the "no published file imports them"
+  statement, the bound-node count and the stale-node substitution are corrected
+  or disclosed above.

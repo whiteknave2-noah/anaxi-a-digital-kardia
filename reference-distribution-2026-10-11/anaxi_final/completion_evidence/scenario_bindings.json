@@ -4,8 +4,11 @@
    "canonical_continuity": {
     "rationale": "Prior canonical X is quoted into both real passes of a fresh session; dialogue pairs are reconstructed in exact chronological order from canonical history; the canonical-before-artifact ordering invariant holds.",
     "tests": [
+     "test_conversation_ui_integrity.py::ProjectionTests::test_canonical_historical_new_timestamps_local_day_order_and_exact_text",
      "test_custom_runner_suites.py::test_custom_runner_suite_passes_every_pinned_check[test_q05_canonical_before_artifact_ordering.py]",
-     "test_session_dialogue_window.py::test_multiple_pairs_exact_chronological_interleaving"
+     "test_post_sleep_wake_continuation.py::ContinuationTests::test_failed_first_wake_then_same_h_continuation",
+     "test_session_dialogue_window.py::test_multiple_pairs_exact_chronological_interleaving",
+     "test_waking_context_integrity.py::WakingPayloadTests::test_fresh_session_quotes_previous_canonical_x_in_both_real_passes"
     ]
    },
    "exact_production_launcher_path": {
@@ -75,6 +78,8 @@
     "tests": [
      "test_context_budget.py::test_compose_drops_atomic_soft_contribution_whole",
      "test_context_budget.py::test_compose_trims_droppable_units_oldest_first",
+     "test_direction_integrity_repair.py::BudgetRecoveryTests::test_excessive_dialogue_is_bounded_before_probe",
+     "test_direction_integrity_repair.py::BudgetRecoveryTests::test_measured_hard_floor_remains_viable_under_accumulated_soft_state",
      "test_pass1_budget_bugfix_v0.py::test_safe_fresh_message_clears_both_passes_end_to_end"
     ]
    },
@@ -110,6 +115,9 @@
     "rationale": "Real live-failure geometries (oversized pair, hard overflow, aggregate caps, capability menu) are bounded and recovered without dropping the current message or role structure. Also: production-sized budgets shed nothing that measurement proves fits.",
     "tests": [
      "test_context_budget.py::test_owc9_reproduces_and_repairs_observed_live_failure_geometry",
+     "test_direction_integrity_repair.py::BudgetRecoveryTests::test_actual_overflow_and_adjacent_pass1_recover_without_losing_roles",
+     "test_direction_integrity_repair.py::BudgetRecoveryTests::test_live_failure_sized_pair_is_measured_in_safe_role_preserving_parts",
+     "test_direction_integrity_repair.py::BudgetRecoveryTests::test_live_pass2_hard_overflow_ignores_disproved_ratio_heuristic",
      "test_pass1_budget_bugfix_v0.py::test_current_human_message_delivered_verbatim_never_dropped_for_budget",
      "test_pass1_budget_bugfix_v0.py::test_full_capability_turn_with_representative_message_fits_and_reaches_model",
      "test_production_delivery_floor.py::test_recent_dialogue_survives_ordinary_pass2_at_production_sizes",
@@ -123,6 +131,7 @@
    "restart_behavior": {
     "rationale": "Process-restart sequences (waking->roaming, public space->waking), durable ceilings and same-H continuation survive fresh connections. This is offline restart of durable state; a real launcher restart is a live-only item under capability 22.",
     "tests": [
+     "test_post_sleep_wake_continuation.py::ContinuationTests::test_failed_first_wake_then_same_h_continuation",
      "test_waking_turn_recovery.py::test_14_process_restart_ceiling_survives_fresh_connection",
      "test_workspace_public_continuity.py::test_18_process_restart_sequence_public_space_to_waking",
      "test_workspace_public_continuity.py::test_18_process_restart_sequence_waking_to_roaming"
@@ -131,6 +140,10 @@
    "truthful_recent_dialogue": {
     "rationale": "The recent-dialogue window carries exact stored text and correct roles, is session-isolated, invariant to prompt wording and canonically projected without paraphrase. Also: at production sizes the newest whole dialogue pairs survive Pass 2.",
     "tests": [
+     "test_conversation_ui_integrity.py::ProjectionTests::test_canonical_historical_new_timestamps_local_day_order_and_exact_text",
+     "test_conversation_ui_integrity.py::ProjectionTests::test_delayed_recovered_x_is_projected_directly_beneath_its_h",
+     "test_conversation_ui_integrity.py::ProjectionTests::test_host_timestamp_comes_from_existing_callback_and_does_not_make_x",
+     "test_conversation_ui_integrity.py::UiAdapterTests::test_supported_gradio_keeps_footer_in_separate_message_block",
      "test_production_delivery_floor.py::test_recent_dialogue_survives_ordinary_pass2_at_production_sizes",
      "test_session_dialogue_window.py::test_current_prompt_appears_exactly_once",
      "test_session_dialogue_window.py::test_exact_text_including_punctuation_and_newlines_not_rewritten",
@@ -1421,7 +1434,9 @@
      "test_post_sleep_schema_upgrade.py::UpgradeTests::test_actual_old_check_failure_rolls_back_then_upgrade_accepts_landing",
      "test_post_sleep_schema_upgrade.py::UpgradeTests::test_existing_rows_rowids_and_fts_survive_and_triggers_still_work",
      "test_post_sleep_schema_upgrade.py::UpgradeTests::test_failed_ddl_upgrade_is_atomic",
-     "test_post_sleep_schema_upgrade.py::UpgradeTests::test_known_four_source_v1_upgrades_but_unknown_shape_fails_closed"
+     "test_post_sleep_schema_upgrade.py::UpgradeTests::test_known_four_source_v1_upgrades_but_unknown_shape_fails_closed",
+     "test_post_sleep_wake_continuation.py::ContinuationTests::test_failed_first_wake_then_same_h_continuation",
+     "test_sleep_read_time_provenance.py::ReadTimeProvenanceTests::test_canonical_landing_real_prepare_both_passes_and_repeated_reads"
     ]
    },
    "generation_bounded_and_truncation_never_parsed": {
@@ -1452,6 +1467,13 @@
      "test_sleep_timing_knock.py::test_knock_while_deferred_lawful",
      "test_sleep_timing_knock.py::test_knock_while_pending_creates_distinct_canonical_knock",
      "test_sleep_timing_knock.py::test_knock_with_no_unresolved_request_rejected"
+    ]
+   },
+   "later_waking": {
+    "rationale": "After a Sleep cycle the next waking turn is prepared through the real prepare path with both passes and repeated reads, and a failed first wake continues on the same H.",
+    "tests": [
+     "test_post_sleep_wake_continuation.py::ContinuationTests::test_failed_first_wake_then_same_h_continuation",
+     "test_sleep_read_time_provenance.py::ReadTimeProvenanceTests::test_canonical_landing_real_prepare_both_passes_and_repeated_reads"
     ]
    },
    "no_duplicate_events": {
@@ -1515,7 +1537,9 @@
      "test_sleep_evidence.py::test_evidence_preserves_auth_status_where_available",
      "test_sleep_evidence.py::test_evidence_preserves_exact_event_and_component_ids",
      "test_sleep_evidence.py::test_evidence_preserves_pipeline_and_model_provenance_where_available",
-     "test_sleep_evidence.py::test_no_invented_metadata_for_rejected_items"
+     "test_sleep_evidence.py::test_no_invented_metadata_for_rejected_items",
+     "test_sleep_read_time_provenance.py::ReadTimeProvenanceTests::test_canonical_landing_real_prepare_both_passes_and_repeated_reads",
+     "test_sleep_read_time_provenance.py::ReadTimeProvenanceTests::test_truncation_and_owc9_refill_keep_marker_attached_or_drop_whole_item"
     ]
    },
    "retrieval_rebuild": {
@@ -1563,6 +1587,7 @@
      "test_custom_runner_suites.py::test_custom_runner_suite_passes_every_pinned_check[test_sleep_landing.py]",
      "test_sleep_evidence.py::test_classifier_never_produces_derived_inference",
      "test_sleep_evidence.py::test_no_semantic_summary_field_exists",
+     "test_sleep_read_time_provenance.py::ReadTimeProvenanceTests::test_truncation_and_owc9_refill_keep_marker_attached_or_drop_whole_item",
      "test_sleep_wmu_window_integrity.py::WindowIntegrityTests::test_later_misattribution_remains_a_separate_clark_occurrence"
     ]
    },
@@ -1724,6 +1749,7 @@
    "authenticated_substantive_projectable_x": {
     "rationale": "Recovery success requires a canonical X linked to the authenticated H with substantive prose that projects beneath its H in the UI; a linked X without substantive prose is not success.",
     "tests": [
+     "test_conversation_ui_integrity.py::ProjectionTests::test_delayed_recovered_x_is_projected_directly_beneath_its_h",
      "test_waking_turn_recovery.py::test_11b_linked_x_without_substantive_prose_cannot_be_success",
      "test_waking_turn_recovery.py::test_correction_5_valid_identity_fields_and_empty_collections",
      "test_waking_turn_recovery.py::test_legacy_resume_success_closes_wtr0_and_creates_exactly_one_x",
@@ -1745,6 +1771,8 @@
    "canonical_same_h_reuse": {
     "rationale": "Recovery reuses the canonical stored H text and event (never caller-supplied text), a new H may follow an unrecoverable H, and same-H continuation works with the real canonical writers in a fresh open session.",
     "tests": [
+     "test_direction_integrity_repair.py::BudgetRecoveryTests::test_failure_then_same_h_in_fresh_open_session_with_real_canonical_writers",
+     "test_post_sleep_wake_continuation.py::ContinuationTests::test_failed_first_wake_then_same_h_continuation",
      "test_waking_turn_recovery.py::test_caller_supplied_replacement_text_is_never_used_for_recovery",
      "test_waking_turn_recovery.py::test_legacy_resume_uses_canonical_stored_text_not_caller_supplied",
      "test_waking_turn_recovery.py::test_new_h_may_follow_unrecoverable_h_and_only_new_failure_is_evidenced"
@@ -2214,6 +2242,8 @@
     "rationale": "Provenance survives delivery: retrieved items keep memory kind/attribution/authentication/creator, public Workspace items retain their component kind, and Sleep read-time provenance markers stay attached through both real passes.",
     "tests": [
      "test_custom_runner_suites.py::test_custom_runner_suite_passes_every_pinned_check[test_hippocampus_retrieval.py]",
+     "test_sleep_read_time_provenance.py::ReadTimeProvenanceTests::test_canonical_landing_real_prepare_both_passes_and_repeated_reads",
+     "test_sleep_read_time_provenance.py::ReadTimeProvenanceTests::test_truncation_and_owc9_refill_keep_marker_attached_or_drop_whole_item",
      "test_workspace_historical_continuity.py::test_public_workspace_item_retains_component_kind_provenance_in_render"
     ]
    },
@@ -2221,6 +2251,7 @@
     "rationale": "Repeated identical queries return identical ordered ids, repeated reads through both real passes leave provenance unchanged, and no usage/recurrence counters exist.",
     "tests": [
      "test_custom_runner_suites.py::test_custom_runner_suite_passes_every_pinned_check[test_hippocampus_retrieval.py]",
+     "test_sleep_read_time_provenance.py::ReadTimeProvenanceTests::test_canonical_landing_real_prepare_both_passes_and_repeated_reads",
      "test_workspace_public_continuity.py::test_19_only_mechanical_new_vs_already_delivered_distinction_exists",
      "test_workspace_roaming.py::test_repeated_successful_private_actions_produce_no_usage_count"
     ]
@@ -2255,7 +2286,9 @@
      "test_context_budget.py::test_compose_drops_atomic_soft_contribution_whole",
      "test_context_budget.py::test_compose_never_tears_a_single_unit",
      "test_owc5_s2_integration.py::test_owc9p2_extreme_retrieval_mechanically_trimmed_reserve_protected",
-     "test_owc5_s2_integration.py::test_owc9p2_hippocampal_disclaimer_present_when_survives_absent_when_trimmed"
+     "test_owc5_s2_integration.py::test_owc9p2_hippocampal_disclaimer_present_when_survives_absent_when_trimmed",
+     "test_sleep_read_time_provenance.py::ReadTimeProvenanceTests::test_truncation_and_owc9_refill_keep_marker_attached_or_drop_whole_item",
+     "test_waking_context_integrity.py::PairBudgetTests::test_trim_and_refill_preserve_whole_pairs_and_pin_newest"
     ]
    }
   },
@@ -2576,6 +2609,10 @@
    "canonical_x_appears": {
     "rationale": "Canonical X is projected to the UI with exact text, canonical times and day order; a delayed recovered X appears directly beneath its H; a longer complete reply survives canonical and UI projection.",
     "tests": [
+     "test_conversation_ui_integrity.py::ProjectionTests::test_canonical_historical_new_timestamps_local_day_order_and_exact_text",
+     "test_conversation_ui_integrity.py::ProjectionTests::test_delayed_recovered_x_is_projected_directly_beneath_its_h",
+     "test_conversation_ui_integrity.py::ProjectionTests::test_host_timestamp_comes_from_existing_callback_and_does_not_make_x",
+     "test_conversation_ui_integrity.py::UiAdapterTests::test_supported_gradio_keeps_footer_in_separate_message_block",
      "test_waking_completion_boundary.py::CompletionBoundaryTests::test_longer_complete_reply_survives_canonical_and_ui_projection"
     ]
    },
@@ -2588,12 +2625,14 @@
    "no_gui_only_truncation": {
     "rationale": "The UI never truncates independently: reply length survives canonical and UI projection, footer stays a separate block, and submit rehydrates canonical times without sending display text to the driver.",
     "tests": [
+     "test_conversation_ui_integrity.py::UiAdapterTests::test_supported_gradio_keeps_footer_in_separate_message_block",
      "test_waking_completion_boundary.py::CompletionBoundaryTests::test_longer_complete_reply_survives_canonical_and_ui_projection"
     ]
    },
    "no_hidden_inaccessible_result": {
     "rationale": "Nothing is hidden from the owner: recovery lists every evidenced H (no top-N), Sleep control lists every actionable request, a recovered X is projected beneath its H, raw values stay available in diagnostics.",
     "tests": [
+     "test_conversation_ui_integrity.py::ProjectionTests::test_delayed_recovered_x_is_projected_directly_beneath_its_h",
      "test_sleep_owner_control.py::test_lists_every_actionable_request_not_a_sample",
      "test_waking_recovery_control.py::test_owner_list_enumerates_every_evidenced_h_without_top_n_sampling"
     ]
@@ -2746,6 +2785,7 @@
     "rationale": "Diagnostics and traces are never memory: control trace is never referenced by dialogue/Kardia/hippocampus sources, telemetry component kinds are never retrieval-eligible, diagnostics record counts and sizes only, thinking content is never written.",
     "tests": [
      "test_conversation_direction_trace.py::test_no_memory_kardia_hippocampus_journal_dialogue_reference",
+     "test_llama_gui_conversation_mode.py::test_control_trace_never_referenced_by_dialogue_kardia_hippocampus_sources",
      "test_ui_turn_diagnostics.py::test_no_content_leak_only_counts_sizes_timings",
      "test_ui_turn_diagnostics.py::test_pass1_thinking_content_never_written_only_length",
      "test_ui_turn_diagnostics.py::test_pass2_thinking_content_never_written_only_length",
@@ -2966,6 +3006,7 @@
    "recovery_x_ui": {
     "rationale": "A recovered X appears directly beneath its H in the UI and the owner recovery surface enumerates and executes exactly one attempt.",
     "tests": [
+     "test_conversation_ui_integrity.py::ProjectionTests::test_delayed_recovered_x_is_projected_directly_beneath_its_h",
      "test_waking_recovery_control.py::test_confirmed_matching_request_executes_exactly_one_attempt",
      "test_waking_recovery_control.py::test_owner_list_enumerates_every_evidenced_h_without_top_n_sampling"
     ]
@@ -3008,7 +3049,8 @@
     "rationale": "Sleep derivations land in the retrievable store with provenance and reach later waking through the real prepare path with markers intact.",
     "tests": [
      "test_custom_runner_suites.py::test_custom_runner_suite_passes_every_pinned_check[test_sleep_cycle.py]",
-     "test_custom_runner_suites.py::test_custom_runner_suite_passes_every_pinned_check[test_sleep_landing.py]"
+     "test_custom_runner_suites.py::test_custom_runner_suite_passes_every_pinned_check[test_sleep_landing.py]",
+     "test_sleep_read_time_provenance.py::ReadTimeProvenanceTests::test_canonical_landing_real_prepare_both_passes_and_repeated_reads"
     ]
    },
    "vision_x_resource_selection": {
@@ -3634,7 +3676,7 @@
   },
   "generator": "anaxi-reference-distribution/a2_public_bindings.py",
   "live_only_requirements": "Unchanged: bindings never satisfy live_only_requirements. Live acceptance is not published raw; it remains live-only evidence outside these bindings.",
-  "october_edition_note": "October 11 edition: the private Porch implementation is not published, so bound test nodes that require it are removed from the bindings and any scenario left with no bound test is reported here as NOT_ATTEMPTED. The remaining bindings are unchanged from the September edition, whose source scenario_bindings.json is byte-identical at the October commit.",
+  "october_edition_note": "October 11 edition: the private Porch implementation is not published, so bound test nodes that require it (import llama_gui or pulse, or read llama_gui.py, llama_desktop.py or llama_launch.py) are removed from the bindings and listed node by node in removed_nodes_for_private_porch, each with the failure verified in this edition; any scenario left with no bound test is reported here as NOT_ATTEMPTED. Bound nodes that do not require the excluded files are kept. One stale source node is replaced by its renamed successor (substituted_nodes). Otherwise the bindings are the September edition's, whose source scenario_bindings.json is byte-identical at the October commit.",
   "omitted_production_only": [
    {
     "capability_id": "15_recovery_wtr0",
@@ -3653,12 +3695,6 @@
     "public_status": "NOT_ATTEMPTED (unbound in the public package; never PASS)",
     "reason": "Every bound test node for this scenario requires the private Porch implementation (porch_api/porch_pairing/pulse/owner_conversation_service), which is not published. The scenario is not reproducible from the public package.",
     "scenario": "ui_reflection"
-   },
-   {
-    "capability_id": "13_sleep_rem",
-    "public_status": "NOT_ATTEMPTED (unbound in the public package; never PASS)",
-    "reason": "Every bound test node for this scenario requires the private Porch implementation (porch_api/porch_pairing/pulse/owner_conversation_service), which is not published. The scenario is not reproducible from the public package.",
-    "scenario": "later_waking"
    },
    {
     "capability_id": "23_ui_host_delivery",
@@ -3837,6 +3873,513 @@
     "node": "test_represented_surface_accounting.py::test_every_owner_gui_control_is_dispositioned",
     "reason": "Reads llama_gui.py, which is not published (private Porch integration).",
     "scenario": "represented_surface_fully_dispositioned"
+   },
+   {
+    "capability_id": "01_ordinary_waking_continuity_temporal_grounding",
+    "scenario": "failure_containment",
+    "node": "test_llama_gui_conversation_mode.py::test_malformed_act_contained_gui_survives_and_flags_diagnostics",
+    "reason": "Imports llama_gui, which is not published (it carries the private Porch integration). Verified in this edition: ModuleNotFoundError: No module named 'llama_gui'."
+   },
+   {
+    "capability_id": "01_ordinary_waking_continuity_temporal_grounding",
+    "scenario": "failure_containment",
+    "node": "test_llama_gui_conversation_mode.py::test_no_content_leak_in_contained_failure_diagnostics",
+    "reason": "Imports llama_gui, which is not published (it carries the private Porch integration). Verified in this edition: ModuleNotFoundError: No module named 'llama_gui'."
+   },
+   {
+    "capability_id": "01_ordinary_waking_continuity_temporal_grounding",
+    "scenario": "failure_containment",
+    "node": "test_llama_gui_conversation_mode.py::test_ui_controls_remain_usable_after_contained_failure",
+    "reason": "Imports llama_gui, which is not published (it carries the private Porch integration). Verified in this edition: ModuleNotFoundError: No module named 'llama_gui'."
+   },
+   {
+    "capability_id": "01_ordinary_waking_continuity_temporal_grounding",
+    "scenario": "ordinary_h_to_x",
+    "node": "test_custom_runner_suites.py::test_custom_runner_suite_passes_every_pinned_check[test_human_waking_authority_end_to_end.py]",
+    "reason": "Pinned custom-runner suite test_human_waking_authority_end_to_end.py imports llama_gui, which imports the unpublished private Porch implementation (pulse); the suite is listed in custom_runner_suites.json october_edition_removed_suites."
+   },
+   {
+    "capability_id": "01_ordinary_waking_continuity_temporal_grounding",
+    "scenario": "ordinary_h_to_x",
+    "node": "test_llama_gui_conversation_mode.py::test_conversation_gui_reaches_typed_pass1_pass2",
+    "reason": "Imports llama_gui, which is not published (it carries the private Porch integration). Verified in this edition: ModuleNotFoundError: No module named 'llama_gui'."
+   },
+   {
+    "capability_id": "01_ordinary_waking_continuity_temporal_grounding",
+    "scenario": "truthful_recent_dialogue",
+    "node": "test_conversation_ui_integrity.py::UiAdapterTests::test_submit_rehydrates_canonical_times_without_sending_display_text_to_driver",
+    "reason": "Imports llama_gui, which is not published (it carries the private Porch integration). Verified in this edition: ModuleNotFoundError: No module named 'llama_gui'."
+   },
+   {
+    "capability_id": "02_conversation_direction",
+    "scenario": "lawful_transitions",
+    "node": "test_llama_gui_conversation_mode.py::test_repeated_explicit_control_idempotent_and_recorded_each_time",
+    "reason": "Imports llama_gui, which is not published (it carries the private Porch integration). Verified in this edition: ModuleNotFoundError: No module named 'llama_gui'."
+   },
+   {
+    "capability_id": "02_conversation_direction",
+    "scenario": "model_visible_state",
+    "node": "test_llama_gui_conversation_mode.py::test_next_pass2_interface_sees_owner_after_give_to_clark",
+    "reason": "Imports llama_gui, which is not published (it carries the private Porch integration). Verified in this edition: ModuleNotFoundError: No module named 'llama_gui'."
+   },
+   {
+    "capability_id": "02_conversation_direction",
+    "scenario": "model_visible_state",
+    "node": "test_llama_gui_conversation_mode.py::test_next_pass2_interface_sees_owner_after_take_direction",
+    "reason": "Imports llama_gui, which is not published (it carries the private Porch integration). Verified in this edition: ModuleNotFoundError: No module named 'llama_gui'."
+   },
+   {
+    "capability_id": "02_conversation_direction",
+    "scenario": "alex_leads",
+    "node": "test_llama_gui_conversation_mode.py::test_next_pass2_interface_sees_owner_after_take_direction",
+    "reason": "Imports llama_gui, which is not published (it carries the private Porch integration). Verified in this edition: ModuleNotFoundError: No module named 'llama_gui'."
+   },
+   {
+    "capability_id": "02_conversation_direction",
+    "scenario": "alex_leads",
+    "node": "test_llama_gui_conversation_mode.py::test_take_direction_full_flow",
+    "reason": "Imports llama_gui, which is not published (it carries the private Porch integration). Verified in this edition: ModuleNotFoundError: No module named 'llama_gui'."
+   },
+   {
+    "capability_id": "02_conversation_direction",
+    "scenario": "null_refusal_defer_interaction",
+    "node": "test_llama_gui_conversation_mode.py::test_unauthorized_relinquish_contained_owner_unchanged_no_preview",
+    "reason": "Imports llama_gui, which is not published (it carries the private Porch integration). Verified in this edition: ModuleNotFoundError: No module named 'llama_gui'."
+   },
+   {
+    "capability_id": "02_conversation_direction",
+    "scenario": "open_shared_state",
+    "node": "test_direction_integrity_repair.py::OpenControlTests::test_human_open_clark_open_ui_trace_and_both_passes_agree",
+    "reason": "Imports llama_gui, which is not published (it carries the private Porch integration). Verified in this edition: ModuleNotFoundError: No module named 'llama_gui'."
+   },
+   {
+    "capability_id": "02_conversation_direction",
+    "scenario": "open_shared_state",
+    "node": "test_llama_gui_conversation_mode.py::test_owc7pB_owner_unknown_request_none_amber_open",
+    "reason": "Imports llama_gui, which is not published (it carries the private Porch integration). Verified in this edition: ModuleNotFoundError: No module named 'llama_gui'."
+   },
+   {
+    "capability_id": "02_conversation_direction",
+    "scenario": "persistence",
+    "node": "test_llama_gui_conversation_mode.py::test_persistent_session_across_multiple_turns",
+    "reason": "Imports llama_gui, which is not published (it carries the private Porch integration). Verified in this edition: ModuleNotFoundError: No module named 'llama_gui'."
+   },
+   {
+    "capability_id": "02_conversation_direction",
+    "scenario": "persistence",
+    "node": "test_llama_gui_conversation_mode.py::test_trace_correct_values_and_session_id",
+    "reason": "Imports llama_gui, which is not published (it carries the private Porch integration). Verified in this edition: ModuleNotFoundError: No module named 'llama_gui'."
+   },
+   {
+    "capability_id": "02_conversation_direction",
+    "scenario": "subject_leads",
+    "node": "test_llama_gui_conversation_mode.py::test_give_direction_to_clark_full_flow",
+    "reason": "Imports llama_gui, which is not published (it carries the private Porch integration). Verified in this edition: ModuleNotFoundError: No module named 'llama_gui'."
+   },
+   {
+    "capability_id": "02_conversation_direction",
+    "scenario": "subject_leads",
+    "node": "test_llama_gui_conversation_mode.py::test_next_pass2_interface_sees_owner_after_give_to_clark",
+    "reason": "Imports llama_gui, which is not published (it carries the private Porch integration). Verified in this edition: ModuleNotFoundError: No module named 'llama_gui'."
+   },
+   {
+    "capability_id": "02_conversation_direction",
+    "scenario": "ui_reflection",
+    "node": "test_llama_gui_conversation_mode.py::test_owc7pB_color_not_sole_signal",
+    "reason": "Imports llama_gui, which is not published (it carries the private Porch integration). Verified in this edition: ModuleNotFoundError: No module named 'llama_gui'."
+   },
+   {
+    "capability_id": "02_conversation_direction",
+    "scenario": "ui_reflection",
+    "node": "test_llama_gui_conversation_mode.py::test_owc7pB_owner_clark_request_none_green_clark",
+    "reason": "Imports llama_gui, which is not published (it carries the private Porch integration). Verified in this edition: ModuleNotFoundError: No module named 'llama_gui'."
+   },
+   {
+    "capability_id": "02_conversation_direction",
+    "scenario": "ui_reflection",
+    "node": "test_llama_gui_conversation_mode.py::test_owc7pB_owner_human_request_none_blue_you",
+    "reason": "Imports llama_gui, which is not published (it carries the private Porch integration). Verified in this edition: ModuleNotFoundError: No module named 'llama_gui'."
+   },
+   {
+    "capability_id": "02_conversation_direction",
+    "scenario": "ui_reflection",
+    "node": "test_llama_gui_conversation_mode.py::test_owc7pB_owner_unknown_request_clark_separate_green_banner",
+    "reason": "Imports llama_gui, which is not published (it carries the private Porch integration). Verified in this edition: ModuleNotFoundError: No module named 'llama_gui'."
+   },
+   {
+    "capability_id": "02_conversation_direction",
+    "scenario": "ui_reflection",
+    "node": "test_llama_gui_conversation_mode.py::test_owc7pB_owner_unknown_request_none_amber_open",
+    "reason": "Imports llama_gui, which is not published (it carries the private Porch integration). Verified in this edition: ModuleNotFoundError: No module named 'llama_gui'."
+   },
+   {
+    "capability_id": "02_conversation_direction",
+    "scenario": "ui_reflection",
+    "node": "test_llama_gui_conversation_mode.py::test_owc7pB_request_display_never_mutates_ownership",
+    "reason": "Imports llama_gui, which is not published (it carries the private Porch integration). Verified in this edition: ModuleNotFoundError: No module named 'llama_gui'."
+   },
+   {
+    "capability_id": "02_conversation_direction",
+    "scenario": "ui_reflection",
+    "node": "test_llama_gui_conversation_mode.py::test_reconnect_render_cannot_mutate_owner",
+    "reason": "Imports llama_gui, which is not published (it carries the private Porch integration). Verified in this edition: ModuleNotFoundError: No module named 'llama_gui'."
+   },
+   {
+    "capability_id": "02_conversation_direction",
+    "scenario": "ui_reflection",
+    "node": "test_llama_gui_conversation_mode.py::test_shared_backend_desktop_and_browser_same_owner",
+    "reason": "Imports llama_gui, which is not published (it carries the private Porch integration). Verified in this edition: ModuleNotFoundError: No module named 'llama_gui'."
+   },
+   {
+    "capability_id": "08_private_space",
+    "scenario": "production_private_space_not_inspected",
+    "node": "test_llama_gui_conversation_mode.py::test_no_test_writes_to_production_paths",
+    "reason": "Imports llama_gui, which is not published (it carries the private Porch integration). Verified in this edition: ModuleNotFoundError: No module named 'llama_gui'."
+   },
+   {
+    "capability_id": "09_family_shared_interaction",
+    "scenario": "ordinary_production_integration",
+    "node": "test_custom_runner_suites.py::test_custom_runner_suite_passes_every_pinned_check[test_human_waking_authority_end_to_end.py]",
+    "reason": "Pinned custom-runner suite test_human_waking_authority_end_to_end.py imports llama_gui, which imports the unpublished private Porch implementation (pulse); the suite is listed in custom_runner_suites.json october_edition_removed_suites."
+   },
+   {
+    "capability_id": "13_sleep_rem",
+    "scenario": "background_inactivity_not_sleep",
+    "node": "test_llama_launch.py::test_launcher_never_references_sleep_rem",
+    "reason": "Tests llama_launch.py, which imports llama_gui.py (private Porch integration); llama_launch.py and test_llama_launch.py are not published."
+   },
+   {
+    "capability_id": "14_public_space_background_activity",
+    "scenario": "host_occasion_distinct_from_subject_act",
+    "node": "test_llama_gui_conversation_mode.py::test_roaming_zero_model_calls_from_button_click_itself",
+    "reason": "Reads llama_gui.py as source text; llama_gui.py is not published (it is, or imports, the private Porch integration). Verified in this edition: FileNotFoundError for llama_gui.py."
+   },
+   {
+    "capability_id": "14_public_space_background_activity",
+    "scenario": "lawful_occasions",
+    "node": "test_llama_gui_conversation_mode.py::test_resume_background_activity_enables_and_starts_worker",
+    "reason": "Imports llama_gui, which is not published (it carries the private Porch integration). Verified in this edition: ModuleNotFoundError: No module named 'llama_gui'."
+   },
+   {
+    "capability_id": "21_side_effects_idempotence",
+    "scenario": "other_state_changes",
+    "node": "test_llama_gui_conversation_mode.py::test_repeated_explicit_control_idempotent_and_recorded_each_time",
+    "reason": "Imports llama_gui, which is not published (it carries the private Porch integration). Verified in this edition: ModuleNotFoundError: No module named 'llama_gui'."
+   },
+   {
+    "capability_id": "22_launcher_runtime_dependencies",
+    "scenario": "clean_shutdown",
+    "node": "test_llama_launch.py::test_backend_kept_alive_via_block_thread_not_window_event_loop",
+    "reason": "Tests llama_launch.py, which imports llama_gui.py (private Porch integration); llama_launch.py and test_llama_launch.py are not published."
+   },
+   {
+    "capability_id": "22_launcher_runtime_dependencies",
+    "scenario": "clean_shutdown",
+    "node": "test_llama_launch.py::test_browser_open_has_no_lifetime_coupling_to_backend",
+    "reason": "Tests llama_launch.py, which imports llama_gui.py (private Porch integration); llama_launch.py and test_llama_launch.py are not published."
+   },
+   {
+    "capability_id": "22_launcher_runtime_dependencies",
+    "scenario": "production_path",
+    "node": "test_llama_gui_conversation_mode.py::test_p5p2a_desktop_launcher_shares_launch_production_backend_not_reimplemented",
+    "reason": "Reads llama_desktop.py as source text; llama_desktop.py is not published (it is, or imports, the private Porch integration). Verified in this edition: FileNotFoundError for llama_desktop.py."
+   },
+   {
+    "capability_id": "22_launcher_runtime_dependencies",
+    "scenario": "production_path",
+    "node": "test_llama_gui_conversation_mode.py::test_p5p2a_launch_launcher_shares_launch_production_backend_not_reimplemented",
+    "reason": "Reads llama_launch.py as source text; llama_launch.py is not published (it is, or imports, the private Porch integration). Verified in this edition: FileNotFoundError for llama_launch.py."
+   },
+   {
+    "capability_id": "22_launcher_runtime_dependencies",
+    "scenario": "production_path",
+    "node": "test_llama_launch.py::test_conversation_mode_propagates_from_argv",
+    "reason": "Tests llama_launch.py, which imports llama_gui.py (private Porch integration); llama_launch.py and test_llama_launch.py are not published."
+   },
+   {
+    "capability_id": "22_launcher_runtime_dependencies",
+    "scenario": "restart",
+    "node": "test_llama_launch.py::test_duplicate_launch_does_not_start_a_second_backend",
+    "reason": "Tests llama_launch.py, which imports llama_gui.py (private Porch integration); llama_launch.py and test_llama_launch.py are not published."
+   },
+   {
+    "capability_id": "22_launcher_runtime_dependencies",
+    "scenario": "runtime_startup",
+    "node": "test_llama_launch.py::test_backend_kept_alive_via_block_thread_not_window_event_loop",
+    "reason": "Tests llama_launch.py, which imports llama_gui.py (private Porch integration); llama_launch.py and test_llama_launch.py are not published."
+   },
+   {
+    "capability_id": "22_launcher_runtime_dependencies",
+    "scenario": "runtime_startup",
+    "node": "test_llama_launch.py::test_backend_start_failure_never_opens_browser",
+    "reason": "Tests llama_launch.py, which imports llama_gui.py (private Porch integration); llama_launch.py and test_llama_launch.py are not published."
+   },
+   {
+    "capability_id": "22_launcher_runtime_dependencies",
+    "scenario": "runtime_startup",
+    "node": "test_llama_launch.py::test_browser_not_opened_before_readiness",
+    "reason": "Tests llama_launch.py, which imports llama_gui.py (private Porch integration); llama_launch.py and test_llama_launch.py are not published."
+   },
+   {
+    "capability_id": "22_launcher_runtime_dependencies",
+    "scenario": "runtime_startup",
+    "node": "test_llama_launch.py::test_browser_open_has_no_lifetime_coupling_to_backend",
+    "reason": "Tests llama_launch.py, which imports llama_gui.py (private Porch integration); llama_launch.py and test_llama_launch.py are not published."
+   },
+   {
+    "capability_id": "22_launcher_runtime_dependencies",
+    "scenario": "runtime_startup",
+    "node": "test_llama_launch.py::test_browser_opened_exactly_once_at_exact_url_after_readiness",
+    "reason": "Tests llama_launch.py, which imports llama_gui.py (private Porch integration); llama_launch.py and test_llama_launch.py are not published."
+   },
+   {
+    "capability_id": "22_launcher_runtime_dependencies",
+    "scenario": "runtime_startup",
+    "node": "test_llama_launch.py::test_config_url_and_probe_are_localhost_only",
+    "reason": "Tests llama_launch.py, which imports llama_gui.py (private Porch integration); llama_launch.py and test_llama_launch.py are not published."
+   },
+   {
+    "capability_id": "22_launcher_runtime_dependencies",
+    "scenario": "runtime_startup",
+    "node": "test_llama_launch.py::test_conversation_mode_propagates_from_argv",
+    "reason": "Tests llama_launch.py, which imports llama_gui.py (private Porch integration); llama_launch.py and test_llama_launch.py are not published."
+   },
+   {
+    "capability_id": "22_launcher_runtime_dependencies",
+    "scenario": "runtime_startup",
+    "node": "test_llama_launch.py::test_duplicate_launch_does_not_start_a_second_backend",
+    "reason": "Tests llama_launch.py, which imports llama_gui.py (private Porch integration); llama_launch.py and test_llama_launch.py are not published."
+   },
+   {
+    "capability_id": "22_launcher_runtime_dependencies",
+    "scenario": "runtime_startup",
+    "node": "test_llama_launch.py::test_fresh_launch_starts_exactly_one_backend",
+    "reason": "Tests llama_launch.py, which imports llama_gui.py (private Porch integration); llama_launch.py and test_llama_launch.py are not published."
+   },
+   {
+    "capability_id": "22_launcher_runtime_dependencies",
+    "scenario": "runtime_startup",
+    "node": "test_llama_launch.py::test_launcher_has_no_second_mode_parser",
+    "reason": "Tests llama_launch.py, which imports llama_gui.py (private Porch integration); llama_launch.py and test_llama_launch.py are not published."
+   },
+   {
+    "capability_id": "22_launcher_runtime_dependencies",
+    "scenario": "runtime_startup",
+    "node": "test_llama_launch.py::test_launcher_never_imports_webview_or_desktop_wrapper",
+    "reason": "Tests llama_launch.py, which imports llama_gui.py (private Porch integration); llama_launch.py and test_llama_launch.py are not published."
+   },
+   {
+    "capability_id": "22_launcher_runtime_dependencies",
+    "scenario": "runtime_startup",
+    "node": "test_llama_launch.py::test_launcher_never_references_sleep_rem",
+    "reason": "Tests llama_launch.py, which imports llama_gui.py (private Porch integration); llama_launch.py and test_llama_launch.py are not published."
+   },
+   {
+    "capability_id": "22_launcher_runtime_dependencies",
+    "scenario": "runtime_startup",
+    "node": "test_llama_launch.py::test_launcher_never_references_workspace_roaming",
+    "reason": "Tests llama_launch.py, which imports llama_gui.py (private Porch integration); llama_launch.py and test_llama_launch.py are not published."
+   },
+   {
+    "capability_id": "22_launcher_runtime_dependencies",
+    "scenario": "runtime_startup",
+    "node": "test_llama_launch.py::test_legacy_wrapper_docstring_marks_it_non_default",
+    "reason": "Tests llama_launch.py, which imports llama_gui.py (private Porch integration); llama_launch.py and test_llama_launch.py are not published."
+   },
+   {
+    "capability_id": "22_launcher_runtime_dependencies",
+    "scenario": "runtime_startup",
+    "node": "test_llama_launch.py::test_probe_gradio_server_accepts_real_looking_gradio_config",
+    "reason": "Tests llama_launch.py, which imports llama_gui.py (private Porch integration); llama_launch.py and test_llama_launch.py are not published."
+   },
+   {
+    "capability_id": "22_launcher_runtime_dependencies",
+    "scenario": "runtime_startup",
+    "node": "test_llama_launch.py::test_probe_gradio_server_rejects_connection_error",
+    "reason": "Tests llama_launch.py, which imports llama_gui.py (private Porch integration); llama_launch.py and test_llama_launch.py are not published."
+   },
+   {
+    "capability_id": "22_launcher_runtime_dependencies",
+    "scenario": "runtime_startup",
+    "node": "test_llama_launch.py::test_probe_gradio_server_rejects_non_gradio_response",
+    "reason": "Tests llama_launch.py, which imports llama_gui.py (private Porch integration); llama_launch.py and test_llama_launch.py are not published."
+   },
+   {
+    "capability_id": "22_launcher_runtime_dependencies",
+    "scenario": "runtime_startup",
+    "node": "test_llama_launch.py::test_readiness_timeout_is_bounded_not_infinite",
+    "reason": "Tests llama_launch.py, which imports llama_gui.py (private Porch integration); llama_launch.py and test_llama_launch.py are not published."
+   },
+   {
+    "capability_id": "22_launcher_runtime_dependencies",
+    "scenario": "runtime_startup",
+    "node": "test_llama_launch.py::test_roaming_authorization_is_off_after_importing_launcher",
+    "reason": "Tests llama_launch.py, which imports llama_gui.py (private Porch integration); llama_launch.py and test_llama_launch.py are not published."
+   },
+   {
+    "capability_id": "22_launcher_runtime_dependencies",
+    "scenario": "runtime_startup",
+    "node": "test_llama_launch.py::test_unrelated_occupant_fails_closed_no_backend_no_browser",
+    "reason": "Tests llama_launch.py, which imports llama_gui.py (private Porch integration); llama_launch.py and test_llama_launch.py are not published."
+   },
+   {
+    "capability_id": "22_launcher_runtime_dependencies",
+    "scenario": "runtime_startup",
+    "node": "test_llama_launch.py::test_wait_for_readiness_respects_bounded_timeout_never_succeeding",
+    "reason": "Tests llama_launch.py, which imports llama_gui.py (private Porch integration); llama_launch.py and test_llama_launch.py are not published."
+   },
+   {
+    "capability_id": "22_launcher_runtime_dependencies",
+    "scenario": "runtime_startup",
+    "node": "test_llama_launch.py::test_wait_for_readiness_stops_as_soon_as_probe_succeeds",
+    "reason": "Tests llama_launch.py, which imports llama_gui.py (private Porch integration); llama_launch.py and test_llama_launch.py are not published."
+   },
+   {
+    "capability_id": "23_ui_host_delivery",
+    "scenario": "canonical_x_appears",
+    "node": "test_conversation_ui_integrity.py::UiAdapterTests::test_submit_rehydrates_canonical_times_without_sending_display_text_to_driver",
+    "reason": "Imports llama_gui, which is not published (it carries the private Porch integration). Verified in this edition: ModuleNotFoundError: No module named 'llama_gui'."
+   },
+   {
+    "capability_id": "23_ui_host_delivery",
+    "scenario": "contained_failure_legible",
+    "node": "test_llama_gui_conversation_mode.py::test_contained_failure_status_panel_clears_on_next_success",
+    "reason": "Imports llama_gui, which is not published (it carries the private Porch integration). Verified in this edition: ModuleNotFoundError: No module named 'llama_gui'."
+   },
+   {
+    "capability_id": "23_ui_host_delivery",
+    "scenario": "contained_failure_legible",
+    "node": "test_llama_gui_conversation_mode.py::test_diagnostic_semantic_split_success_vs_contained_failure",
+    "reason": "Imports llama_gui, which is not published (it carries the private Porch integration). Verified in this edition: ModuleNotFoundError: No module named 'llama_gui'."
+   },
+   {
+    "capability_id": "23_ui_host_delivery",
+    "scenario": "contained_failure_legible",
+    "node": "test_llama_gui_conversation_mode.py::test_malformed_act_contained_gui_survives_and_flags_diagnostics",
+    "reason": "Imports llama_gui, which is not published (it carries the private Porch integration). Verified in this edition: ModuleNotFoundError: No module named 'llama_gui'."
+   },
+   {
+    "capability_id": "23_ui_host_delivery",
+    "scenario": "contained_failure_legible",
+    "node": "test_llama_gui_conversation_mode.py::test_no_content_leak_in_contained_failure_diagnostics",
+    "reason": "Imports llama_gui, which is not published (it carries the private Porch integration). Verified in this edition: ModuleNotFoundError: No module named 'llama_gui'."
+   },
+   {
+    "capability_id": "23_ui_host_delivery",
+    "scenario": "contained_failure_legible",
+    "node": "test_llama_gui_conversation_mode.py::test_ui_controls_remain_usable_after_contained_failure",
+    "reason": "Imports llama_gui, which is not published (it carries the private Porch integration). Verified in this edition: ModuleNotFoundError: No module named 'llama_gui'."
+   },
+   {
+    "capability_id": "23_ui_host_delivery",
+    "scenario": "controls_reflect_authoritative_state",
+    "node": "test_llama_gui_conversation_mode.py::test_fresh_process_status_displays_unknown",
+    "reason": "Imports llama_gui, which is not published (it carries the private Porch integration). Verified in this edition: ModuleNotFoundError: No module named 'llama_gui'."
+   },
+   {
+    "capability_id": "23_ui_host_delivery",
+    "scenario": "controls_reflect_authoritative_state",
+    "node": "test_llama_gui_conversation_mode.py::test_indicator_derived_from_launch_not_model_or_prose",
+    "reason": "Imports llama_gui, which is not published (it carries the private Porch integration). Verified in this edition: ModuleNotFoundError: No module named 'llama_gui'."
+   },
+   {
+    "capability_id": "23_ui_host_delivery",
+    "scenario": "controls_reflect_authoritative_state",
+    "node": "test_llama_gui_conversation_mode.py::test_mode_indicator_matches_execution_mode_conversation",
+    "reason": "Imports llama_gui, which is not published (it carries the private Porch integration). Verified in this edition: ModuleNotFoundError: No module named 'llama_gui'."
+   },
+   {
+    "capability_id": "23_ui_host_delivery",
+    "scenario": "controls_reflect_authoritative_state",
+    "node": "test_llama_gui_conversation_mode.py::test_owc7pB_button_labels_changed_control_acts_unchanged",
+    "reason": "Imports llama_gui, which is not published (it carries the private Porch integration). Verified in this edition: ModuleNotFoundError: No module named 'llama_gui'."
+   },
+   {
+    "capability_id": "23_ui_host_delivery",
+    "scenario": "controls_reflect_authoritative_state",
+    "node": "test_llama_gui_conversation_mode.py::test_owc7pB_let_clark_lead_button_uses_existing_transition",
+    "reason": "Imports llama_gui, which is not published (it carries the private Porch integration). Verified in this edition: ModuleNotFoundError: No module named 'llama_gui'."
+   },
+   {
+    "capability_id": "23_ui_host_delivery",
+    "scenario": "controls_reflect_authoritative_state",
+    "node": "test_llama_gui_conversation_mode.py::test_owc7pB_take_the_lead_button_uses_existing_transition",
+    "reason": "Imports llama_gui, which is not published (it carries the private Porch integration). Verified in this edition: ModuleNotFoundError: No module named 'llama_gui'."
+   },
+   {
+    "capability_id": "23_ui_host_delivery",
+    "scenario": "controls_reflect_authoritative_state",
+    "node": "test_llama_gui_conversation_mode.py::test_p5p2_status_text_shows_recovery_needed",
+    "reason": "Imports llama_gui, which is not published (it carries the private Porch integration). Verified in this edition: ModuleNotFoundError: No module named 'llama_gui'."
+   },
+   {
+    "capability_id": "23_ui_host_delivery",
+    "scenario": "no_gui_only_truncation",
+    "node": "test_conversation_ui_integrity.py::UiAdapterTests::test_submit_rehydrates_canonical_times_without_sending_display_text_to_driver",
+    "reason": "Imports llama_gui, which is not published (it carries the private Porch integration). Verified in this edition: ModuleNotFoundError: No module named 'llama_gui'."
+   },
+   {
+    "capability_id": "23_ui_host_delivery",
+    "scenario": "no_hidden_inaccessible_result",
+    "node": "test_llama_gui_conversation_mode.py::test_owc7pB_raw_values_remain_available_in_diagnostics",
+    "reason": "Imports llama_gui, which is not published (it carries the private Porch integration). Verified in this edition: ModuleNotFoundError: No module named 'llama_gui'."
+   },
+   {
+    "capability_id": "23_ui_host_delivery",
+    "scenario": "restart_reconnect_consistency",
+    "node": "test_llama_gui_conversation_mode.py::test_reconnect_render_cannot_mutate_owner",
+    "reason": "Imports llama_gui, which is not published (it carries the private Porch integration). Verified in this edition: ModuleNotFoundError: No module named 'llama_gui'."
+   },
+   {
+    "capability_id": "23_ui_host_delivery",
+    "scenario": "restart_reconnect_consistency",
+    "node": "test_llama_gui_conversation_mode.py::test_roaming_shared_backend_desktop_and_browser",
+    "reason": "Imports llama_gui, which is not published (it carries the private Porch integration). Verified in this edition: ModuleNotFoundError: No module named 'llama_gui'."
+   },
+   {
+    "capability_id": "23_ui_host_delivery",
+    "scenario": "restart_reconnect_consistency",
+    "node": "test_llama_gui_conversation_mode.py::test_shared_backend_desktop_and_browser_same_owner",
+    "reason": "Imports llama_gui, which is not published (it carries the private Porch integration). Verified in this edition: ModuleNotFoundError: No module named 'llama_gui'."
+   },
+   {
+    "capability_id": "23_ui_host_delivery",
+    "scenario": "waking_recovery_owner_control",
+    "node": "test_llama_gui_conversation_mode.py::test_p5p2_human_resume_recovers_once_canonical_truth_becomes_readable",
+    "reason": "Imports llama_gui, which is not published (it carries the private Porch integration). Verified in this edition: ModuleNotFoundError: No module named 'llama_gui'."
+   },
+   {
+    "capability_id": "24_architecture_wide_invariants",
+    "scenario": "no_silent_current_h_rewrite",
+    "node": "test_conversation_ui_integrity.py::UiAdapterTests::test_submit_rehydrates_canonical_times_without_sending_display_text_to_driver",
+    "reason": "Imports llama_gui, which is not published (it carries the private Porch integration). Verified in this edition: ModuleNotFoundError: No module named 'llama_gui'."
+   },
+   {
+    "capability_id": "24_architecture_wide_invariants",
+    "scenario": "alex_absence_not_sleep",
+    "node": "test_llama_launch.py::test_launcher_never_references_sleep_rem",
+    "reason": "Tests llama_launch.py, which imports llama_gui.py (private Porch integration); llama_launch.py and test_llama_launch.py are not published."
+   },
+   {
+    "capability_id": "25_cross_component_integration",
+    "scenario": "family_shared_x_authority",
+    "node": "test_custom_runner_suites.py::test_custom_runner_suite_passes_every_pinned_check[test_human_waking_authority_end_to_end.py]",
+    "reason": "Pinned custom-runner suite test_human_waking_authority_end_to_end.py imports llama_gui, which imports the unpublished private Porch implementation (pulse); the suite is listed in custom_runner_suites.json october_edition_removed_suites."
+   },
+   {
+    "capability_id": "25_cross_component_integration",
+    "scenario": "recovery_x_ui",
+    "node": "test_llama_gui_conversation_mode.py::test_p5p2_human_resume_recovers_once_canonical_truth_becomes_readable",
+    "reason": "Imports llama_gui, which is not published (it carries the private Porch integration). Verified in this edition: ModuleNotFoundError: No module named 'llama_gui'."
+   }
+  ],
+  "substituted_nodes": [
+   {
+    "capability_id": "01_ordinary_waking_continuity_temporal_grounding",
+    "scenario": "waking_completion_boundary",
+    "source_node": "test_waking_completion_boundary.py::CompletionBoundaryTests::test_previous_observation_only_boundary_accepts_length_limited_json",
+    "public_node": "test_waking_completion_boundary.py::CompletionBoundaryTests::test_previous_observation_only_boundary_is_rejected_by_canonical_receipt",
+    "reason": "The accepted source's scenario_bindings.json (byte-identical to September's) still names the September test, but commit c680669 (before the accepted revision) replaced it in test_waking_completion_boundary.py with the node bound here. The source binding is therefore stale: its node does not exist at the accepted revision. The replacement asserts that a length-limited reply is refused by the canonical receipt, which is what the scenario's rationale claims. Recorded so the substitution is visible, not presented as an unchanged binding."
    }
   ]
  }
