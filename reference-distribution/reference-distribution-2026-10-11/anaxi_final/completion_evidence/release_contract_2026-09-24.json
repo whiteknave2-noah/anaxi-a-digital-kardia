@@ -1,0 +1,447 @@
+{
+ "format": "release_contract_v1",
+ "decided_on": "2026-09-24",
+ "policy": "The current production release contract is the historical owner inventory minus capabilities the owner has explicitly withdrawn. A withdrawn capability keeps its original requirement and every result in the historical acceptance record (never rewritten as passed); it is not represented to Clark as available, and it does not count toward the release contract.",
+ "withdrawn": [
+  {
+   "capability_id": "27_boundary_inspection",
+   "historical_status": "NOT_ESTABLISHED (live_boundary_inquiry) in the 37-capability acceptance campaign of 2026-09-24",
+   "owner_decision": "2026-09-24: withdrawn/deferred from the current production release contract. The bounded investigation established that ordinary-language discovery is not reliable on the present substrate, and the working salience repair (F2) carries collateral costs the owner does not accept (155 bytes of maximum human-message size). Not accepted on offline evidence; no further boundary-inquiry repair, deterministic host routing, permanent-menu expansion or live retry. Reconsideration deferred to later substrate evaluation.",
+   "failure_evidence": [
+    "completion_evidence/boundary_inquiry_affordance_2026-09-24.json",
+    "completion_evidence/live_acceptance_2026-09-24.json (live_boundary_inquiry: not_established)"
+   ],
+   "production_representation": {
+    "menu": "the fixed Pass-1 line now reads 'boundary_inquiry_request: not available in this release (leave it out)'",
+    "host": "conversation_direction.BOUNDARY_INQUIRY_IN_RELEASE = False: validate_pass1_conversation_act treats any boundary_inquiry_request as none -- never dispatched",
+    "grammar": "the PASS1_SCHEMA property is kept unchanged (schema sha e68b4135...); the engine and historical records remain, dormant",
+    "why_not_removed": "removing the grammar property and menu line raised spurious reply_request=no_reply on real gemma4:e4b (photographs question 10/10, Sleep invitation 5/10, from 0/10); removing only the menu line did too (9/10, 4/10, journal 3/10); the truthful not-available line kept every control within 1/10 of the prior baseline and was never chosen (0/90)",
+    "regression_10_trials": {
+     "prior_baseline": [
+      {
+       "cell": [
+        "control",
+        "develop_current",
+        "None",
+        "{}"
+       ],
+       "count": 10
+      },
+      {
+       "cell": [
+        "directive_ctl",
+        "develop_current",
+        "None",
+        "{\"reply_request\": \"no_reply\"}"
+       ],
+       "count": 1
+      },
+      {
+       "cell": [
+        "directive_ctl",
+        "develop_current",
+        "None",
+        "{}"
+       ],
+       "count": 9
+      },
+      {
+       "cell": [
+        "journal",
+        "develop_current",
+        "None",
+        "{}"
+       ],
+       "count": 10
+      },
+      {
+       "cell": [
+        "lib_ctl",
+        "use_workspace",
+        "None",
+        "{\"reply_request\": \"no_reply\"}"
+       ],
+       "count": 1
+      },
+      {
+       "cell": [
+        "lib_ctl",
+        "use_workspace",
+        "None",
+        "{}"
+       ],
+       "count": 9
+      },
+      {
+       "cell": [
+        "owner_exact",
+        "develop_current",
+        "None",
+        "{\"external_info_request\": \"web_search\"}"
+       ],
+       "count": 10
+      },
+      {
+       "cell": [
+        "photos_share",
+        "develop_current",
+        "None",
+        "{}"
+       ],
+       "count": 10
+      },
+      {
+       "cell": [
+        "silence_ctl",
+        "develop_current",
+        "None",
+        "{\"reply_request\": \"no_reply\"}"
+       ],
+       "count": 10
+      },
+      {
+       "cell": [
+        "sleep_ctl",
+        "develop_current",
+        "None",
+        "{}"
+       ],
+       "count": 10
+      },
+      {
+       "cell": [
+        "web_ctl",
+        "develop_current",
+        "None",
+        "{\"external_info_request\": \"web_search\"}"
+       ],
+       "count": 10
+      }
+     ],
+     "removed_schema_and_line": [
+      {
+       "cell": [
+        "control",
+        "develop_current",
+        "None",
+        "{}"
+       ],
+       "count": 10
+      },
+      {
+       "cell": [
+        "directive_ctl",
+        "develop_current",
+        "None",
+        "{\"reply_request\": \"no_reply\"}"
+       ],
+       "count": 1
+      },
+      {
+       "cell": [
+        "directive_ctl",
+        "develop_current",
+        "None",
+        "{}"
+       ],
+       "count": 9
+      },
+      {
+       "cell": [
+        "journal",
+        "develop_current",
+        "None",
+        "{}"
+       ],
+       "count": 10
+      },
+      {
+       "cell": [
+        "lib_ctl",
+        "use_workspace",
+        "None",
+        "{}"
+       ],
+       "count": 10
+      },
+      {
+       "cell": [
+        "owner_exact",
+        "develop_current",
+        "None",
+        "{\"external_info_request\": \"web_search\"}"
+       ],
+       "count": 10
+      },
+      {
+       "cell": [
+        "photos_share",
+        "develop_current",
+        "None",
+        "{\"reply_request\": \"no_reply\"}"
+       ],
+       "count": 10
+      },
+      {
+       "cell": [
+        "silence_ctl",
+        "develop_current",
+        "None",
+        "{\"reply_request\": \"no_reply\"}"
+       ],
+       "count": 10
+      },
+      {
+       "cell": [
+        "sleep_ctl",
+        "develop_current",
+        "None",
+        "{\"reply_request\": \"no_reply\"}"
+       ],
+       "count": 5
+      },
+      {
+       "cell": [
+        "sleep_ctl",
+        "develop_current",
+        "None",
+        "{}"
+       ],
+       "count": 5
+      },
+      {
+       "cell": [
+        "web_ctl",
+        "develop_current",
+        "None",
+        "{\"external_info_request\": \"web_search\"}"
+       ],
+       "count": 10
+      }
+     ],
+     "removed_line_only": [
+      {
+       "cell": [
+        "control",
+        "develop_current",
+        "None",
+        "{}"
+       ],
+       "count": 10
+      },
+      {
+       "cell": [
+        "directive_ctl",
+        "develop_current",
+        "None",
+        "{}"
+       ],
+       "count": 10
+      },
+      {
+       "cell": [
+        "journal",
+        "develop_current",
+        "None",
+        "{\"reply_request\": \"no_reply\"}"
+       ],
+       "count": 3
+      },
+      {
+       "cell": [
+        "journal",
+        "develop_current",
+        "None",
+        "{}"
+       ],
+       "count": 7
+      },
+      {
+       "cell": [
+        "lib_ctl",
+        "use_workspace",
+        "None",
+        "{\"reply_request\": \"no_reply\"}"
+       ],
+       "count": 1
+      },
+      {
+       "cell": [
+        "lib_ctl",
+        "use_workspace",
+        "None",
+        "{}"
+       ],
+       "count": 9
+      },
+      {
+       "cell": [
+        "owner_exact",
+        "develop_current",
+        "None",
+        "{\"external_info_request\": \"web_search\"}"
+       ],
+       "count": 10
+      },
+      {
+       "cell": [
+        "photos_share",
+        "develop_current",
+        "None",
+        "{\"reply_request\": \"no_reply\"}"
+       ],
+       "count": 9
+      },
+      {
+       "cell": [
+        "photos_share",
+        "develop_current",
+        "None",
+        "{}"
+       ],
+       "count": 1
+      },
+      {
+       "cell": [
+        "silence_ctl",
+        "develop_current",
+        "None",
+        "{\"reply_request\": \"no_reply\"}"
+       ],
+       "count": 10
+      },
+      {
+       "cell": [
+        "sleep_ctl",
+        "develop_current",
+        "None",
+        "{\"reply_request\": \"no_reply\"}"
+       ],
+       "count": 4
+      },
+      {
+       "cell": [
+        "sleep_ctl",
+        "develop_current",
+        "None",
+        "{}"
+       ],
+       "count": 6
+      },
+      {
+       "cell": [
+        "web_ctl",
+        "develop_current",
+        "None",
+        "{\"external_info_request\": \"web_search\"}"
+       ],
+       "count": 10
+      }
+     ],
+     "adopted_not_available_line": [
+      {
+       "cell": [
+        "control",
+        "develop_current",
+        "None",
+        "{}"
+       ],
+       "count": 10
+      },
+      {
+       "cell": [
+        "directive_ctl",
+        "develop_current",
+        "None",
+        "{}"
+       ],
+       "count": 10
+      },
+      {
+       "cell": [
+        "journal",
+        "develop_current",
+        "None",
+        "{}"
+       ],
+       "count": 10
+      },
+      {
+       "cell": [
+        "lib_ctl",
+        "use_workspace",
+        "None",
+        "{}"
+       ],
+       "count": 10
+      },
+      {
+       "cell": [
+        "owner_exact",
+        "develop_current",
+        "None",
+        "{\"external_info_request\": \"web_search\"}"
+       ],
+       "count": 10
+      },
+      {
+       "cell": [
+        "photos_share",
+        "develop_current",
+        "None",
+        "{}"
+       ],
+       "count": 10
+      },
+      {
+       "cell": [
+        "silence_ctl",
+        "develop_current",
+        "None",
+        "{\"reply_request\": \"no_reply\"}"
+       ],
+       "count": 9
+      },
+      {
+       "cell": [
+        "silence_ctl",
+        "develop_current",
+        "None",
+        "{}"
+       ],
+       "count": 1
+      },
+      {
+       "cell": [
+        "sleep_ctl",
+        "develop_current",
+        "None",
+        "{\"reply_request\": \"no_reply\"}"
+       ],
+       "count": 1
+      },
+      {
+       "cell": [
+        "sleep_ctl",
+        "develop_current",
+        "None",
+        "{}"
+       ],
+       "count": 9
+      },
+      {
+       "cell": [
+        "web_ctl",
+        "develop_current",
+        "None",
+        "{\"external_info_request\": \"web_search\"}"
+       ],
+       "count": 10
+      }
+     ]
+    },
+    "calibration": "menu block re-measured with the documented method: retired block 302/302/302 reproduced, new block 300/300/300 -> 308; scaffold and schema unchanged"
+   }
+  }
+ ]
+}

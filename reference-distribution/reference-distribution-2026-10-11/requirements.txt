@@ -1,0 +1,8 @@
+# ANAXI reference distribution A -- Python dependencies (macOS, Python 3.14).
+#
+# The public run path includes the bound runtime-dependency scenario
+# (anaxi_final/test_runtime_dependencies.py), which requires every pin in
+# anaxi_final/requirements-macos.txt to be installed at exactly its pinned
+# version. That pinned set is therefore the minimum complete specification;
+# pip may add platform packages the pins depend on.
+-r anaxi_final/requirements-macos.txt

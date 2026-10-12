@@ -1,0 +1,236 @@
+{
+  "assay": "owner_public_resources_v1",
+  "authoritative_discovery_error": null,
+  "canonical_production_history_mutated": false,
+  "ordinary_route": "workspace_direction.execute_workspace_action",
+  "private_space_traversed": false,
+  "production_manifest_error": null,
+  "production_resource_files_mutated": false,
+  "records": [
+    {
+      "attempted_total": 5,
+      "authoritative_expected_total": 5,
+      "authoritative_required_set_established": true,
+      "capability_id": "public_resources.library",
+      "failed_items_or_scenarios": [],
+      "failed_total": 0,
+      "item_results": {
+        "ANAXI_CAPABILITIES_AND_PATHWAYS.md": {
+          "evidence": {
+            "chars": 3395,
+            "document_type": "text",
+            "has_more": false,
+            "operation": "read"
+          },
+          "reason": null,
+          "status": "PASS"
+        },
+        "Books/long_reading_sample.txt": {
+          "evidence": {
+            "chars": 4000,
+            "document_type": "text",
+            "has_more": true,
+            "operation": "read"
+          },
+          "reason": null,
+          "status": "PASS"
+        },
+        "Books/notes/nested_notes.md": {
+          "evidence": {
+            "chars": 1517,
+            "document_type": "text",
+            "has_more": false,
+            "operation": "read"
+          },
+          "reason": null,
+          "status": "PASS"
+        },
+        "Books/scans/scanned_sample.pdf": {
+          "evidence": {
+            "delivered_bytes": 327525,
+            "document_type": "pdf_page_image",
+            "operation": "view_page",
+            "page": 2,
+            "page_count": 3
+          },
+          "reason": null,
+          "status": "PASS"
+        },
+        "Books/text_sample.pdf": {
+          "evidence": {
+            "chars": 4000,
+            "document_type": "pdf",
+            "has_more": true,
+            "operation": "read"
+          },
+          "reason": null,
+          "status": "PASS"
+        }
+      },
+      "live_only_owner_dispositions": {},
+      "live_only_passed": [],
+      "live_only_requirements": [],
+      "missing_from_production": [],
+      "passed_total": 5,
+      "production_discovered_total": 5,
+      "remaining_not_established": [],
+      "skipped_or_unattempted": [],
+      "status": "COMPLETE",
+      "unexpected_in_production": []
+    },
+    {
+      "attempted_total": 5,
+      "authoritative_expected_total": 5,
+      "authoritative_required_set_established": true,
+      "capability_id": "public_resources.photographs",
+      "failed_items_or_scenarios": [],
+      "failed_total": 0,
+      "item_results": {
+        "Pictures/Landscapes/gradient_a.jpg": {
+          "evidence": {
+            "delivered_bytes": 52892,
+            "derivative": false,
+            "height": 480,
+            "operation": "view",
+            "width": 640
+          },
+          "reason": null,
+          "status": "PASS"
+        },
+        "Pictures/Landscapes/gradient_b.jpeg": {
+          "evidence": {
+            "delivered_bytes": 52989,
+            "derivative": false,
+            "height": 480,
+            "operation": "view",
+            "width": 640
+          },
+          "reason": null,
+          "status": "PASS"
+        },
+        "Pictures/Patterns/nested/pattern_d.webp": {
+          "evidence": {
+            "delivered_bytes": 12172,
+            "derivative": false,
+            "height": 480,
+            "operation": "view",
+            "width": 640
+          },
+          "reason": null,
+          "status": "PASS"
+        },
+        "Pictures/Patterns/pattern_c.png": {
+          "evidence": {
+            "delivered_bytes": 5735,
+            "derivative": false,
+            "height": 480,
+            "operation": "view",
+            "width": 640
+          },
+          "reason": null,
+          "status": "PASS"
+        },
+        "Pictures/pattern_e.gif": {
+          "evidence": {
+            "delivered_bytes": 67093,
+            "derivative": true,
+            "height": 480,
+            "operation": "view",
+            "width": 640
+          },
+          "reason": null,
+          "status": "PASS"
+        }
+      },
+      "live_only_owner_dispositions": {},
+      "live_only_passed": [],
+      "live_only_requirements": [],
+      "missing_from_production": [],
+      "passed_total": 5,
+      "production_discovered_total": 5,
+      "remaining_not_established": [],
+      "skipped_or_unattempted": [],
+      "status": "COMPLETE",
+      "unexpected_in_production": []
+    },
+    {
+      "attempted_total": 3,
+      "authoritative_expected_total": 3,
+      "authoritative_required_set_established": true,
+      "capability_id": "public_resources.music",
+      "failed_items_or_scenarios": [],
+      "failed_total": 0,
+      "item_results": {
+        "Music/Album One/tone_a.wav": {
+          "evidence": {
+            "decoder": "libsndfile",
+            "duration_seconds": 6.0,
+            "late_interval_seconds": [
+              0.9,
+              5.9
+            ],
+            "opening_interval_seconds": [
+              0.0,
+              1.0
+            ],
+            "operation": "listen_and_late_dynamics"
+          },
+          "reason": null,
+          "status": "PASS"
+        },
+        "Music/Album One/tone_b.flac": {
+          "evidence": {
+            "decoder": "libsndfile",
+            "duration_seconds": 5.888,
+            "late_interval_seconds": [
+              0.788,
+              5.788
+            ],
+            "opening_interval_seconds": [
+              0.0,
+              1.0
+            ],
+            "operation": "listen_and_late_dynamics"
+          },
+          "reason": null,
+          "status": "PASS"
+        },
+        "Music/Album Two/tone_c.wma": {
+          "evidence": {
+            "decoder": "pyav/wmav2",
+            "duration_seconds": 5.944,
+            "late_interval_seconds": [
+              0.844,
+              5.844
+            ],
+            "opening_interval_seconds": [
+              0.0,
+              1.0
+            ],
+            "operation": "listen_and_late_dynamics"
+          },
+          "reason": null,
+          "status": "PASS"
+        }
+      },
+      "live_only_owner_dispositions": {},
+      "live_only_passed": [],
+      "live_only_requirements": [],
+      "missing_from_production": [],
+      "passed_total": 3,
+      "production_discovered_total": 3,
+      "remaining_not_established": [],
+      "skipped_or_unattempted": [],
+      "status": "COMPLETE",
+      "unexpected_in_production": []
+    }
+  ],
+  "source_root": "<synthetic-public-source-root>",
+  "whole_resource_result": {
+    "capability_record_total": 3,
+    "nonpassing_capabilities": [],
+    "passing_capability_total": 3,
+    "status": "COMPLETE"
+  },
+  "workspace_root": "<synthetic-isolated-workspace-root>"
+}

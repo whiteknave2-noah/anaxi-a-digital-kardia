@@ -1,0 +1,23 @@
+{
+  "anaxi_protocol.py": {
+    "_init_violation_prototypes": "f7db8ef9640e65d3404457ad185598e37c6730e5518544134384ac2a11641b7a",
+    "_kardia_delta": "d94bffd452ec2423439688d026f2215cdda249742e29d50f75350d047e83d5e5",
+    "_kardia_text": "b655cf7a8dfbe007c212afc4638146975300e90319338c7b280622355efec518",
+    "_max_sim_to_prototypes": "6f336e8949d63770b602e0c21b46cbf25938362bb60379b04d2af1070dff9325",
+    "_validate_axioms_destination": "8e97b7bcdb7f4e396b4cf7428177b3c7b48c30f04899b5e5c67394b36a5fe2d1",
+    "_validate_axioms_trajectory": "2fa091f46ccda38a13c5c6a11e8369018e48a108a69891392f5faf2047a65224",
+    "class_constants": "98cef924bcbef4c8ad111a4de7744a2e2a970cf1424fd5409174ea0908db80fe"
+  },
+  "anaxi_protocol_sqlite.py": {
+    "_init_violation_prototypes": "8458de2266d53ae58c83cb58448610dc5779dd2ac48d7b0cfe1303f7eb33c3cd",
+    "_kardia_delta": "c3a97b1dd153e6da431a6e3ef49b6c5024ba97a6b4393decd814f773defaa004",
+    "_kardia_text": "b655cf7a8dfbe007c212afc4638146975300e90319338c7b280622355efec518",
+    "_max_sim_to_prototypes": "6f336e8949d63770b602e0c21b46cbf25938362bb60379b04d2af1070dff9325",
+    "_validate_axioms_destination": "c6396d5eda9293aae56043ff58b7a4585d981eaa89847a10d4e7f5a6ba976d93",
+    "_validate_axioms_trajectory": "51313ad52276da0a04065bdc80ced2f289777940c332f84288b6929ebec5d761",
+    "class_constants": "98cef924bcbef4c8ad111a4de7744a2e2a970cf1424fd5409174ea0908db80fe"
+  },
+  "baseline_commit": "b2ee105f1e70e5c5e84d92128559736b271b9961",
+  "linguistic_pipeline.py": "f7dbe1b30070784ec8153cd447532472b2a3173420a41d94cfcf3f832e793734",
+  "note": "Fingerprints computed from the merge-base production baseline (master). Changing constitutional meaning requires an explicit owner decision and a deliberate baseline update."
+}
