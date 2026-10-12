@@ -65,8 +65,14 @@ Consequence, reported honestly rather than hidden:
   belong to the unpublished `test_llama_launch.py` are removed from the public
   bindings. Each is listed, with the scenario it was bound to and the failure
   verified in this edition, in `scenario_bindings.json` under
-  `public_distribution.removed_nodes_for_private_porch`. Bound nodes that do not
-  need the excluded files are kept;
+  `public_distribution.removed_nodes_for_private_porch`. That list has 84
+  entries, one per node and scenario, because some nodes support several
+  scenarios. By unique node, each in exactly one category: 36 import
+  `llama_gui`; 22 belong to the unpublished `test_llama_launch.py`; 3 read
+  `llama_gui.py`, `llama_desktop.py` or `llama_launch.py` as source text; 1
+  skips when `llama_gui.py` is absent (a skip is never a PASS); 1 is the
+  removed custom-runner suite. Bound nodes that do not need the excluded files
+  are kept;
 - the 2 scenarios left with no bound test are reported as NOT_ATTEMPTED in
   `scenario_bindings.json` under `public_distribution.omitted_production_only`:
   `02_conversation_direction / ui_reflection`,
