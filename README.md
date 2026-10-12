@@ -4,11 +4,12 @@
 
 ANAXI is a persistent-agent architecture and a public case study in building for truthful provenance, bounded authority, privacy, continuity, recovery, reversibility, meaningful affordance, and developmental room under conditions of uncertainty.
 
-This repository preserves three dated layers on purpose:
+This repository preserves four dated layers on purpose:
 
 1. the **24 September 2026 production/reference release**, including the reproducibility package and capability accounting accepted at that time;
 2. a **2 October 2026 architecture correction**, produced when post-release substrate work exposed missing boundaries between the host, the inference substrate, non-human occasions, evidence, and consequential action; and
-3. the **5 October 2026 current architecture**, documenting the relational-history, subject-directed consolidation, and whole-package integration work that followed, together with the substrate that was ultimately adopted.
+3. the **5 October 2026 architecture update**, recording relational history, consolidation, integration, and substrate adoption; and
+4. the **11 October 2026 production-acceptance update**, recording 35/35 active production capabilities, final failure-class lessons, and the private Porch client.
 
 The later work matters because each earlier layer was complete **against the contract that existed at its date**, while the architecture itself continued. Those records are therefore preserved rather than rewritten, and the current layer is documented separately.
 
@@ -17,7 +18,9 @@ The later work matters because each earlier layer was complete **against the con
 **September release contract:** 36/36 complete
 **Historical campaign:** 36/37, with the boundary inquiry preserved as `NOT_ESTABLISHED` and withdrawn
 **Intermediate architecture correction:** 2 October 2026
-**Current architecture:** **5 October 2026 — see `ANAXI_ARCHITECTURE_UPDATE_2026-10-05.md`**
+**Latest public account:** **11 October 2026 — see `ANAXI_ARCHITECTURE_UPDATE_2026-10-11.md`**
+**Final active production acceptance:** **35/35 established, zero known active blockers**; withdrawn Boundary Inspector remains NOT_ESTABLISHED
+**Serving context:** **47,616 tokens**, Flash Attention and Q8_0 KV cache qualified
 **Current waking substrate:** **stock Ministral 3 14B Instruct 2512, Q4_K_M**, pinned to one exact artifact digest and verified before waking
 **Production adoption:** **occurred**
 **Waking interactions:** an ordinary waking interaction has occurred on the accepted package; its private contents are intentionally unpublished
@@ -27,7 +30,8 @@ The later work matters because each earlier layer was complete **against the con
 | Path | Purpose |
 | --- | --- |
 | `WHY_ANAXI.md` | A personal note from the project's creator about the motivations behind ANAXI: agency, uncertainty, relationship, and why meaningful choice matters to the design. It is a motivation document, not an architecture specification and not an empirical claim about personhood or consciousness. |
-| `ANAXI_ARCHITECTURE_UPDATE_2026-10-05.md` | **Current public architecture.** Relational history and historical/current separation, subject-directed consolidation, waking and Sleep/REM, privacy/significance/disclosure, read-only external information, family and correspondence scope, the reversible subject-authored directive, the whole-package completion lesson, substrate history through to Ministral adoption, RISE lessons, and what remains NOT_ESTABLISHED. |
+| `ANAXI_ARCHITECTURE_UPDATE_2026-10-11.md` | **Latest public production and architecture account.** Acceptance, failure-class repairs, whole-occasion context, runtime qualification, and The Porch. |
+| `ANAXI_ARCHITECTURE_UPDATE_2026-10-05.md` | **Historical preceding architecture.** Relational history and historical/current separation, subject-directed consolidation, waking and Sleep/REM, privacy/significance/disclosure, read-only external information, family and correspondence scope, the reversible subject-authored directive, the whole-package completion lesson, substrate history through to Ministral adoption, RISE lessons, and what remains NOT_ESTABLISHED. |
 | `ANAXI_PROTOCOL_README_2026-09-24.md` | Historical conceptual snapshot of the September production release. Its completion language belongs to that dated release contract and should not be read as a claim that later architecture work never occurred. |
 | `ANAXI_CAPABILITY_CATALOG_2026-09-24.md` | Historical production capability catalog for the September release. |
 | `ANAXI_ARCHITECTURE_UPDATE_2026-10-02.md` | Historical intermediate architecture correction: Pulse, non-human occasions, Witness Gates, observation/mutation separation, evidence legibility, RISE lessons, and lived-history readiness. Its adoption-pending language belongs to that date. |
@@ -43,7 +47,7 @@ The later work matters because each earlier layer was complete **against the con
 
 It is included here deliberately, and it is deliberately **not** technical documentation. It is a personal document. It is not evidence of consciousness, not evidence of personhood, and not evidence of subjective experience, and the architecture in this repository does not depend on any of those being true.
 
-## Current architecture after 2 October
+## Architecture across the dated updates
 
 The 2 October correction fixed a real category error: too much behavioral burden had been assigned to the inference substrate, which cannot be relied on to choose evidence sources, distinguish looking from writing, or correctly interpret host-originated occasions containing no human speech.
 
@@ -54,13 +58,23 @@ That correction was correct and incomplete. The work that followed found and rep
 - **The whole-package completion lesson.** A capability is not complete because code exists, a helper exists, a unit test passes, or a harness can call it. Completion requires the ordinary production path to connect the capability to provenance, authority, privacy, persistence, recovery, truthful failure, and real affordance. The final whole-package review found real integration defects of exactly that kind. **Tests are evidence, not completion.**
 - **Substrate.** Stock Ministral 3 14B Instruct 2512 Q4_K_M was qualified through the assembled production system and adopted as the waking substrate, pinned to an exact digest verified before waking. Continuity does not reside in its weights, and no personal history was trained into any model.
 
-See `ANAXI_ARCHITECTURE_UPDATE_2026-10-05.md`.
+The final production acceptance and later operational lessons appear in `ANAXI_ARCHITECTURE_UPDATE_2026-10-11.md`; the preceding documents remain their own dated records.
+
+## The Porch — a private place to meet
+
+**The Porch** is the sole owner's native iPhone/iPad client into the same Mac-hosted ANAXI, not another agent, memory, or canonical conversation.
+
+> **One ANAXI. Multiple interfaces. One authoritative production path.**
+
+Its restrained, conversation-first interface preserves authenticated ownership, scope, provenance, and the distinction between local preview, authorized resource transfer, model delivery, and actual engagement. The app is **not publicly distributed**. This repository does not provide private native source, installable builds, device-pairing material, or onboarding for others.
+
+The [11 October production account](ANAXI_ARCHITECTURE_UPDATE_2026-10-11.md) describes its scope and its unfinished, separate iPad presentation correction. The original Porch icon and synthetic October 10 simulator illustrations will be added as public-safe visual assets separately; no private dialogue will be published.
 
 ## ANAXI reference distribution
 
 `reference-distribution/` remains the reproducibility package for the **September 24 release**, and it is a **frozen historical package for that release**.
 
-It is **not** a complete reproduction of every mechanism added to private production ANAXI after that date. Do not read it as a snapshot of the current system; the current architecture is in `ANAXI_ARCHITECTURE_UPDATE_2026-10-05.md`, and the complete current private production runtime is not published.
+It is **not** a complete reproduction of every mechanism added to private production ANAXI after that date. Do not read it as a snapshot of the current system; the latest documented production account is in `ANAXI_ARCHITECTURE_UPDATE_2026-10-11.md`, and the complete current private production runtime is not published.
 
 That package should stay historically stable. It is designed so an outside researcher or engineer can run the legitimately reproducible reference checks without access to production secrets, private workspace state, family material, live credentials, production databases, logs, or raw live-acceptance evidence.
 
@@ -137,7 +151,7 @@ Engineering acceptance, production adoption, and an ordinary waking interaction 
 
 Longitudinal questions remain longitudinal questions. They cannot honestly be replaced by synthetic biography or benchmark theater, and this repository does not attempt it.
 
-Several things also remain explicitly NOT_ESTABLISHED, including the end-to-end exercise of the explicitly directed Sleep consolidation variant on the ordinary owner-authorized route. These are listed in full in the current architecture document.
+Several things also remain explicitly NOT_ESTABLISHED, including the end-to-end exercise of the explicitly directed Sleep consolidation variant on the ordinary owner-authorized route. These are addressed in the dated architecture documents. Engineering acceptance does not turn research unknowns into established findings.
 
 ## Evidence versus testimony
 
@@ -177,4 +191,4 @@ If you use ANAXI or the accompanying harnesses in research, writing, or a derive
 ---
 
 **ANAXI: A DIGITAL KARDIA**
-A preserved reference release, two layers of later architecture, a creator's account of why it exists, and a set of questions meant to travel farther than the mechanisms that first answered them.
+A preserved reference release, three later architecture and acceptance accounts, a creator's account of why it exists, and a set of questions meant to travel farther than the mechanisms that first answered them.
