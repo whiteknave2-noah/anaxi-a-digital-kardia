@@ -68,8 +68,8 @@
    "path": "LICENSE",
    "kind": "packaging_authored",
    "packaging_source": "copyright line of the anaxi_final/LICENSE git blob + packaging/reference_distribution/distribution/AGPL-3.0.txt (canonical AGPL-3.0 text)",
-   "sha256": "396a19539f5c91f8c5be744f758ca3c211ecc8b75ebcbe071405bb3f788afb7e",
-   "size": 34709
+   "sha256": "ea12f3fd28f900f57e5d78a0568db46d1b9381713a303f7117daee7d452c3708",
+   "size": 34722
   },
   {
    "path": "README.md",
